@@ -1,0 +1,49 @@
+// Framework for offcanvas grid generation
+// Parallel to the grid framework of bootstrap
+// uses any value of `@grid-columns`
+
+.make-offcanvas-columns() {
+    // Common styles for all sizes of grid columns, widths 1-12
+    .offc(@index) { // initial
+        @item: ~".offc-xs-@{index}, .offc-sm-@{index}, .offc-md-@{index}, .offc-lg-@{index}";
+        .offc((@index + 1), @item);
+    }
+    .offc(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
+        @item: ~".offc-xs-@{index}, .offc-sm-@{index}, .offc-md-@{index}, .offc-lg-@{index}";
+        .offc((@index + 1), ~"@{list}, @{item}");
+    }
+    .offc(@index, @list) when (@index > @grid-columns) { // terminal
+        @{list} {
+            position: relative;
+            // Prevent columns from collapsing when empty
+            min-height: 1px;
+            // Inner gutter via padding
+            padding-left:  (@grid-gutter-width / 2);
+            padding-right: (@grid-gutter-width / 2);
+        }
+    }
+
+    .offc(1);
+}
+
+.calc-offcanvas-column(@index, @class, @type) when (@type = width) and (@index > 0) {
+  .offc-@{class}-@{index} {
+    width: percentage((@index / @grid-columns));
+  }
+}
+
+// Basic looping in LESS
+.loop-offcanvas-columns(@index, @class, @type) when (@index >= 0) {
+  .calc-offcanvas-column(@index, @class, @type);
+  // next iteration
+  .loop-offcanvas-columns((@index - 1), @class, @type);
+}
+
+// Create grid for specific class
+.make-offcanvas(@class) {
+  .float-offcanvas-columns(@class);
+  .loop-offcanvas-columns(@grid-columns, @class, width);
+  .loop-offcanvas-columns(@grid-columns, @class, pull);
+  .loop-offcanvas-columns(@grid-columns, @class, push);
+  .loop-offcanvas-columns(@grid-columns, @class, offset);
+}

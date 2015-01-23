@@ -1,0 +1,52 @@
+@import "./mixins/offcanvas-framework";
+
+//
+// Off-Canvas
+// --------------------------------------------------
+
+
+// Base class
+// --------------------------------------------------
+
+.offcanvas {
+    margin: 0;
+    padding: @grid-gutter-width/2;
+}
+
+.make-offcanvas-columns();
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+.make-offcanvas(xs);
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: @screen-sm-min) {
+  .make-offcanvas(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: @screen-md-min) {
+  .make-offcanvas(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: @screen-lg-min) {
+  .make-offcanvas(lg);
+}
