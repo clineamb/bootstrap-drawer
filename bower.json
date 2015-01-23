@@ -1,0 +1,29 @@
+{
+  "name": "bootstrap.offcanvas",
+  "version": "0.1.0",
+  "authors": [
+    "Caroline Amaba <her@carolineamaba.com>"
+  ],
+  "description": "A Bootstrap add-on to create off-canvas styled navigation",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "bootstrap",
+    "offcanvas",
+    "off-canvas",
+    "off",
+    "canvas",
+    "navigation",
+    "navs",
+    "nav"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
