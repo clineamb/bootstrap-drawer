@@ -17,3 +17,11 @@ goes off screen.  This is an add-on to the core Bootstrap framewrk that adds var
 # WIP
 
 Working on getting this ready for distribution on npm/bower.
+
+## TODO
+
+* Fix how button is positioned.
+* Docs and examples
+* Setup github website
+* Fix readme
+* npm/bower
