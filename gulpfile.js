@@ -51,6 +51,10 @@ gulp.task('js', function() {
     gulp.src("./js/*.js")  
         .pipe(gulp.dest("./dist/js"))
     ;
+
+    gulp.src("./js/*.js")  
+        .pipe(gulp.dest("./example"))
+    ;
 });
 
 gulp.task('js.min', function() {

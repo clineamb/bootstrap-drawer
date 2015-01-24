@@ -16,30 +16,51 @@
             position: fixed;
             // Prevent columns from collapsing when empty
             min-height: 1px;
-            // Inner gutter via padding
-            // padding-left:  (@grid-gutter-width / 2);
-            // padding-right: (@grid-gutter-width / 2);
+            height: 100%;
         }
     }
 
     .offc(1);
 }
 
+.offc-base(@index) {
+  width: percentage((@index / @grid-columns));
+}
+
 .calc-offcanvas-column(@index, @class, @type) when (@type = width) and (@index > 0) {
+
   .offc-@{class}-@{index} {
     width: percentage((@index / @grid-columns));
-    margin-left: -1 * percentage((@index / @grid-columns));
+  }
+
+  .offcanvas.fold.offc-@{class}-@{index} {
+    margin-left: -1 * percentage((@index / @grid-columns));;
     margin-right: 0;
   }
 
-  .offcanvas.offcanvas-right.offc-@{class}-@{index} {
-    margin-left: 0;
-    margin-right: -1 * percentage((@index / @grid-columns));
+  .offcanvas.folding.offc-@{class}-@{index} {
+      position: fixed;
+      height: 100%;
+      .transition-property(~"margin-left");
+      .transition-duration(.35s);
+      .transition-timing-function(ease);
   }
 
-  .offcanvas.opened.offc-@{class}-@{index} {
-    margin-left: 0;
+  .offcanvas.offcanvas-right {
+    &.fold.offc-@{class}-@{index} {
+      margin-left: 0;
+      margin-right: -1 * percentage((@index / @grid-columns));
+    }
+
+    &.fold.offc-@{class}-@{index} {
+      .transition-property(~"margin-right");
+    }
+  }
+
+  .offcanvas.fold.open.offc-@{class}-@{index},
+  .offcanvas.offcanvas-right.fold.open.offc-@{class}-@{index} {
     margin-right: 0;
+    margin-left: 0;
   }
 }
 

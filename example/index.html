@@ -13,17 +13,17 @@
         <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="bootstrap.offcanvas.css">
         <style>
-            #offcanvas-example {
+            #offcanvas-page {
                 padding-top: 20px;
                 padding-bottom: 20px;
             }
         </style>
     </head>
     <body class="has-offcanvas">
-        <div id="bs-example-offcanvas" class="offcanvas offc-xs-10 offc-sm-6 offc-md-4">
+        <div id="offcanvasExample" class="offcanvas offcanvas-right offc-xs-10 offc-sm-6 offc-md-4 fold" aria-labelledby="offcanvasExample">
             <div class="offcanvas-controls">
                 <div class="toggle-outer">
-                    <a href="#" class="btn btn-primary btn-sm">Menu</a>
+                    <a href="#offcanvasExample" data-toggle="offcanvas" href="#offcanvasExample" aria-foldedopen="false" aria-controls="offcanvasExample" class="btn btn-primary btn-sm">Menu</a>
                 </div>
             </div>
             <div class="offcanvas-contents">
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div id="offcanvas-example" class="container">
+        <div id="offcanvas-page" class="container">
             <div class="jumbotron">
                 <h1>Hello, world!</h1>
                 <p>...</p>
