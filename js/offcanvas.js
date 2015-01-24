@@ -64,7 +64,6 @@
     var dimension = this.dimension()
 
     this.$element
-      // .removeClass('fold')
       .addClass('folding').css(dimension, 0)
       .attr('aria-expanded', true)
 
@@ -85,8 +84,6 @@
 
     if (!$.support.transition) return complete.call(this)
 
-    // var scrollSize = $.camelCase(['scroll', dimension].join('-'))
-
     this.$element
       .one('bsTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd(OffCanvas.TRANSITION_DURATION).css(dimension, 0)
@@ -100,8 +97,6 @@
     if (startEvent.isDefaultPrevented()) return
 
     var dimension = this.dimension()
-
-    // this.$element.css(dimension, '');
 
     this.$element
       .addClass('folding')
@@ -162,7 +157,7 @@
   }
 
 
-  // COLLAPSE PLUGIN DEFINITION
+  // OFFCANVAS PLUGIN DEFINITION
   // ==========================
 
   function Plugin(option) {
@@ -183,7 +178,7 @@
   $.fn.offcanvas.Constructor = OffCanvas
 
 
-  // COLLAPSE NO CONFLICT
+  // OFFCANVAS NO CONFLICT
   // ====================
 
   $.fn.offcanvas.noConflict = function () {
@@ -192,7 +187,7 @@
   }
 
 
-  // COLLAPSE DATA-API
+  // OFFCANVAS DATA-API
   // =================
 
   $(document).on('click.bs.fold.data-api', '[data-toggle="offcanvas"]', function (e) {

@@ -48,11 +48,11 @@ gulp.task("less.min", function() {
 });
 
 gulp.task('js', function() {
-    gulp.src("./js/*.js")  
+    gulp.src("./js/*.js", {read:false})  
         .pipe(gulp.dest("./dist/js"))
     ;
 
-    gulp.src("./js/*.js")  
+    gulp.src("./js/*.js", {read:false})  
         .pipe(gulp.dest("./example"))
     ;
 });
