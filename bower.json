@@ -1,6 +1,6 @@
 {
   "name": "bootstrap.offcanvas",
-  "version": "0.1.0",
+  "version": "0.9.0",
   "authors": [
     "Caroline Amaba <her@carolineamaba.com>"
   ],
@@ -28,6 +28,6 @@
   ],
   "dependencies": {
     "jquery": "~2.1.3",
-    "bootstrap": "~3.3.2"
+    "bootstrap": "3.x.x"
   }
 }
