@@ -1,4 +1,6 @@
 @import "./mixins/offcanvas-framework";
+@import "./offcanvas-variables";
+
 
 //
 // Off-Canvas
@@ -9,49 +11,171 @@ html {
     height: 100%;
 }
 
-body.use-offcanvas {
+body.has-offcanvas {
     min-height: 100%;
     height: 100%;
+}
+
+.has-offcanvas {
+    position: relative;
 }
 
 // Base class
 // --------------------------------------------------
 
-.offcanvas {
-    display: block;
-    margin: 0;
-    padding: 0;
-
-    &:extend(.offcanvas-heading);
-    &:extend(.offcanvas-body);
-    &:extend(.offcanvas-footer);
-}
 
 .offcanvas {
-    background-color: @body-bg;
     display: block;
-    border-right: 1px solid @gray-lighter;
+    background-color: @offc-bg;
+    color: @offc-color;
+    border-right: 1px solid @offc-border-color;
     height: 100%;
     top: 0;
     left: 0;
+    .box-shadow(0 1px 1px rgba(0,0,0,.05));
+
+    &-heading, &-body, &-nav, &-footer {
+        display: inherit;
+        margin: 0;
+        width: 100%;
+        position: relative;
+    }
+
+    &.offcanvas-right {
+        left: auto;
+        right: 0;
+        border-right: none;
+        border-left: 1px solid @offc-border-color;
+        .box-shadow(0 -1px 1px rgba(0,0,0,.05))
+    }
+
+    &.offcanvas-inverse {
+        background-color: @offc-inverse-bg;
+        color: @offc-inverse-color;
+        border-right: 1px solid @offc-inverse-border-color;
+
+        &.offcanvas-right {
+            border-right: 1px solid @offc-border-color;
+        }
+    }
+
+    a {
+        color: @offc-inverse-link-color;
+
+        &:hover, &:focus {
+            color: @offc-inverse-link-hover-color;
+        }
+    }
 }
 
 .offcanvas-heading {
-    border-bottom: 1px solid @gray-lighter;
-    padding-top: @panel-heading-padding;
+    border-bottom: 1px solid @offc-border-color;
+    padding: @offc-heading-padding;
+    color: inherit;
+
+    .offcanvas-title {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.offcanvas-toggle {
+    
 }
 
 .offcanvas-body, .offcanvas-nav {
-    padding: @panel-body-padding;
+    padding: @offc-body-padding;
 }
 
-.offcanvas-nav {
-    padding-left: 0;
-    padding-right: 0;
+.offcanvas-nav, .offcanvas-fullnav {
+    padding: @offc-nav-padding;
+    margin-bottom: 0;
+    list-style: none;
+    &:extend(.clearfix all);
+
+    > li {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+
+        a {
+            color: @offc-nav-link-color;
+            border-radius: @offc-nav-border-radius;
+            position: relative;
+            display: block;
+            padding: @offc-nav-link-padding;
+
+            &:hover, &:focus {
+                color: @offc-nav-link-hover-color;
+                text-decoration: none;
+                background-color: @offc-nav-link-hover-bg;
+            }
+        }
+
+        &.active a {
+            color: @offc-nav-link-hover-color;
+            background-color: @offc-nav-link-hover-bg;
+        }
+    }
+}
+
+.offcanvas-fullnav {
+    color: @offc-inverse-nav-link-color;
+    padding: 0;
+
+    > li {
+        margin-bottom: 0;
+
+        a {
+            border-radius: 0;
+        }
+    }
+}
+
+.offcanvas-inverse .offcanvas-fullnav,
+.offcanvas-inverse .offcanvas-nav {
+    > li {
+        a {
+            color: @offc-inverse-nav-link-color;
+            padding: @offc-navfull-padding;
+
+            &:hover, &:focus {
+                color: @offc-inverse-nav-link-hover-color;
+                background-color: @offc-inverse-nav-link-hover-bg;
+            }
+        }
+
+        &.active a {
+            color: @offc-inverse-nav-link-hover-color;
+            background-color: @offc-inverse-nav-link-hover-bg;
+
+            &:hover, &:focus {
+                color: @offc-inverse-nav-link-hover-color;
+                background-color: @offc-inverse-nav-link-hover-bg;
+            }
+        }
+    }
 }
 
 .offcanvas-footer {
-    padding: @panel-footer-padding;
+    padding: @offc-footer-padding;
+
+    &.locked {
+        position:   absolute;
+        bottom:     0;
+        left:       0;
+    }
+}
+
+.panel-heading, .panel-footer {
+    > a,
+    > small,
+    > .small,
+    > small > a,
+    > .small > a {
+        color: inherit;
+    }
 }
 
 .make-offcanvas-columns();
@@ -63,7 +187,6 @@ body.use-offcanvas {
 // smartphones.
 
 .make-offcanvas(xs);
-
 
 // Small grid
 //

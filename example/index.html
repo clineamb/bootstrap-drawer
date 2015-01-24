@@ -20,19 +20,31 @@
         </style>
     </head>
     <body class="use-offcanvas">
-        <div class="offcanvas offc-xs-6 offc-sm-4 offc-md-3 opened">
+        <div id="bs-example-offcanvas" class="offcanvas offc-xs-10 offc-sm-6 offc-md-4 opened">
+            
             <div class="offcanvas-heading">
-                <h2>Menu</h2>
+                <h2 class="offcanvas-title">Menu</h2>
             </div>
-            <div class="offcanvas-nav">
-                <ul class="nav nav-pills nav-stacked">
-                    <li role="presentation" class="active"><a href="#">Home</a></li>
-                    <li role="presentation"><a href="#">Profile</a></li>
-                    <li role="presentation"><a href="#">Messages</a></li>
-                </ul>
+            <button type="button" class="btn btn-sm btn-danger offcanvas-toggle" data-toggle="offcanvas" data-target="#bs-example-offcanvas">
+                &times;
+            </button>
+            <button type="button" class="btn btn-sm btn-primary offcanvas-toggle-outer" data-toggle="offcanvas" data-target="#bs-example-offcanvas">
+                [MENU]
+            </button>
+            <ul class="offcanvas-fullnav">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages</a></li>
+            </ul>
+            <div class="offcanvas-body">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat.</p>
+                <a href="#">A Regular Link</a>
             </div>
-            <div class="offcanvas-footer">
-                &copy; Caroline Amaba
+            <div class="offcanvas-footer locked text-center">
+                <small>&copy; Caroline Amaba</small>
             </div>
         </div>
         <div id="offcanvas-example" class="container">

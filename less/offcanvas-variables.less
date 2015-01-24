@@ -1,0 +1,47 @@
+//  You can either include this file in your less after
+//  variables.less and before offcanvas.less, or you 
+//  just copy+paste these to bootstrap's usual variables.less
+// -------------------------------------------------------------------------
+
+
+//== Off Canvas
+//
+//## Customizes the `.offcanvas` component with basic values, each used across all offcanvas variations.
+
+// Basics of Off Canvas
+
+@offc-bg:                      #f8f8f8;
+@offc-color:                   @gray-dark;
+@offc-border-color:            darken(@offc-bg, 10%);
+@offc-link-color:              @link-color;
+@offc-link-hover-color:        darken(@offc-link-color, 15%);
+
+@offc-base-padding:            10px;
+
+@offc-heading-padding:         @offc-base-padding (@grid-gutter-width / 2);
+@offc-body-padding:            @offc-base-padding (@grid-gutter-width / 2);
+@offc-footer-padding:          @offc-base-padding (@grid-gutter-width / 2);
+
+// Off Canvas nav styles
+@offc-nav-border-radius:       @nav-pills-border-radius;
+@offc-nav-padding:             @offc-base-padding @offc-base-padding @offc-base-padding 0;
+
+@offc-nav-link-padding:        @offc-base-padding;
+@offc-nav-link-color:          #777;
+@offc-nav-link-hover-color:    darken(@offc-nav-link-color, 15%);
+@offc-nav-link-hover-bg:       lighten(@offc-bg, 15%);
+
+@offc-nav-padding:             @offc-base-padding (@grid-gutter-width - @offc-nav-link-padding);
+@offc-navfull-padding:         @offc-base-padding (@grid-gutter-width / 2);
+
+
+// Inverse Off Canvas
+@offc-inverse-bg:                   #333;
+@offc-inverse-color:                @gray-lighter;
+@offc-inverse-border-color:         darken(@offc-inverse-bg, 10%);
+@offc-inverse-link-color:           lighten(@link-color, 25%);
+@offc-inverse-link-hover-color:     darken(@offc-inverse-link-color, 15%);
+
+@offc-inverse-nav-link-color:          #fff;
+@offc-inverse-nav-link-hover-color:    @gray-lighter;
+@offc-inverse-nav-link-hover-bg:       darken(@offc-inverse-bg, 10%);
