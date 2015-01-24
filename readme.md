@@ -13,8 +13,7 @@ goes off screen.  This is an add-on to the core Bootstrap framewrk that adds var
 *  [Bootstrap](http://getbootstrap.com)
 *  [jQuery](http://jquery.com/) (already a Bootstrap dependency)
 
-## Installing
 
-You can...
+# WIP
 
-* Download the files
+Working on getting this ready for distribution on npm/bower.
