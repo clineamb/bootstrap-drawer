@@ -9,7 +9,6 @@
         .offc((@index + 1), @item);
     }
     .offc(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
-        @item: ~".offc-xs-@{index}, .offc-sm-@{index}, .offc-md-@{index}, .offc-lg-@{index}";
         .offc((@index + 1), ~"@{list}, @{item}");
     }
     .offc(@index, @list) when (@index > @grid-columns) { // terminal
@@ -33,7 +32,7 @@
     margin-right: 0;
   }
 
-  .offcanvas.offc-right.offc-@{class}-@{index} {
+  .offcanvas.offcanvas-right.offc-@{class}-@{index} {
     margin-left: 0;
     margin-right: -1 * percentage((@index / @grid-columns));
   }

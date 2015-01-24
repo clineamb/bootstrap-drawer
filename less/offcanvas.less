@@ -33,8 +33,9 @@ body.has-offcanvas {
     top: 0;
     left: 0;
     .box-shadow(0 1px 1px rgba(0,0,0,.05));
+    z-index: @zindex-offcanvas;
 
-    &-heading, &-body, &-nav, &-footer {
+    &-contents, &-heading, &-body, &-nav, &-footer {
         display: inherit;
         margin: 0;
         width: 100%;
@@ -58,14 +59,34 @@ body.has-offcanvas {
             border-right: 1px solid @offc-border-color;
         }
     }
+}
 
-    a {
-        color: @offc-inverse-link-color;
+.offcanvas-controls {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    z-index: 500;
+    width: 100%;
 
-        &:hover, &:focus {
-            color: @offc-inverse-link-hover-color;
-        }
+    .toggle-inner, .toggle-outer {
+        position:   absolute;
+        display:    block;
+        top:        @offc-base-padding;
     }
+
+    .toggle-inner {
+        left:       95%;
+    }
+
+    .toggle-outer {
+        left:       105%;
+    }
+}
+
+.offcanvas-contents {
+    background-color: @offc-bg;
+    height: 100%;
+    @z-index: 100;
 }
 
 .offcanvas-heading {
@@ -79,8 +100,10 @@ body.has-offcanvas {
     }
 }
 
-.offcanvas-toggle {
-    
+.offcanvas-inner-toggle {
+    position: absolute;
+    top: @offc-base-padding;
+    right: @offc-base-padding;
 }
 
 .offcanvas-body, .offcanvas-nav {
@@ -133,26 +156,31 @@ body.has-offcanvas {
     }
 }
 
-.offcanvas-inverse .offcanvas-fullnav,
-.offcanvas-inverse .offcanvas-nav {
-    > li {
-        a {
-            color: @offc-inverse-nav-link-color;
-            padding: @offc-navfull-padding;
+.offcanvas.offcanvas-inverse {
+    .offcanvas-contents {
+        background-color: @offc-inverse-bg;
+    }
 
-            &:hover, &:focus {
-                color: @offc-inverse-nav-link-hover-color;
-                background-color: @offc-inverse-nav-link-hover-bg;
+    .offcanvas-fullnav, .offcanvas-nav {
+        > li {
+            a {
+                color: @offc-inverse-nav-link-color;
+                padding: @offc-navfull-padding;
+
+                &:hover, &:focus {
+                    color: @offc-inverse-nav-link-hover-color;
+                    background-color: @offc-inverse-nav-link-hover-bg;
+                }
             }
-        }
 
-        &.active a {
-            color: @offc-inverse-nav-link-hover-color;
-            background-color: @offc-inverse-nav-link-hover-bg;
-
-            &:hover, &:focus {
+            &.active a {
                 color: @offc-inverse-nav-link-hover-color;
                 background-color: @offc-inverse-nav-link-hover-bg;
+
+                &:hover, &:focus {
+                    color: @offc-inverse-nav-link-hover-color;
+                    background-color: @offc-inverse-nav-link-hover-bg;
+                }
             }
         }
     }
