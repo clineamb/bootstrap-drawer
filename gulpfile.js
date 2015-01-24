@@ -42,7 +42,7 @@ gulp.task("less.min", function() {
             paths: ["./less"],
             compress: true
         }))
-        .pipe(rename({basename: "offcanvas", extname: ".min.css"}))
+        .pipe(rename("offcanvas.min.css"))
         .pipe(gulp.dest("./dist/css"))
     ;
 });

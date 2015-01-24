@@ -14,7 +14,7 @@
     }
     .offc(@index, @list) when (@index > @grid-columns) { // terminal
         @{list} {
-            position: relative;
+            position: fixed;
             // Prevent columns from collapsing when empty
             min-height: 1px;
             // Inner gutter via padding
@@ -29,6 +29,11 @@
 .calc-offcanvas-column(@index, @class, @type) when (@type = width) and (@index > 0) {
   .offc-@{class}-@{index} {
     width: percentage((@index / @grid-columns));
+    margin-left: -1 * percentage((@index / @grid-columns));
+  }
+
+  .offcanvas.opened.offc-@{class}-@{index} {
+    margin-left: 0;
   }
 }
 
@@ -41,7 +46,7 @@
 
 // Create grid for specific class
 .make-offcanvas(@class) {
-  .float-offcanvas-columns(@class);
+  // .float-offcanvas-columns(@class);
   .loop-offcanvas-columns(@grid-columns, @class, width);
   .loop-offcanvas-columns(@grid-columns, @class, pull);
   .loop-offcanvas-columns(@grid-columns, @class, push);

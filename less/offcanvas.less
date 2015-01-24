@@ -4,13 +4,54 @@
 // Off-Canvas
 // --------------------------------------------------
 
+html {
+    min-height: 100%;
+    height: 100%;
+}
+
+body.use-offcanvas {
+    min-height: 100%;
+    height: 100%;
+}
 
 // Base class
 // --------------------------------------------------
 
 .offcanvas {
+    display: block;
     margin: 0;
-    padding: @grid-gutter-width/2;
+    padding: 0;
+
+    &:extend(.offcanvas-heading);
+    &:extend(.offcanvas-body);
+    &:extend(.offcanvas-footer);
+}
+
+.offcanvas {
+    background-color: @body-bg;
+    display: block;
+    border-right: 1px solid @gray-lighter;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.offcanvas-heading {
+    border-bottom: 1px solid @gray-lighter;
+    padding-top: @panel-heading-padding;
+}
+
+.offcanvas-body, .offcanvas-nav {
+    padding: @panel-body-padding;
+}
+
+.offcanvas-nav {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.offcanvas-footer {
+    padding: @panel-footer-padding;
 }
 
 .make-offcanvas-columns();
