@@ -1,0 +1,42 @@
+// FOR DOCS
+
+@bsdir: "../bower_components/bootstrap/less/";
+
+// Core variables and mixins
+@import "@{bsdir}variables.less";
+@import "./drawer-variables.less";
+@import "@{bsdir}mixins.less";
+@import "./mixins/drawer-framework.less";
+
+// Reset and dependencies
+@import "@{bsdir}normalize.less";
+
+// Core CSS
+@import "@{bsdir}scaffolding.less";
+@import "@{bsdir}type.less";
+@import "@{bsdir}code.less";
+@import "@{bsdir}grid.less";
+@import "@{bsdir}tables.less";
+@import "@{bsdir}forms.less";
+@import "@{bsdir}buttons.less";
+
+// Components
+@import "@{bsdir}component-animations.less";
+
+// Components w/ JavaScript
+@import "./drawer.less";
+
+// Utility classes
+@import "@{bsdir}utilities.less";
+@import "@{bsdir}responsive-utilities.less";
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background: #eee;
+}
+
+#drawer-docs {
+    max-width:  960px;
+    background: #fff;
+    min-height: 100%;
+}

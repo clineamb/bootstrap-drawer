@@ -1,0 +1,16 @@
+{% extends "./views/layout/layout.nunjucks" %}
+{% set bodyHasDrawer = true %}
+
+{% block styles %}
+    
+{% endblock %}
+
+{% block body %}
+    <div id="drawer-docs" class="container">
+        <h1><strong>bootstrap-drawer</strong></h1>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    
+{% endblock %}

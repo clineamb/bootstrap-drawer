@@ -66,11 +66,16 @@ gulp.task('js.min', function() {
 });
 
 gulp.task('docs', function() {
-    gulp.src("./docs-tpls/*.nunjucks")
+    gulp.src("./less/drawer-docs.less")
+        .pipe(less())
+        .pipe(gulp.dest("./example"))
+    ;
+
+    gulp.src("./views/*.nunjucks")
         .pipe(nunjucks({
-            path: "./docs-tpls"
+            path: "./views"
         }))
         .pipe(rename({extname: ".html"}))
-        .pipe(gulp.dest("./docs"))
+        .pipe(gulp.dest("./"))
     ;
 });

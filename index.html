@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="example/drawer-docs.css">
     <style>
-        {%- block styles %}{% endblock -%}
-    </style>
+    
+</style>
 </head>
 <body class="has-offcanvas">
     <div id="docDrawer" class="drawer dw-xs-10 dw-sm-4 dw-md-3 fold in open" aria-labelledby="docDrawer">
@@ -51,7 +51,10 @@
             </div>
         </div>
     </div>
-    {%- block body %}{% endblock %}
+    <div id="drawer-docs" class="container">
+        <h1><strong>bootstrap-drawer</strong></h1>
+    </div>
+
     <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="example/bootstrap.min.js"></script>
     <script src="dist/js/drawer.js"></script>
@@ -60,6 +63,7 @@
 
         })(jQuery || window.jQuery || $ || {});
     </script>
-    {% block footer %}{% endblock -%}
+    
+    
 </body>
 </html>
