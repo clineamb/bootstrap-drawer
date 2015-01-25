@@ -17,9 +17,10 @@ body.has-offcanvas {
   height: 100%;
   top: 0;
   left: 0;
+  position: fixed;
+  z-index: 1035;
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
-  z-index: 1035;
 }
 .offcanvas-contents,
 .offcanvas-heading,
@@ -48,35 +49,23 @@ body.has-offcanvas {
   border-right: 1px solid #dfdfdf;
 }
 .offcanvas-controls {
-  position: absolute;
-  top: 0;
-  padding: 0;
+  float: right;
+  margin-right: -16.66666667%;
+  padding: 10px;
+  height: 100%;
+  position: relative;
+  width: 16.66666667%;
   z-index: 500;
-  width: 100%;
-}
-.offcanvas-controls .toggle-inner,
-.offcanvas-controls .toggle-outer {
-  position: absolute;
-  display: block;
-  top: 10px;
-}
-.offcanvas-controls .toggle-inner {
-  left: 95%;
-}
-.offcanvas-controls .toggle-outer {
-  left: 105%;
-}
-.offcanvas-right .offcanvas-controls .toggle-inner {
-  left: auto;
-  right: 95%;
-}
-.offcanvas-right .offcanvas-controls .toggle-outer {
-  left: auto;
-  right: 105%;
 }
 .offcanvas-contents {
   background-color: #f8f8f8;
   height: 100%;
+  width: 100%;
+}
+.offcanvas-right .offcanvas-controls {
+  float: left;
+  margin-left: -16.66666667%;
+  margin-right: 0;
 }
 .offcanvas-heading {
   border-bottom: 1px solid #dfdfdf;
@@ -188,7 +177,6 @@ body.has-offcanvas {
   color: inherit;
 }
 .offc-xs-1, .offc-sm-1, .offc-md-1, .offc-lg-1, .offc-xs-2, .offc-sm-2, .offc-md-2, .offc-lg-2, .offc-xs-3, .offc-sm-3, .offc-md-3, .offc-lg-3, .offc-xs-4, .offc-sm-4, .offc-md-4, .offc-lg-4, .offc-xs-5, .offc-sm-5, .offc-md-5, .offc-lg-5, .offc-xs-6, .offc-sm-6, .offc-md-6, .offc-lg-6, .offc-xs-7, .offc-sm-7, .offc-md-7, .offc-lg-7, .offc-xs-8, .offc-sm-8, .offc-md-8, .offc-lg-8, .offc-xs-9, .offc-sm-9, .offc-md-9, .offc-lg-9, .offc-xs-10, .offc-sm-10, .offc-md-10, .offc-lg-10, .offc-xs-11, .offc-sm-11, .offc-md-11, .offc-lg-11, .offc-xs-12, .offc-sm-12, .offc-md-12, .offc-lg-12 {
-  position: fixed;
   min-height: 1px;
   height: 100%;
 }

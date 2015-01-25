@@ -13,7 +13,7 @@
     }
     .offc(@index, @list) when (@index > @grid-columns) { // terminal
         @{list} {
-            position: fixed;
+            // position: fixed;
             // Prevent columns from collapsing when empty
             min-height: 1px;
             height: 100%;
@@ -33,34 +33,36 @@
     width: percentage((@index / @grid-columns));
   }
 
-  .offcanvas.fold.offc-@{class}-@{index} {
-    margin-left: -1 * percentage((@index / @grid-columns));;
-    margin-right: 0;
-  }
-
-  .offcanvas.folding.offc-@{class}-@{index} {
-      position: fixed;
-      height: 100%;
-      .transition-property(~"margin-left");
-      .transition-duration(.35s);
-      .transition-timing-function(ease);
-  }
-
-  .offcanvas.offcanvas-right {
+  .offcanvas {
     &.fold.offc-@{class}-@{index} {
+      margin-left: -1 * percentage((@index / @grid-columns));;
+      margin-right: 0;
+    }
+
+    &.folding.offc-@{class}-@{index} {
+        position: fixed;
+        height: 100%;
+        .transition-property(~"margin-left");
+        .transition-duration(.35s);
+        .transition-timing-function(ease);
+    }
+
+    &.offcanvas-right {
+      &.fold.offc-@{class}-@{index} {
+        margin-left: 0;
+        margin-right: -1 * percentage((@index / @grid-columns));
+      }
+
+      &.fold.offc-@{class}-@{index} {
+        .transition-property(~"margin-right");
+      }
+    }
+
+    &.fold.open.offc-@{class}-@{index},
+    &.offcanvas-right.fold.open.offc-@{class}-@{index} {
+      margin-right: 0;
       margin-left: 0;
-      margin-right: -1 * percentage((@index / @grid-columns));
     }
-
-    &.fold.offc-@{class}-@{index} {
-      .transition-property(~"margin-right");
-    }
-  }
-
-  .offcanvas.fold.open.offc-@{class}-@{index},
-  .offcanvas.offcanvas-right.fold.open.offc-@{class}-@{index} {
-    margin-right: 0;
-    margin-left: 0;
   }
 }
 

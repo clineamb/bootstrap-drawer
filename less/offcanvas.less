@@ -32,8 +32,9 @@ body.has-offcanvas {
     height: 100%;
     top: 0;
     left: 0;
-    .box-shadow(0 1px 1px rgba(0,0,0,.05));
+    position: fixed;
     z-index: @zindex-offcanvas;
+    .box-shadow(0 1px 1px rgba(0,0,0,.05));
 
     &-contents, &-heading, &-body, &-nav, &-footer {
         display: inherit;
@@ -62,44 +63,31 @@ body.has-offcanvas {
 }
 
 .offcanvas-controls {
-    position: absolute;
-    top: 0;
-    padding: 0;
+    float: right;
+    margin-right: (-1 * @offc-ctrls-default-width);
+    padding: @offc-ctrls-padding;
+    height: 100%;
+    position: relative;
+    width: @offc-ctrls-default-width;
     z-index: 500;
-    width: 100%;
-
-    .toggle-inner, .toggle-outer {
-        position:   absolute;
-        display:    block;
-        top:        @offc-base-padding;
-    }
-
-    .toggle-inner {
-        left:       95%;
-    }
-
-    .toggle-outer {
-        left:       105%;
-    }
-}
-
-.offcanvas-right .offcanvas-controls {
-    .toggle-inner {
-        left: auto;
-        right: 95%;
-    }
-
-    .toggle-outer {
-        left: auto;
-        right: 105%;
-    }
 }
 
 .offcanvas-contents {
     background-color: @offc-bg;
     height: 100%;
+    width: 100%;
     @z-index: 100;
 }
+
+.offcanvas-right {
+    .offcanvas-controls {
+        float: left;
+        margin-left: -1 * @offc-ctrls-default-width;
+        margin-right: 0;
+    }
+}
+
+// OFF CANVAS CONTENT STYLES
 
 .offcanvas-heading {
     border-bottom: 1px solid @offc-border-color;
