@@ -61,6 +61,7 @@ body.has-offcanvas {
   background-color: #f8f8f8;
   height: 100%;
   width: 100%;
+  overflow: auto;
 }
 .offcanvas-right .offcanvas-controls {
   float: left;
@@ -87,7 +88,7 @@ body.has-offcanvas {
 }
 .offcanvas-nav,
 .offcanvas-fullnav {
-  padding: 10px 20px;
+  padding: 10px 15px;
   margin-bottom: 0;
   list-style: none;
 }
@@ -104,7 +105,7 @@ body.has-offcanvas {
   border-radius: 4px;
   position: relative;
   display: block;
-  padding: 10px;
+  padding: 10px 15px;
 }
 .offcanvas-nav > li a:hover,
 .offcanvas-fullnav > li a:hover,
