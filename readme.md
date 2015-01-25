@@ -1,6 +1,16 @@
-# bootstrap.offcanvas
+# bootstrap-offcanvas
 
 A [Bootstrap](http://getbootstrap.com) add-on to create off-canvas styled navigation.
+
+----------
+
+## 1/25/2015
+
+This readme was written assuming the documentation was done.  Currently, the
+documentation is a work-in-progress, but feel free to checkout the example folder
+and use the quickstart to start using this!
+
+----------
 
 As of Bootstrap 3.2.2, there is no "offcanvas" element - a drawer-like menu that
 goes off screen.  This is an add-on to the core Bootstrap framewrk that adds various
