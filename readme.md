@@ -1,8 +1,6 @@
-# bootstrap-offcanvas
+# bootstrap-drawer
 
-A [Bootstrap](http://getbootstrap.com) add-on to create off-canvas styled navigation.
-
-----------
+A [Bootstrap](http://getbootstrap.com) add-on to create drawer (off-canvas) styled navigation.
 
 ## 1/25/2015
 
@@ -10,11 +8,14 @@ This readme was written assuming the documentation was done.  Currently, the
 documentation is a work-in-progress, but feel free to checkout the example folder
 and use the quickstart to start using this!
 
+Also, had to change the name from "offcanvas" to drawer, because bootstrap-offcanvas
+was already taken.
+
 ----------
 
-As of Bootstrap 3.2.2, there is no "offcanvas" element - a drawer-like menu that
+As of Bootstrap 3.2.2, there is no "drawer" element - a drawer-like menu that
 goes off screen.  This is an add-on to the core Bootstrap framewrk that adds various
-`.offcanvas` classes to quickly and easily create the offcanvas component.
+`.drawer` classes to quickly and easily create the drawer component.
 
 This Readme is actually a quick start. [Check out the full documentation](http://clineamb.github.io/bootstrap-canvas) for detailed
 usage and style guide.
@@ -31,14 +32,14 @@ usage and style guide.
 
 ### Get it via Bower or NPM:
 
-`bower install bootstrap-canvas` / `npm install bootstrap-canvas`
+`bower install bootstrap-drawer` / `npm install bootstrap-drawer`
 
-or you can (download the latest release)[https://github.com/clineamb/bootstrap-offcanvas/releases] from the release page.
+or you can (download the latest release)[https://github.com/clineamb/bootstrap-drawer/releases] from the release page.
 
 
 ## Installing
 
-For more detailed use on the bootstrap-offcanvas framework, check out the [style guide documentation](http://clineamb.github.io/bootstrap-offcanvas).
+For more detailed use on the bootstrap-drawer framework, check out the [style guide documentation](http://clineamb.github.io/bootstrap-drawer).
 
 ### When using the full Bootstrap Framework:
 
@@ -46,14 +47,14 @@ For more detailed use on the bootstrap-offcanvas framework, check out the [style
     <html>
         <head>
             <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-            <link rel="stylesheet" type="text/css" href="offcanvas.min.css">
+            <link rel="stylesheet" type="text/css" href="drawer.min.css">
             <link rel="stylesheet" type="text/css" href="YOUR_OTHER_STYLES.css">
         </head>
         <body class="has-canvas">
             <!-- Off Canvas & other HTML here -->
             <script src="jquery.min.js"></script>
             <script src="bootstrap.min.js"></script>
-            <script src="offcanvas.min.js"></script>
+            <script src="drawer.min.js"></script>
             <script src="YOUR_CUSTOM_JS.js"></script>
         </body>
     </html>
@@ -63,14 +64,14 @@ For more detailed use on the bootstrap-offcanvas framework, check out the [style
 
 I am assuming for this section you are familiar with using less and the Bootstrap less source. 
 There are files in the `less/` directory that are parallel to Bootstrap's less source files.
-`offcanvas.less` already includes its custom variable package as well as less loop framework.
+`drawer.less` already includes its custom variable package as well as less loop framework.
 To include the less in your build files, you can do one of the following:
 
 #### Add to your main less file after bootstrap
 
 ```less
     @import "bootstrap.less";
-    @import "path/to/offcanvas.less";
+    @import "path/to/drawer.less";
 
     /* Your styles */
 ```
@@ -91,7 +92,7 @@ To include the less in your build files, you can do one of the following:
     @import "tooltip.less";
     @import "popovers.less";
     @import "carousel.less";
-    @import "path/to/offcanvas.less";
+    @import "path/to/drawer.less";
 
     // Utility Classes
     // ... etc ...
@@ -99,21 +100,19 @@ To include the less in your build files, you can do one of the following:
 
 #### Move Contents
 
-The first two lines in `less/offcanvas.less` can be removed and moved
+The first two lines in `less/drawer.less` can be removed and moved
 
-Feel free to move `offcanvas-variables.less` and `offcanvas-framework.less` to appropriate
-folders to maintain bootstrap structure.  The off-canvas variables rely on a few variables
-from the core bootstrap framework, likewise for the mixin framework.  Be sure to simply
-include them after the bootstrap core variables/mixins files:
+Feel free to move `drawer-variables.less` and `drawer-framework.less` to appropriate
+folders to maintain bootstrap structure.  The component's variables rely on a few variables from the core bootstrap framework, likewise for the mixin framework.  Be sure to simply include them after the bootstrap core variables/mixins files:
 
-*  `@import "./offcanvas-variables";` can be put after importing `variables.less`
-*  `@import "./mixins/offcanvas-framework";` can be put after importing `mixins.less`
+*  `@import "./drawer-variables";` can be put after importing `variables.less`
+*  `@import "./mixins/drawer-framework";` can be put after importing `mixins.less`
 
 ```less
     @import "variables.less";
-    @import "path/to/offcanvas-variables.less"
+    @import "path/to/drawer-variables.less"
     @import "mixins.less";
-    @import "path/to/offcanvas-framework.less";
+    @import "path/to/drawer-framework.less";
 
     // Bootstrap Core
     // ...
@@ -125,7 +124,7 @@ include them after the bootstrap core variables/mixins files:
     @import "tooltip.less";
     @import "popovers.less";
     @import "carousel.less";
-    @import "path/to/offcanvas.less";
+    @import "path/to/drawer.less";
 
     // Utility Classes
     // ... etc ...
@@ -134,7 +133,7 @@ include them after the bootstrap core variables/mixins files:
 ### Javascript
 
 The Javascript/jQuery plugin requires the `transition.js` file from the core Bootstrap
-framework in order to work.  Usage is nearly the same as the [collapse](http://getbootstrap.com/javascript/#collapse) component, but checkout out the documentation for more detailed usage for `$('.offcanvas').offcanvas()`.  The events emitted are `*.bs.offcanvas`.
+framework in order to work.  Usage is nearly the same as the [collapse](http://getbootstrap.com/javascript/#collapse) component, but checkout out the documentation for more detailed usage for `$('.drawer').drawer()`.  The events emitted are `*.bs.drawer`.
 
 ----------------------------------------------------
 

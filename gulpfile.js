@@ -11,7 +11,7 @@ gulp.task("build", ['less', 'less.min', 'js', 'js.min', 'example']);
 
 gulp.task('example', function() {
     gulp.src([
-        "./dist/js/offcanvas.js",
+        "./dist/js/drawer.js",
         "./bower_components/bootstrap/dist/css/bootstrap.min.css",
         "./bower_components/bootstrap/dist/js/bootstrap.min.js"
     ])  
@@ -20,40 +20,40 @@ gulp.task('example', function() {
 });
 
 gulp.task("less", function() {
-    gulp.src("./less/bootstrap.offcanvas.less")
+    gulp.src("./less/bootstrap.drawer.less")
         .pipe(less({
             paths: ["./less"]
         }))
         .pipe(gulp.dest("./example"))
     ;
 
-    gulp.src("./less/bootstrap.offcanvas.less")
+    gulp.src("./less/bootstrap.drawer.less")
         .pipe(less({
             paths: ["./less"],
             debug: true
         }))
-        .pipe(rename({basename: "offcanvas"}))
+        .pipe(rename({basename: "drawer"}))
         .pipe(gulp.dest("./dist/css"))
     ;
 });
 
 gulp.task("less.min", function() {
-    gulp.src("./less/bootstrap.offcanvas.less")
+    gulp.src("./less/bootstrap.drawer.less")
         .pipe(less({
             paths: ["./less"],
             compress: true
         }))
-        .pipe(rename("offcanvas.min.css"))
+        .pipe(rename("drawer.min.css"))
         .pipe(gulp.dest("./dist/css"))
     ;
 });
 
 gulp.task('js', function() {
-    gulp.src("./js/*.js", {read:false})  
+    gulp.src("./js/*.js")  
         .pipe(gulp.dest("./dist/js"))
     ;
 
-    gulp.src("./js/*.js", {read:false})  
+    gulp.src("./js/*.js")  
         .pipe(gulp.dest("./example"))
     ;
 });

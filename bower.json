@@ -1,10 +1,10 @@
 {
-  "name": "bootstrap.offcanvas",
+  "name": "bootstrap-drawer",
   "version": "0.9.0",
   "authors": [
     "Caroline Amaba <her@carolineamaba.com>"
   ],
-  "description": "A Bootstrap add-on to create off-canvas styled navigation",
+  "description": "A Bootstrap add-on to create drawer (off-canvas) styled navigation",
   "moduleType": [
     "globals"
   ],
@@ -14,7 +14,7 @@
   ]
   "repository": {
     "type": "git",
-    "url": "https://github.com/clineamb/bootstrap-offcanvas.git"
+    "url": "https://github.com/clineamb/bootstrap-drawer.git"
   },
   "keywords": [
     "bootstrap",
@@ -24,7 +24,15 @@
     "canvas",
     "navigation",
     "navs",
-    "nav"
+    "nav",
+    "drawer",
+    "menu",
+    "html",
+    "css",
+    "less",
+    "javascript",
+    "js",
+    "jquery"
   ],
   "license": "ISC",
   "ignore": [

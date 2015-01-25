@@ -2,14 +2,14 @@ html {
   min-height: 100%;
   height: 100%;
 }
-body.has-offcanvas {
+body.has-drawer {
   min-height: 100%;
   height: 100%;
 }
-.has-offcanvas {
+.has-drawer {
   position: relative;
 }
-.offcanvas {
+.drawer {
   display: block;
   background-color: #f8f8f8;
   color: #333333;
@@ -22,17 +22,17 @@ body.has-offcanvas {
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
-.offcanvas-contents,
-.offcanvas-heading,
-.offcanvas-body,
-.offcanvas-nav,
-.offcanvas-footer {
+.drawer-contents,
+.drawer-heading,
+.drawer-body,
+.drawer-nav,
+.drawer-footer {
   display: inherit;
   margin: 0;
   width: 100%;
   position: relative;
 }
-.offcanvas.offcanvas-right {
+.drawer.drawer-right {
   left: auto;
   right: 0;
   border-right: none;
@@ -40,15 +40,15 @@ body.has-offcanvas {
   -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.05);
 }
-.offcanvas.offcanvas-inverse {
+.drawer.drawer-inverse {
   background-color: #333333;
   color: #eeeeee;
   border-right: 1px solid #1a1a1a;
 }
-.offcanvas.offcanvas-inverse.offcanvas-right {
+.drawer.drawer-inverse.drawer-right {
   border-right: 1px solid #dfdfdf;
 }
-.offcanvas-controls {
+.drawer-controls {
   float: right;
   margin-right: -16.66666667%;
   padding: 10px;
@@ -57,138 +57,126 @@ body.has-offcanvas {
   width: 16.66666667%;
   z-index: 500;
 }
-.offcanvas-contents {
+.drawer-contents {
   background-color: #f8f8f8;
   height: 100%;
   width: 100%;
   overflow: auto;
 }
-.offcanvas-right .offcanvas-controls {
+.drawer-right .drawer-controls {
   float: left;
   margin-left: -16.66666667%;
   margin-right: 0;
 }
-.offcanvas-heading {
+.drawer-heading {
   border-bottom: 1px solid #dfdfdf;
   padding: 10px 15px;
   color: inherit;
 }
-.offcanvas-heading .offcanvas-title {
+.drawer-heading .drawer-title {
   margin-top: 0;
   margin-bottom: 0;
 }
-.offcanvas-inner-toggle {
+.drawer-inner-toggle {
   position: absolute;
   top: 10px;
   right: 10px;
 }
-.offcanvas-body,
-.offcanvas-nav {
+.drawer-body,
+.drawer-nav {
   padding: 10px 15px;
 }
-.offcanvas-nav,
-.offcanvas-fullnav {
+.drawer-nav,
+.drawer-fullnav {
   padding: 10px 15px;
   margin-bottom: 0;
   list-style: none;
 }
-.offcanvas-nav > li,
-.offcanvas-fullnav > li {
+.drawer-nav > li,
+.drawer-fullnav > li {
   position: relative;
   display: block;
   width: 100%;
   margin-bottom: 5px;
 }
-.offcanvas-nav > li a,
-.offcanvas-fullnav > li a {
+.drawer-nav > li a,
+.drawer-fullnav > li a {
   color: #777777;
   border-radius: 4px;
   position: relative;
   display: block;
   padding: 10px 15px;
 }
-.offcanvas-nav > li a:hover,
-.offcanvas-fullnav > li a:hover,
-.offcanvas-nav > li a:focus,
-.offcanvas-fullnav > li a:focus {
+.drawer-nav > li a:hover,
+.drawer-fullnav > li a:hover,
+.drawer-nav > li a:focus,
+.drawer-fullnav > li a:focus {
   color: #515151;
   text-decoration: none;
   background-color: #ffffff;
 }
-.offcanvas-nav > li.active a,
-.offcanvas-fullnav > li.active a {
+.drawer-nav > li.active a,
+.drawer-fullnav > li.active a {
   color: #515151;
   background-color: #ffffff;
 }
-.offcanvas-fullnav {
+.drawer-fullnav {
   color: #ffffff;
   padding: 0;
 }
-.offcanvas-fullnav > li {
+.drawer-fullnav > li {
   margin-bottom: 0;
 }
-.offcanvas-fullnav > li a {
+.drawer-fullnav > li a {
   border-radius: 0;
 }
-.offcanvas.offcanvas-inverse .offcanvas-contents {
+.drawer.drawer-inverse .drawer-contents {
   background-color: #333333;
 }
-.offcanvas.offcanvas-inverse .offcanvas-fullnav > li a,
-.offcanvas.offcanvas-inverse .offcanvas-nav > li a {
+.drawer.drawer-inverse .drawer-fullnav > li a,
+.drawer.drawer-inverse .drawer-nav > li a {
   color: #ffffff;
   padding: 10px 15px;
 }
-.offcanvas.offcanvas-inverse .offcanvas-fullnav > li a:hover,
-.offcanvas.offcanvas-inverse .offcanvas-nav > li a:hover,
-.offcanvas.offcanvas-inverse .offcanvas-fullnav > li a:focus,
-.offcanvas.offcanvas-inverse .offcanvas-nav > li a:focus {
+.drawer.drawer-inverse .drawer-fullnav > li a:hover,
+.drawer.drawer-inverse .drawer-nav > li a:hover,
+.drawer.drawer-inverse .drawer-fullnav > li a:focus,
+.drawer.drawer-inverse .drawer-nav > li a:focus {
   color: #eeeeee;
   background-color: #1a1a1a;
 }
-.offcanvas.offcanvas-inverse .offcanvas-fullnav > li.active a,
-.offcanvas.offcanvas-inverse .offcanvas-nav > li.active a {
+.drawer.drawer-inverse .drawer-fullnav > li.active a,
+.drawer.drawer-inverse .drawer-nav > li.active a {
   color: #eeeeee;
   background-color: #1a1a1a;
 }
-.offcanvas.offcanvas-inverse .offcanvas-fullnav > li.active a:hover,
-.offcanvas.offcanvas-inverse .offcanvas-nav > li.active a:hover,
-.offcanvas.offcanvas-inverse .offcanvas-fullnav > li.active a:focus,
-.offcanvas.offcanvas-inverse .offcanvas-nav > li.active a:focus {
+.drawer.drawer-inverse .drawer-fullnav > li.active a:hover,
+.drawer.drawer-inverse .drawer-nav > li.active a:hover,
+.drawer.drawer-inverse .drawer-fullnav > li.active a:focus,
+.drawer.drawer-inverse .drawer-nav > li.active a:focus {
   color: #eeeeee;
   background-color: #1a1a1a;
 }
-.offcanvas-footer {
+.drawer-footer {
   padding: 10px 15px;
 }
-.offcanvas-footer.locked {
+.drawer-footer.locked {
   position: absolute;
   bottom: 0;
   left: 0;
 }
-.panel-heading > a,
-.panel-footer > a,
-.panel-heading > small,
-.panel-footer > small,
-.panel-heading > .small,
-.panel-footer > .small,
-.panel-heading > small > a,
-.panel-footer > small > a,
-.panel-heading > .small > a,
-.panel-footer > .small > a {
-  color: inherit;
-}
-.offc-xs-1, .offc-sm-1, .offc-md-1, .offc-lg-1, .offc-xs-2, .offc-sm-2, .offc-md-2, .offc-lg-2, .offc-xs-3, .offc-sm-3, .offc-md-3, .offc-lg-3, .offc-xs-4, .offc-sm-4, .offc-md-4, .offc-lg-4, .offc-xs-5, .offc-sm-5, .offc-md-5, .offc-lg-5, .offc-xs-6, .offc-sm-6, .offc-md-6, .offc-lg-6, .offc-xs-7, .offc-sm-7, .offc-md-7, .offc-lg-7, .offc-xs-8, .offc-sm-8, .offc-md-8, .offc-lg-8, .offc-xs-9, .offc-sm-9, .offc-md-9, .offc-lg-9, .offc-xs-10, .offc-sm-10, .offc-md-10, .offc-lg-10, .offc-xs-11, .offc-sm-11, .offc-md-11, .offc-lg-11, .offc-xs-12, .offc-sm-12, .offc-md-12, .offc-lg-12 {
+.dw-xs-1, .dw-sm-1, .dw-md-1, .dw-lg-1, .dw-xs-2, .dw-sm-2, .dw-md-2, .dw-lg-2, .dw-xs-3, .dw-sm-3, .dw-md-3, .dw-lg-3, .dw-xs-4, .dw-sm-4, .dw-md-4, .dw-lg-4, .dw-xs-5, .dw-sm-5, .dw-md-5, .dw-lg-5, .dw-xs-6, .dw-sm-6, .dw-md-6, .dw-lg-6, .dw-xs-7, .dw-sm-7, .dw-md-7, .dw-lg-7, .dw-xs-8, .dw-sm-8, .dw-md-8, .dw-lg-8, .dw-xs-9, .dw-sm-9, .dw-md-9, .dw-lg-9, .dw-xs-10, .dw-sm-10, .dw-md-10, .dw-lg-10, .dw-xs-11, .dw-sm-11, .dw-md-11, .dw-lg-11, .dw-xs-12, .dw-sm-12, .dw-md-12, .dw-lg-12 {
   min-height: 1px;
   height: 100%;
 }
-.offc-xs-12 {
+.dw-xs-12 {
   width: 100%;
 }
-.offcanvas.fold.offc-xs-12 {
+.drawer.fold.dw-xs-12 {
   margin-left: -100%;
   margin-right: 0;
 }
-.offcanvas.folding.offc-xs-12 {
+.drawer.folding.dw-xs-12 {
   position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
@@ -198,27 +186,27 @@ body.has-offcanvas {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-12 {
+.drawer.drawer-right.fold.dw-xs-12 {
   margin-left: 0;
   margin-right: -100%;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-12 {
+.drawer.drawer-right.fold.dw-xs-12 {
   -webkit-transition-property: margin-right;
   transition-property: margin-right;
 }
-.offcanvas.fold.open.offc-xs-12,
-.offcanvas.offcanvas-right.fold.open.offc-xs-12 {
+.drawer.fold.open.dw-xs-12,
+.drawer.drawer-right.fold.open.dw-xs-12 {
   margin-right: 0;
   margin-left: 0;
 }
-.offc-xs-11 {
+.dw-xs-11 {
   width: 91.66666667%;
 }
-.offcanvas.fold.offc-xs-11 {
+.drawer.fold.dw-xs-11 {
   margin-left: -91.66666667%;
   margin-right: 0;
 }
-.offcanvas.folding.offc-xs-11 {
+.drawer.folding.dw-xs-11 {
   position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
@@ -228,27 +216,27 @@ body.has-offcanvas {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-11 {
+.drawer.drawer-right.fold.dw-xs-11 {
   margin-left: 0;
   margin-right: -91.66666667%;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-11 {
+.drawer.drawer-right.fold.dw-xs-11 {
   -webkit-transition-property: margin-right;
   transition-property: margin-right;
 }
-.offcanvas.fold.open.offc-xs-11,
-.offcanvas.offcanvas-right.fold.open.offc-xs-11 {
+.drawer.fold.open.dw-xs-11,
+.drawer.drawer-right.fold.open.dw-xs-11 {
   margin-right: 0;
   margin-left: 0;
 }
-.offc-xs-10 {
+.dw-xs-10 {
   width: 83.33333333%;
 }
-.offcanvas.fold.offc-xs-10 {
+.drawer.fold.dw-xs-10 {
   margin-left: -83.33333333%;
   margin-right: 0;
 }
-.offcanvas.folding.offc-xs-10 {
+.drawer.folding.dw-xs-10 {
   position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
@@ -258,27 +246,27 @@ body.has-offcanvas {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-10 {
+.drawer.drawer-right.fold.dw-xs-10 {
   margin-left: 0;
   margin-right: -83.33333333%;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-10 {
+.drawer.drawer-right.fold.dw-xs-10 {
   -webkit-transition-property: margin-right;
   transition-property: margin-right;
 }
-.offcanvas.fold.open.offc-xs-10,
-.offcanvas.offcanvas-right.fold.open.offc-xs-10 {
+.drawer.fold.open.dw-xs-10,
+.drawer.drawer-right.fold.open.dw-xs-10 {
   margin-right: 0;
   margin-left: 0;
 }
-.offc-xs-9 {
+.dw-xs-9 {
   width: 75%;
 }
-.offcanvas.fold.offc-xs-9 {
+.drawer.fold.dw-xs-9 {
   margin-left: -75%;
   margin-right: 0;
 }
-.offcanvas.folding.offc-xs-9 {
+.drawer.folding.dw-xs-9 {
   position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
@@ -288,27 +276,27 @@ body.has-offcanvas {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-9 {
+.drawer.drawer-right.fold.dw-xs-9 {
   margin-left: 0;
   margin-right: -75%;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-9 {
+.drawer.drawer-right.fold.dw-xs-9 {
   -webkit-transition-property: margin-right;
   transition-property: margin-right;
 }
-.offcanvas.fold.open.offc-xs-9,
-.offcanvas.offcanvas-right.fold.open.offc-xs-9 {
+.drawer.fold.open.dw-xs-9,
+.drawer.drawer-right.fold.open.dw-xs-9 {
   margin-right: 0;
   margin-left: 0;
 }
-.offc-xs-8 {
+.dw-xs-8 {
   width: 66.66666667%;
 }
-.offcanvas.fold.offc-xs-8 {
+.drawer.fold.dw-xs-8 {
   margin-left: -66.66666667%;
   margin-right: 0;
 }
-.offcanvas.folding.offc-xs-8 {
+.drawer.folding.dw-xs-8 {
   position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
@@ -318,27 +306,27 @@ body.has-offcanvas {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-8 {
+.drawer.drawer-right.fold.dw-xs-8 {
   margin-left: 0;
   margin-right: -66.66666667%;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-8 {
+.drawer.drawer-right.fold.dw-xs-8 {
   -webkit-transition-property: margin-right;
   transition-property: margin-right;
 }
-.offcanvas.fold.open.offc-xs-8,
-.offcanvas.offcanvas-right.fold.open.offc-xs-8 {
+.drawer.fold.open.dw-xs-8,
+.drawer.drawer-right.fold.open.dw-xs-8 {
   margin-right: 0;
   margin-left: 0;
 }
-.offc-xs-7 {
+.dw-xs-7 {
   width: 58.33333333%;
 }
-.offcanvas.fold.offc-xs-7 {
+.drawer.fold.dw-xs-7 {
   margin-left: -58.33333333%;
   margin-right: 0;
 }
-.offcanvas.folding.offc-xs-7 {
+.drawer.folding.dw-xs-7 {
   position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
@@ -348,27 +336,27 @@ body.has-offcanvas {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-7 {
+.drawer.drawer-right.fold.dw-xs-7 {
   margin-left: 0;
   margin-right: -58.33333333%;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-7 {
+.drawer.drawer-right.fold.dw-xs-7 {
   -webkit-transition-property: margin-right;
   transition-property: margin-right;
 }
-.offcanvas.fold.open.offc-xs-7,
-.offcanvas.offcanvas-right.fold.open.offc-xs-7 {
+.drawer.fold.open.dw-xs-7,
+.drawer.drawer-right.fold.open.dw-xs-7 {
   margin-right: 0;
   margin-left: 0;
 }
-.offc-xs-6 {
+.dw-xs-6 {
   width: 50%;
 }
-.offcanvas.fold.offc-xs-6 {
+.drawer.fold.dw-xs-6 {
   margin-left: -50%;
   margin-right: 0;
 }
-.offcanvas.folding.offc-xs-6 {
+.drawer.folding.dw-xs-6 {
   position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
@@ -378,27 +366,27 @@ body.has-offcanvas {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-6 {
+.drawer.drawer-right.fold.dw-xs-6 {
   margin-left: 0;
   margin-right: -50%;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-6 {
+.drawer.drawer-right.fold.dw-xs-6 {
   -webkit-transition-property: margin-right;
   transition-property: margin-right;
 }
-.offcanvas.fold.open.offc-xs-6,
-.offcanvas.offcanvas-right.fold.open.offc-xs-6 {
+.drawer.fold.open.dw-xs-6,
+.drawer.drawer-right.fold.open.dw-xs-6 {
   margin-right: 0;
   margin-left: 0;
 }
-.offc-xs-5 {
+.dw-xs-5 {
   width: 41.66666667%;
 }
-.offcanvas.fold.offc-xs-5 {
+.drawer.fold.dw-xs-5 {
   margin-left: -41.66666667%;
   margin-right: 0;
 }
-.offcanvas.folding.offc-xs-5 {
+.drawer.folding.dw-xs-5 {
   position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
@@ -408,27 +396,27 @@ body.has-offcanvas {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-5 {
+.drawer.drawer-right.fold.dw-xs-5 {
   margin-left: 0;
   margin-right: -41.66666667%;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-5 {
+.drawer.drawer-right.fold.dw-xs-5 {
   -webkit-transition-property: margin-right;
   transition-property: margin-right;
 }
-.offcanvas.fold.open.offc-xs-5,
-.offcanvas.offcanvas-right.fold.open.offc-xs-5 {
+.drawer.fold.open.dw-xs-5,
+.drawer.drawer-right.fold.open.dw-xs-5 {
   margin-right: 0;
   margin-left: 0;
 }
-.offc-xs-4 {
+.dw-xs-4 {
   width: 33.33333333%;
 }
-.offcanvas.fold.offc-xs-4 {
+.drawer.fold.dw-xs-4 {
   margin-left: -33.33333333%;
   margin-right: 0;
 }
-.offcanvas.folding.offc-xs-4 {
+.drawer.folding.dw-xs-4 {
   position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
@@ -438,27 +426,27 @@ body.has-offcanvas {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-4 {
+.drawer.drawer-right.fold.dw-xs-4 {
   margin-left: 0;
   margin-right: -33.33333333%;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-4 {
+.drawer.drawer-right.fold.dw-xs-4 {
   -webkit-transition-property: margin-right;
   transition-property: margin-right;
 }
-.offcanvas.fold.open.offc-xs-4,
-.offcanvas.offcanvas-right.fold.open.offc-xs-4 {
+.drawer.fold.open.dw-xs-4,
+.drawer.drawer-right.fold.open.dw-xs-4 {
   margin-right: 0;
   margin-left: 0;
 }
-.offc-xs-3 {
+.dw-xs-3 {
   width: 25%;
 }
-.offcanvas.fold.offc-xs-3 {
+.drawer.fold.dw-xs-3 {
   margin-left: -25%;
   margin-right: 0;
 }
-.offcanvas.folding.offc-xs-3 {
+.drawer.folding.dw-xs-3 {
   position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
@@ -468,27 +456,27 @@ body.has-offcanvas {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-3 {
+.drawer.drawer-right.fold.dw-xs-3 {
   margin-left: 0;
   margin-right: -25%;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-3 {
+.drawer.drawer-right.fold.dw-xs-3 {
   -webkit-transition-property: margin-right;
   transition-property: margin-right;
 }
-.offcanvas.fold.open.offc-xs-3,
-.offcanvas.offcanvas-right.fold.open.offc-xs-3 {
+.drawer.fold.open.dw-xs-3,
+.drawer.drawer-right.fold.open.dw-xs-3 {
   margin-right: 0;
   margin-left: 0;
 }
-.offc-xs-2 {
+.dw-xs-2 {
   width: 16.66666667%;
 }
-.offcanvas.fold.offc-xs-2 {
+.drawer.fold.dw-xs-2 {
   margin-left: -16.66666667%;
   margin-right: 0;
 }
-.offcanvas.folding.offc-xs-2 {
+.drawer.folding.dw-xs-2 {
   position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
@@ -498,27 +486,27 @@ body.has-offcanvas {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-2 {
+.drawer.drawer-right.fold.dw-xs-2 {
   margin-left: 0;
   margin-right: -16.66666667%;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-2 {
+.drawer.drawer-right.fold.dw-xs-2 {
   -webkit-transition-property: margin-right;
   transition-property: margin-right;
 }
-.offcanvas.fold.open.offc-xs-2,
-.offcanvas.offcanvas-right.fold.open.offc-xs-2 {
+.drawer.fold.open.dw-xs-2,
+.drawer.drawer-right.fold.open.dw-xs-2 {
   margin-right: 0;
   margin-left: 0;
 }
-.offc-xs-1 {
+.dw-xs-1 {
   width: 8.33333333%;
 }
-.offcanvas.fold.offc-xs-1 {
+.drawer.fold.dw-xs-1 {
   margin-left: -8.33333333%;
   margin-right: 0;
 }
-.offcanvas.folding.offc-xs-1 {
+.drawer.folding.dw-xs-1 {
   position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
@@ -528,28 +516,28 @@ body.has-offcanvas {
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-1 {
+.drawer.drawer-right.fold.dw-xs-1 {
   margin-left: 0;
   margin-right: -8.33333333%;
 }
-.offcanvas.offcanvas-right.fold.offc-xs-1 {
+.drawer.drawer-right.fold.dw-xs-1 {
   -webkit-transition-property: margin-right;
   transition-property: margin-right;
 }
-.offcanvas.fold.open.offc-xs-1,
-.offcanvas.offcanvas-right.fold.open.offc-xs-1 {
+.drawer.fold.open.dw-xs-1,
+.drawer.drawer-right.fold.open.dw-xs-1 {
   margin-right: 0;
   margin-left: 0;
 }
 @media (min-width: 768px) {
-  .offc-sm-12 {
+  .dw-sm-12 {
     width: 100%;
   }
-  .offcanvas.fold.offc-sm-12 {
+  .drawer.fold.dw-sm-12 {
     margin-left: -100%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-sm-12 {
+  .drawer.folding.dw-sm-12 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -559,27 +547,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-12 {
+  .drawer.drawer-right.fold.dw-sm-12 {
     margin-left: 0;
     margin-right: -100%;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-12 {
+  .drawer.drawer-right.fold.dw-sm-12 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-sm-12,
-  .offcanvas.offcanvas-right.fold.open.offc-sm-12 {
+  .drawer.fold.open.dw-sm-12,
+  .drawer.drawer-right.fold.open.dw-sm-12 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-sm-11 {
+  .dw-sm-11 {
     width: 91.66666667%;
   }
-  .offcanvas.fold.offc-sm-11 {
+  .drawer.fold.dw-sm-11 {
     margin-left: -91.66666667%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-sm-11 {
+  .drawer.folding.dw-sm-11 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -589,27 +577,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-11 {
+  .drawer.drawer-right.fold.dw-sm-11 {
     margin-left: 0;
     margin-right: -91.66666667%;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-11 {
+  .drawer.drawer-right.fold.dw-sm-11 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-sm-11,
-  .offcanvas.offcanvas-right.fold.open.offc-sm-11 {
+  .drawer.fold.open.dw-sm-11,
+  .drawer.drawer-right.fold.open.dw-sm-11 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-sm-10 {
+  .dw-sm-10 {
     width: 83.33333333%;
   }
-  .offcanvas.fold.offc-sm-10 {
+  .drawer.fold.dw-sm-10 {
     margin-left: -83.33333333%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-sm-10 {
+  .drawer.folding.dw-sm-10 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -619,27 +607,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-10 {
+  .drawer.drawer-right.fold.dw-sm-10 {
     margin-left: 0;
     margin-right: -83.33333333%;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-10 {
+  .drawer.drawer-right.fold.dw-sm-10 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-sm-10,
-  .offcanvas.offcanvas-right.fold.open.offc-sm-10 {
+  .drawer.fold.open.dw-sm-10,
+  .drawer.drawer-right.fold.open.dw-sm-10 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-sm-9 {
+  .dw-sm-9 {
     width: 75%;
   }
-  .offcanvas.fold.offc-sm-9 {
+  .drawer.fold.dw-sm-9 {
     margin-left: -75%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-sm-9 {
+  .drawer.folding.dw-sm-9 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -649,27 +637,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-9 {
+  .drawer.drawer-right.fold.dw-sm-9 {
     margin-left: 0;
     margin-right: -75%;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-9 {
+  .drawer.drawer-right.fold.dw-sm-9 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-sm-9,
-  .offcanvas.offcanvas-right.fold.open.offc-sm-9 {
+  .drawer.fold.open.dw-sm-9,
+  .drawer.drawer-right.fold.open.dw-sm-9 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-sm-8 {
+  .dw-sm-8 {
     width: 66.66666667%;
   }
-  .offcanvas.fold.offc-sm-8 {
+  .drawer.fold.dw-sm-8 {
     margin-left: -66.66666667%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-sm-8 {
+  .drawer.folding.dw-sm-8 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -679,27 +667,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-8 {
+  .drawer.drawer-right.fold.dw-sm-8 {
     margin-left: 0;
     margin-right: -66.66666667%;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-8 {
+  .drawer.drawer-right.fold.dw-sm-8 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-sm-8,
-  .offcanvas.offcanvas-right.fold.open.offc-sm-8 {
+  .drawer.fold.open.dw-sm-8,
+  .drawer.drawer-right.fold.open.dw-sm-8 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-sm-7 {
+  .dw-sm-7 {
     width: 58.33333333%;
   }
-  .offcanvas.fold.offc-sm-7 {
+  .drawer.fold.dw-sm-7 {
     margin-left: -58.33333333%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-sm-7 {
+  .drawer.folding.dw-sm-7 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -709,27 +697,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-7 {
+  .drawer.drawer-right.fold.dw-sm-7 {
     margin-left: 0;
     margin-right: -58.33333333%;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-7 {
+  .drawer.drawer-right.fold.dw-sm-7 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-sm-7,
-  .offcanvas.offcanvas-right.fold.open.offc-sm-7 {
+  .drawer.fold.open.dw-sm-7,
+  .drawer.drawer-right.fold.open.dw-sm-7 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-sm-6 {
+  .dw-sm-6 {
     width: 50%;
   }
-  .offcanvas.fold.offc-sm-6 {
+  .drawer.fold.dw-sm-6 {
     margin-left: -50%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-sm-6 {
+  .drawer.folding.dw-sm-6 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -739,27 +727,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-6 {
+  .drawer.drawer-right.fold.dw-sm-6 {
     margin-left: 0;
     margin-right: -50%;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-6 {
+  .drawer.drawer-right.fold.dw-sm-6 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-sm-6,
-  .offcanvas.offcanvas-right.fold.open.offc-sm-6 {
+  .drawer.fold.open.dw-sm-6,
+  .drawer.drawer-right.fold.open.dw-sm-6 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-sm-5 {
+  .dw-sm-5 {
     width: 41.66666667%;
   }
-  .offcanvas.fold.offc-sm-5 {
+  .drawer.fold.dw-sm-5 {
     margin-left: -41.66666667%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-sm-5 {
+  .drawer.folding.dw-sm-5 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -769,27 +757,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-5 {
+  .drawer.drawer-right.fold.dw-sm-5 {
     margin-left: 0;
     margin-right: -41.66666667%;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-5 {
+  .drawer.drawer-right.fold.dw-sm-5 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-sm-5,
-  .offcanvas.offcanvas-right.fold.open.offc-sm-5 {
+  .drawer.fold.open.dw-sm-5,
+  .drawer.drawer-right.fold.open.dw-sm-5 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-sm-4 {
+  .dw-sm-4 {
     width: 33.33333333%;
   }
-  .offcanvas.fold.offc-sm-4 {
+  .drawer.fold.dw-sm-4 {
     margin-left: -33.33333333%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-sm-4 {
+  .drawer.folding.dw-sm-4 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -799,27 +787,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-4 {
+  .drawer.drawer-right.fold.dw-sm-4 {
     margin-left: 0;
     margin-right: -33.33333333%;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-4 {
+  .drawer.drawer-right.fold.dw-sm-4 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-sm-4,
-  .offcanvas.offcanvas-right.fold.open.offc-sm-4 {
+  .drawer.fold.open.dw-sm-4,
+  .drawer.drawer-right.fold.open.dw-sm-4 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-sm-3 {
+  .dw-sm-3 {
     width: 25%;
   }
-  .offcanvas.fold.offc-sm-3 {
+  .drawer.fold.dw-sm-3 {
     margin-left: -25%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-sm-3 {
+  .drawer.folding.dw-sm-3 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -829,27 +817,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-3 {
+  .drawer.drawer-right.fold.dw-sm-3 {
     margin-left: 0;
     margin-right: -25%;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-3 {
+  .drawer.drawer-right.fold.dw-sm-3 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-sm-3,
-  .offcanvas.offcanvas-right.fold.open.offc-sm-3 {
+  .drawer.fold.open.dw-sm-3,
+  .drawer.drawer-right.fold.open.dw-sm-3 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-sm-2 {
+  .dw-sm-2 {
     width: 16.66666667%;
   }
-  .offcanvas.fold.offc-sm-2 {
+  .drawer.fold.dw-sm-2 {
     margin-left: -16.66666667%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-sm-2 {
+  .drawer.folding.dw-sm-2 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -859,27 +847,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-2 {
+  .drawer.drawer-right.fold.dw-sm-2 {
     margin-left: 0;
     margin-right: -16.66666667%;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-2 {
+  .drawer.drawer-right.fold.dw-sm-2 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-sm-2,
-  .offcanvas.offcanvas-right.fold.open.offc-sm-2 {
+  .drawer.fold.open.dw-sm-2,
+  .drawer.drawer-right.fold.open.dw-sm-2 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-sm-1 {
+  .dw-sm-1 {
     width: 8.33333333%;
   }
-  .offcanvas.fold.offc-sm-1 {
+  .drawer.fold.dw-sm-1 {
     margin-left: -8.33333333%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-sm-1 {
+  .drawer.folding.dw-sm-1 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -889,29 +877,29 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-1 {
+  .drawer.drawer-right.fold.dw-sm-1 {
     margin-left: 0;
     margin-right: -8.33333333%;
   }
-  .offcanvas.offcanvas-right.fold.offc-sm-1 {
+  .drawer.drawer-right.fold.dw-sm-1 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-sm-1,
-  .offcanvas.offcanvas-right.fold.open.offc-sm-1 {
+  .drawer.fold.open.dw-sm-1,
+  .drawer.drawer-right.fold.open.dw-sm-1 {
     margin-right: 0;
     margin-left: 0;
   }
 }
 @media (min-width: 992px) {
-  .offc-md-12 {
+  .dw-md-12 {
     width: 100%;
   }
-  .offcanvas.fold.offc-md-12 {
+  .drawer.fold.dw-md-12 {
     margin-left: -100%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-md-12 {
+  .drawer.folding.dw-md-12 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -921,27 +909,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-12 {
+  .drawer.drawer-right.fold.dw-md-12 {
     margin-left: 0;
     margin-right: -100%;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-12 {
+  .drawer.drawer-right.fold.dw-md-12 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-md-12,
-  .offcanvas.offcanvas-right.fold.open.offc-md-12 {
+  .drawer.fold.open.dw-md-12,
+  .drawer.drawer-right.fold.open.dw-md-12 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-md-11 {
+  .dw-md-11 {
     width: 91.66666667%;
   }
-  .offcanvas.fold.offc-md-11 {
+  .drawer.fold.dw-md-11 {
     margin-left: -91.66666667%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-md-11 {
+  .drawer.folding.dw-md-11 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -951,27 +939,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-11 {
+  .drawer.drawer-right.fold.dw-md-11 {
     margin-left: 0;
     margin-right: -91.66666667%;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-11 {
+  .drawer.drawer-right.fold.dw-md-11 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-md-11,
-  .offcanvas.offcanvas-right.fold.open.offc-md-11 {
+  .drawer.fold.open.dw-md-11,
+  .drawer.drawer-right.fold.open.dw-md-11 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-md-10 {
+  .dw-md-10 {
     width: 83.33333333%;
   }
-  .offcanvas.fold.offc-md-10 {
+  .drawer.fold.dw-md-10 {
     margin-left: -83.33333333%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-md-10 {
+  .drawer.folding.dw-md-10 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -981,27 +969,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-10 {
+  .drawer.drawer-right.fold.dw-md-10 {
     margin-left: 0;
     margin-right: -83.33333333%;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-10 {
+  .drawer.drawer-right.fold.dw-md-10 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-md-10,
-  .offcanvas.offcanvas-right.fold.open.offc-md-10 {
+  .drawer.fold.open.dw-md-10,
+  .drawer.drawer-right.fold.open.dw-md-10 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-md-9 {
+  .dw-md-9 {
     width: 75%;
   }
-  .offcanvas.fold.offc-md-9 {
+  .drawer.fold.dw-md-9 {
     margin-left: -75%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-md-9 {
+  .drawer.folding.dw-md-9 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1011,27 +999,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-9 {
+  .drawer.drawer-right.fold.dw-md-9 {
     margin-left: 0;
     margin-right: -75%;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-9 {
+  .drawer.drawer-right.fold.dw-md-9 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-md-9,
-  .offcanvas.offcanvas-right.fold.open.offc-md-9 {
+  .drawer.fold.open.dw-md-9,
+  .drawer.drawer-right.fold.open.dw-md-9 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-md-8 {
+  .dw-md-8 {
     width: 66.66666667%;
   }
-  .offcanvas.fold.offc-md-8 {
+  .drawer.fold.dw-md-8 {
     margin-left: -66.66666667%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-md-8 {
+  .drawer.folding.dw-md-8 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1041,27 +1029,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-8 {
+  .drawer.drawer-right.fold.dw-md-8 {
     margin-left: 0;
     margin-right: -66.66666667%;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-8 {
+  .drawer.drawer-right.fold.dw-md-8 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-md-8,
-  .offcanvas.offcanvas-right.fold.open.offc-md-8 {
+  .drawer.fold.open.dw-md-8,
+  .drawer.drawer-right.fold.open.dw-md-8 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-md-7 {
+  .dw-md-7 {
     width: 58.33333333%;
   }
-  .offcanvas.fold.offc-md-7 {
+  .drawer.fold.dw-md-7 {
     margin-left: -58.33333333%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-md-7 {
+  .drawer.folding.dw-md-7 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1071,27 +1059,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-7 {
+  .drawer.drawer-right.fold.dw-md-7 {
     margin-left: 0;
     margin-right: -58.33333333%;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-7 {
+  .drawer.drawer-right.fold.dw-md-7 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-md-7,
-  .offcanvas.offcanvas-right.fold.open.offc-md-7 {
+  .drawer.fold.open.dw-md-7,
+  .drawer.drawer-right.fold.open.dw-md-7 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-md-6 {
+  .dw-md-6 {
     width: 50%;
   }
-  .offcanvas.fold.offc-md-6 {
+  .drawer.fold.dw-md-6 {
     margin-left: -50%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-md-6 {
+  .drawer.folding.dw-md-6 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1101,27 +1089,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-6 {
+  .drawer.drawer-right.fold.dw-md-6 {
     margin-left: 0;
     margin-right: -50%;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-6 {
+  .drawer.drawer-right.fold.dw-md-6 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-md-6,
-  .offcanvas.offcanvas-right.fold.open.offc-md-6 {
+  .drawer.fold.open.dw-md-6,
+  .drawer.drawer-right.fold.open.dw-md-6 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-md-5 {
+  .dw-md-5 {
     width: 41.66666667%;
   }
-  .offcanvas.fold.offc-md-5 {
+  .drawer.fold.dw-md-5 {
     margin-left: -41.66666667%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-md-5 {
+  .drawer.folding.dw-md-5 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1131,27 +1119,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-5 {
+  .drawer.drawer-right.fold.dw-md-5 {
     margin-left: 0;
     margin-right: -41.66666667%;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-5 {
+  .drawer.drawer-right.fold.dw-md-5 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-md-5,
-  .offcanvas.offcanvas-right.fold.open.offc-md-5 {
+  .drawer.fold.open.dw-md-5,
+  .drawer.drawer-right.fold.open.dw-md-5 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-md-4 {
+  .dw-md-4 {
     width: 33.33333333%;
   }
-  .offcanvas.fold.offc-md-4 {
+  .drawer.fold.dw-md-4 {
     margin-left: -33.33333333%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-md-4 {
+  .drawer.folding.dw-md-4 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1161,27 +1149,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-4 {
+  .drawer.drawer-right.fold.dw-md-4 {
     margin-left: 0;
     margin-right: -33.33333333%;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-4 {
+  .drawer.drawer-right.fold.dw-md-4 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-md-4,
-  .offcanvas.offcanvas-right.fold.open.offc-md-4 {
+  .drawer.fold.open.dw-md-4,
+  .drawer.drawer-right.fold.open.dw-md-4 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-md-3 {
+  .dw-md-3 {
     width: 25%;
   }
-  .offcanvas.fold.offc-md-3 {
+  .drawer.fold.dw-md-3 {
     margin-left: -25%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-md-3 {
+  .drawer.folding.dw-md-3 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1191,27 +1179,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-3 {
+  .drawer.drawer-right.fold.dw-md-3 {
     margin-left: 0;
     margin-right: -25%;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-3 {
+  .drawer.drawer-right.fold.dw-md-3 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-md-3,
-  .offcanvas.offcanvas-right.fold.open.offc-md-3 {
+  .drawer.fold.open.dw-md-3,
+  .drawer.drawer-right.fold.open.dw-md-3 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-md-2 {
+  .dw-md-2 {
     width: 16.66666667%;
   }
-  .offcanvas.fold.offc-md-2 {
+  .drawer.fold.dw-md-2 {
     margin-left: -16.66666667%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-md-2 {
+  .drawer.folding.dw-md-2 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1221,27 +1209,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-2 {
+  .drawer.drawer-right.fold.dw-md-2 {
     margin-left: 0;
     margin-right: -16.66666667%;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-2 {
+  .drawer.drawer-right.fold.dw-md-2 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-md-2,
-  .offcanvas.offcanvas-right.fold.open.offc-md-2 {
+  .drawer.fold.open.dw-md-2,
+  .drawer.drawer-right.fold.open.dw-md-2 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-md-1 {
+  .dw-md-1 {
     width: 8.33333333%;
   }
-  .offcanvas.fold.offc-md-1 {
+  .drawer.fold.dw-md-1 {
     margin-left: -8.33333333%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-md-1 {
+  .drawer.folding.dw-md-1 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1251,29 +1239,29 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-1 {
+  .drawer.drawer-right.fold.dw-md-1 {
     margin-left: 0;
     margin-right: -8.33333333%;
   }
-  .offcanvas.offcanvas-right.fold.offc-md-1 {
+  .drawer.drawer-right.fold.dw-md-1 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-md-1,
-  .offcanvas.offcanvas-right.fold.open.offc-md-1 {
+  .drawer.fold.open.dw-md-1,
+  .drawer.drawer-right.fold.open.dw-md-1 {
     margin-right: 0;
     margin-left: 0;
   }
 }
 @media (min-width: 1200px) {
-  .offc-lg-12 {
+  .dw-lg-12 {
     width: 100%;
   }
-  .offcanvas.fold.offc-lg-12 {
+  .drawer.fold.dw-lg-12 {
     margin-left: -100%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-lg-12 {
+  .drawer.folding.dw-lg-12 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1283,27 +1271,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-12 {
+  .drawer.drawer-right.fold.dw-lg-12 {
     margin-left: 0;
     margin-right: -100%;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-12 {
+  .drawer.drawer-right.fold.dw-lg-12 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-lg-12,
-  .offcanvas.offcanvas-right.fold.open.offc-lg-12 {
+  .drawer.fold.open.dw-lg-12,
+  .drawer.drawer-right.fold.open.dw-lg-12 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-lg-11 {
+  .dw-lg-11 {
     width: 91.66666667%;
   }
-  .offcanvas.fold.offc-lg-11 {
+  .drawer.fold.dw-lg-11 {
     margin-left: -91.66666667%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-lg-11 {
+  .drawer.folding.dw-lg-11 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1313,27 +1301,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-11 {
+  .drawer.drawer-right.fold.dw-lg-11 {
     margin-left: 0;
     margin-right: -91.66666667%;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-11 {
+  .drawer.drawer-right.fold.dw-lg-11 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-lg-11,
-  .offcanvas.offcanvas-right.fold.open.offc-lg-11 {
+  .drawer.fold.open.dw-lg-11,
+  .drawer.drawer-right.fold.open.dw-lg-11 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-lg-10 {
+  .dw-lg-10 {
     width: 83.33333333%;
   }
-  .offcanvas.fold.offc-lg-10 {
+  .drawer.fold.dw-lg-10 {
     margin-left: -83.33333333%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-lg-10 {
+  .drawer.folding.dw-lg-10 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1343,27 +1331,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-10 {
+  .drawer.drawer-right.fold.dw-lg-10 {
     margin-left: 0;
     margin-right: -83.33333333%;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-10 {
+  .drawer.drawer-right.fold.dw-lg-10 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-lg-10,
-  .offcanvas.offcanvas-right.fold.open.offc-lg-10 {
+  .drawer.fold.open.dw-lg-10,
+  .drawer.drawer-right.fold.open.dw-lg-10 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-lg-9 {
+  .dw-lg-9 {
     width: 75%;
   }
-  .offcanvas.fold.offc-lg-9 {
+  .drawer.fold.dw-lg-9 {
     margin-left: -75%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-lg-9 {
+  .drawer.folding.dw-lg-9 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1373,27 +1361,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-9 {
+  .drawer.drawer-right.fold.dw-lg-9 {
     margin-left: 0;
     margin-right: -75%;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-9 {
+  .drawer.drawer-right.fold.dw-lg-9 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-lg-9,
-  .offcanvas.offcanvas-right.fold.open.offc-lg-9 {
+  .drawer.fold.open.dw-lg-9,
+  .drawer.drawer-right.fold.open.dw-lg-9 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-lg-8 {
+  .dw-lg-8 {
     width: 66.66666667%;
   }
-  .offcanvas.fold.offc-lg-8 {
+  .drawer.fold.dw-lg-8 {
     margin-left: -66.66666667%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-lg-8 {
+  .drawer.folding.dw-lg-8 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1403,27 +1391,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-8 {
+  .drawer.drawer-right.fold.dw-lg-8 {
     margin-left: 0;
     margin-right: -66.66666667%;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-8 {
+  .drawer.drawer-right.fold.dw-lg-8 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-lg-8,
-  .offcanvas.offcanvas-right.fold.open.offc-lg-8 {
+  .drawer.fold.open.dw-lg-8,
+  .drawer.drawer-right.fold.open.dw-lg-8 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-lg-7 {
+  .dw-lg-7 {
     width: 58.33333333%;
   }
-  .offcanvas.fold.offc-lg-7 {
+  .drawer.fold.dw-lg-7 {
     margin-left: -58.33333333%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-lg-7 {
+  .drawer.folding.dw-lg-7 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1433,27 +1421,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-7 {
+  .drawer.drawer-right.fold.dw-lg-7 {
     margin-left: 0;
     margin-right: -58.33333333%;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-7 {
+  .drawer.drawer-right.fold.dw-lg-7 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-lg-7,
-  .offcanvas.offcanvas-right.fold.open.offc-lg-7 {
+  .drawer.fold.open.dw-lg-7,
+  .drawer.drawer-right.fold.open.dw-lg-7 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-lg-6 {
+  .dw-lg-6 {
     width: 50%;
   }
-  .offcanvas.fold.offc-lg-6 {
+  .drawer.fold.dw-lg-6 {
     margin-left: -50%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-lg-6 {
+  .drawer.folding.dw-lg-6 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1463,27 +1451,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-6 {
+  .drawer.drawer-right.fold.dw-lg-6 {
     margin-left: 0;
     margin-right: -50%;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-6 {
+  .drawer.drawer-right.fold.dw-lg-6 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-lg-6,
-  .offcanvas.offcanvas-right.fold.open.offc-lg-6 {
+  .drawer.fold.open.dw-lg-6,
+  .drawer.drawer-right.fold.open.dw-lg-6 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-lg-5 {
+  .dw-lg-5 {
     width: 41.66666667%;
   }
-  .offcanvas.fold.offc-lg-5 {
+  .drawer.fold.dw-lg-5 {
     margin-left: -41.66666667%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-lg-5 {
+  .drawer.folding.dw-lg-5 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1493,27 +1481,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-5 {
+  .drawer.drawer-right.fold.dw-lg-5 {
     margin-left: 0;
     margin-right: -41.66666667%;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-5 {
+  .drawer.drawer-right.fold.dw-lg-5 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-lg-5,
-  .offcanvas.offcanvas-right.fold.open.offc-lg-5 {
+  .drawer.fold.open.dw-lg-5,
+  .drawer.drawer-right.fold.open.dw-lg-5 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-lg-4 {
+  .dw-lg-4 {
     width: 33.33333333%;
   }
-  .offcanvas.fold.offc-lg-4 {
+  .drawer.fold.dw-lg-4 {
     margin-left: -33.33333333%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-lg-4 {
+  .drawer.folding.dw-lg-4 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1523,27 +1511,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-4 {
+  .drawer.drawer-right.fold.dw-lg-4 {
     margin-left: 0;
     margin-right: -33.33333333%;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-4 {
+  .drawer.drawer-right.fold.dw-lg-4 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-lg-4,
-  .offcanvas.offcanvas-right.fold.open.offc-lg-4 {
+  .drawer.fold.open.dw-lg-4,
+  .drawer.drawer-right.fold.open.dw-lg-4 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-lg-3 {
+  .dw-lg-3 {
     width: 25%;
   }
-  .offcanvas.fold.offc-lg-3 {
+  .drawer.fold.dw-lg-3 {
     margin-left: -25%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-lg-3 {
+  .drawer.folding.dw-lg-3 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1553,27 +1541,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-3 {
+  .drawer.drawer-right.fold.dw-lg-3 {
     margin-left: 0;
     margin-right: -25%;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-3 {
+  .drawer.drawer-right.fold.dw-lg-3 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-lg-3,
-  .offcanvas.offcanvas-right.fold.open.offc-lg-3 {
+  .drawer.fold.open.dw-lg-3,
+  .drawer.drawer-right.fold.open.dw-lg-3 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-lg-2 {
+  .dw-lg-2 {
     width: 16.66666667%;
   }
-  .offcanvas.fold.offc-lg-2 {
+  .drawer.fold.dw-lg-2 {
     margin-left: -16.66666667%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-lg-2 {
+  .drawer.folding.dw-lg-2 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1583,27 +1571,27 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-2 {
+  .drawer.drawer-right.fold.dw-lg-2 {
     margin-left: 0;
     margin-right: -16.66666667%;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-2 {
+  .drawer.drawer-right.fold.dw-lg-2 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-lg-2,
-  .offcanvas.offcanvas-right.fold.open.offc-lg-2 {
+  .drawer.fold.open.dw-lg-2,
+  .drawer.drawer-right.fold.open.dw-lg-2 {
     margin-right: 0;
     margin-left: 0;
   }
-  .offc-lg-1 {
+  .dw-lg-1 {
     width: 8.33333333%;
   }
-  .offcanvas.fold.offc-lg-1 {
+  .drawer.fold.dw-lg-1 {
     margin-left: -8.33333333%;
     margin-right: 0;
   }
-  .offcanvas.folding.offc-lg-1 {
+  .drawer.folding.dw-lg-1 {
     position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
@@ -1613,16 +1601,16 @@ body.has-offcanvas {
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-1 {
+  .drawer.drawer-right.fold.dw-lg-1 {
     margin-left: 0;
     margin-right: -8.33333333%;
   }
-  .offcanvas.offcanvas-right.fold.offc-lg-1 {
+  .drawer.drawer-right.fold.dw-lg-1 {
     -webkit-transition-property: margin-right;
     transition-property: margin-right;
   }
-  .offcanvas.fold.open.offc-lg-1,
-  .offcanvas.offcanvas-right.fold.open.offc-lg-1 {
+  .drawer.fold.open.dw-lg-1,
+  .drawer.drawer-right.fold.open.dw-lg-1 {
     margin-right: 0;
     margin-left: 0;
   }

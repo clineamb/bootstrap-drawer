@@ -1,0 +1,54 @@
+//  You can either include this file in your less after
+//  variables.less and before offcanvas.less, or you 
+//  just copy+paste these to bootstrap's usual variables.less
+// -------------------------------------------------------------------------
+
+
+//== Off Canvas
+//
+//## Customizes the `.drawer` component with basic values, each used across all drawer variations.
+
+// Basics of Off Canvas
+@half-gutter:                       (@grid-gutter-width / 2);
+
+@drawer-bg:                         #f8f8f8;
+@drawer-color:                      @gray-dark;
+@drawer-border-color:               darken(@drawer-bg, 10%);
+@drawer-link-color:                 @link-color;
+@drawer-link-hover-color:           darken(@drawer-link-color, 15%);
+
+@drawer-base-padding:               10px;
+@zindex-drawer:                     @zindex-navbar-fixed + 5;
+
+@drawer-heading-padding:            @drawer-base-padding @half-gutter;
+@drawer-body-padding:               @drawer-base-padding @half-gutter;
+@drawer-footer-padding:             @drawer-base-padding @half-gutter;
+
+// Off Canvas Controls
+@drawer-ctrls-default-cols:         2;
+@drawer-ctrls-default-width:        @drawer-ctrls-default-cols / @grid-columns * 100%;
+@drawer-ctrls-padding:              @drawer-base-padding;
+
+// Off Canvas nav styles
+@drawer-nav-border-radius:          @nav-pills-border-radius;
+@drawer-nav-padding:                @drawer-base-padding @drawer-base-padding @drawer-base-padding 0;
+
+@drawer-nav-link-padding:           @drawer-base-padding @half-gutter;
+@drawer-nav-link-color:             #777;
+@drawer-nav-link-hover-color:       darken(@drawer-nav-link-color, 15%);
+@drawer-nav-link-hover-bg:          lighten(@drawer-bg, 15%);
+
+@drawer-nav-padding:                @drawer-base-padding @half-gutter;
+@drawer-navfull-padding:            @drawer-base-padding @half-gutter;
+
+
+// Inverse Off Canvas
+@drawer-inverse-bg:                 #333;
+@drawer-inverse-color:              @gray-lighter;
+@drawer-inverse-border-color:       darken(@drawer-inverse-bg, 10%);
+@drawer-inverse-link-color:         lighten(@link-color, 25%);
+@drawer-inverse-link-hover-color:   darken(@drawer-inverse-link-color, 15%);
+
+@drawer-inverse-nav-link-color:          #fff;
+@drawer-inverse-nav-link-hover-color:    @gray-lighter;
+@drawer-inverse-nav-link-hover-bg:       darken(@drawer-inverse-bg, 10%);
