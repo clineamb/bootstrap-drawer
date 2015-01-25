@@ -6,53 +6,55 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>bootstrap.offcanvas example</title>
+        <title>bootstrap-drawer example</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,800' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="bootstrap.offcanvas.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap.drawer.css">
         <style>
             body, body * {
                 font-family: 'Open Sans', Arial, sans-serif;
             }
 
-            #offcanvas-page {
+            #drawer-page {
                 padding-top: 20px;
                 padding-bottom: 20px;
             }
         </style>
     </head>
-    <body class="has-offcanvas">
-        <div id="offcanvasExample" class="offcanvas offc-xs-10 offc-sm-6 offc-md-4 fold" aria-labelledby="offcanvasExample">
-            <div class="offcanvas-controls">
-                <a href="#offcanvasExample" data-toggle="offcanvas" href="#offcanvasExample" aria-foldedopen="false" aria-controls="offcanvasExample" class="btn btn-primary btn-sm">Menu</a>
+    <body class="has-drawer">
+        <div id="drawerExample" class="drawer dw-xs-10 dw-sm-6 dw-md-4 fold" aria-labelledby="drawerExample">
+            <div class="drawer-controls">
+                <a href="#drawerExample" data-toggle="drawer" href="#drawerExample" aria-foldedopen="false" aria-controls="drawerExample" class="btn btn-primary btn-sm">Menu</a>
             </div>
-            <div class="offcanvas-contents">
-                <div class="offcanvas-heading">
-                    <h2 class="offcanvas-title">Menu</h2>
+            <div class="drawer-contents">
+                <div class="drawer-heading">
+                    <h2 class="drawer-title">Menu</h2>
                 </div>
-                <ul class="offcanvas-nav">
+                <ul class="drawer-nav">
                     <li role="presentation" class="active"><a href="#">Home</a></li>
                     <li role="presentation"><a href="#">Profile</a></li>
                     <li role="presentation"><a href="#">Messages</a></li>
                 </ul>
-                <div class="offcanvas-body">
+                <div class="drawer-body">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                     quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                     consequat.</p>
                     <a href="#">A Regular Link</a>
                 </div>
-                <div class="offcanvas-footer locked text-center">
+                <div class="drawer-footer locked text-center">
                     <small>&copy; Caroline Amaba</small>
                 </div>
             </div>
         </div>
-        <div id="offcanvas-page" class="container">
+        <div id="drawer-page" class="container">
             <div class="jumbotron">
                 <h1>Bootstrap Off-Canvas</h1>
-                <p>I used to call the "off-canvas" style menu a mobile menu "drawer".  Even so, the current bootstrap package (3.2.2) doesn't have any off-canvas elements by default even though it is becomming a growing mobile design trend.  Granted, this might change in the future, but - hey - I made this for now.</p>
+                <p>The more common name for a drawer menu, I learned, is "off-canvas"; but, that name was taken for other packages that also did this.  Even so, the current bootstrap package (3.2.2) doesn't have any off-canvas elements by default even though it is becoming a growing mobile design trend.  Granted, this might change in the future, but - hey - I made this for now.</p>
+                <p>This page contains a basic example of how to use the full page.  See the <a href="http://clineamb.github.io/bootstrap-drawer" target="_blank">documentation page</a> for more details and more examples!</p>
+                <p>If you have any issues or questions, please <a href="https://github.com/clineamb/bootstrap-drawer/issues" target="_blank">check out out the repo and drop an issue</a>.
                 <p>The toggle below uses the programmatic javascript API to help demo that feature.</p>
                 <p><a id="other-toggle" class="btn btn-primary btn-lg" href="#" role="button">Another Toggle!</a></p>
             </div>
@@ -60,12 +62,12 @@
         <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
         <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
         <script src="bootstrap.min.js"></script>
-        <script src="offcanvas.js"></script>
+        <script src="drawer.js"></script>
         <script>
-            $('#offcanvasExample').offcanvas({ toggle: false });
+            $('#drawerExample').drawer({ toggle: false });
 
             $('#other-toggle').click(function() {
-                $('#offcanvasExample').offcanvas('toggle');
+                $('#drawerExample').drawer('toggle');
                 return false;
             });
         </script>

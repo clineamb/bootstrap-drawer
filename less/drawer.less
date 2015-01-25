@@ -1,0 +1,236 @@
+@import "./mixins/drawer-framework";
+@import "./drawer-variables";
+
+
+//
+// Off-Canvas
+// --------------------------------------------------
+
+html {
+    min-height: 100%;
+    height: 100%;
+}
+
+body.has-drawer {
+    min-height: 100%;
+    height: 100%;
+}
+
+.has-drawer {
+    position: relative;
+}
+
+// Base class
+// --------------------------------------------------
+
+
+.drawer {
+    display: block;
+    background-color: @drawer-bg;
+    color: @drawer-color;
+    border-right: 1px solid @drawer-border-color;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: @zindex-drawer;
+    .box-shadow(0 1px 1px rgba(0,0,0,.05));
+
+    &-contents, &-heading, &-body, &-nav, &-footer {
+        display: inherit;
+        margin: 0;
+        width: 100%;
+        position: relative;
+    }
+
+    &.drawer-right {
+        left: auto;
+        right: 0;
+        border-right: none;
+        border-left: 1px solid @drawer-border-color;
+        .box-shadow(0 -1px 1px rgba(0,0,0,.05))
+    }
+
+    &.drawer-inverse {
+        background-color: @drawer-inverse-bg;
+        color: @drawer-inverse-color;
+        border-right: 1px solid @drawer-inverse-border-color;
+
+        &.drawer-right {
+            border-right: 1px solid @drawer-border-color;
+        }
+    }
+}
+
+.drawer-controls {
+    float: right;
+    margin-right: (-1 * @drawer-ctrls-default-width);
+    padding: @drawer-ctrls-padding;
+    height: 100%;
+    position: relative;
+    width: @drawer-ctrls-default-width;
+    z-index: 500;
+}
+
+.drawer-contents {
+    background-color: @drawer-bg;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    @z-index: 100;
+}
+
+.drawer-right {
+    .drawer-controls {
+        float: left;
+        margin-left: -1 * @drawer-ctrls-default-width;
+        margin-right: 0;
+    }
+}
+
+// OFF CANVAS CONTENT STYLES
+
+.drawer-heading {
+    border-bottom: 1px solid @drawer-border-color;
+    padding: @drawer-heading-padding;
+    color: inherit;
+
+    .drawer-title {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.drawer-inner-toggle {
+    position: absolute;
+    top: @drawer-base-padding;
+    right: @drawer-base-padding;
+}
+
+.drawer-body, .drawer-nav {
+    padding: @drawer-body-padding;
+}
+
+.drawer-nav, .drawer-fullnav {
+    padding: @drawer-nav-padding;
+    margin-bottom: 0;
+    list-style: none;
+    &:extend(.clearfix all);
+
+    > li {
+        position: relative;
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+
+        a {
+            color: @drawer-nav-link-color;
+            border-radius: @drawer-nav-border-radius;
+            position: relative;
+            display: block;
+            padding: @drawer-nav-link-padding;
+
+            &:hover, &:focus {
+                color: @drawer-nav-link-hover-color;
+                text-decoration: none;
+                background-color: @drawer-nav-link-hover-bg;
+            }
+        }
+
+        &.active a {
+            color: @drawer-nav-link-hover-color;
+            background-color: @drawer-nav-link-hover-bg;
+        }
+    }
+}
+
+.drawer-fullnav {
+    color: @drawer-inverse-nav-link-color;
+    padding: 0;
+
+    > li {
+        margin-bottom: 0;
+
+        a {
+            border-radius: 0;
+        }
+    }
+}
+
+.drawer.drawer-inverse {
+    .drawer-contents {
+        background-color: @drawer-inverse-bg;
+    }
+
+    .drawer-fullnav, .drawer-nav {
+        > li {
+            a {
+                color: @drawer-inverse-nav-link-color;
+                padding: @drawer-navfull-padding;
+
+                &:hover, &:focus {
+                    color: @drawer-inverse-nav-link-hover-color;
+                    background-color: @drawer-inverse-nav-link-hover-bg;
+                }
+            }
+
+            &.active a {
+                color: @drawer-inverse-nav-link-hover-color;
+                background-color: @drawer-inverse-nav-link-hover-bg;
+
+                &:hover, &:focus {
+                    color: @drawer-inverse-nav-link-hover-color;
+                    background-color: @drawer-inverse-nav-link-hover-bg;
+                }
+            }
+        }
+    }
+}
+
+.drawer-footer {
+    padding: @drawer-footer-padding;
+
+    &.locked {
+        position:   absolute;
+        bottom:     0;
+        left:       0;
+    }
+}
+
+
+.make-drawer-columns();
+
+
+// Extra small grid
+//
+// Columns, offsets, pushes, and pulls for extra small devices like
+// smartphones.
+
+.make-drawer(xs);
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: @screen-sm-min) {
+  .make-drawer(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: @screen-md-min) {
+  .make-drawer(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: @screen-lg-min) {
+  .make-drawer(lg);
+}

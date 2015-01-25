@@ -1,17 +1,15 @@
 {
-  "name": "bootstrap.offcanvas",
+  "name": "bootstrap-drawer",
   "version": "0.9.0",
-  "description": "A Bootstrap add-on to create off-canvas styled navigation",
+  "description": "A Bootstrap add-on to create drawer (off-canvas) styled navigation",
   "main": "index.js",
   "directories": {
     "example": "example"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
-    "url": "https://github.com/clineamb/bootstrap.offcanvas.git"
+    "url": "https://github.com/clineamb/bootstrap-drawer.git"
   },
   "keywords": [
     "bootstrap",
@@ -21,25 +19,33 @@
     "canvas",
     "navigation",
     "navs",
-    "nav"
+    "nav",
+    "drawer",
+    "menu",
+    "html",
+    "css",
+    "less",
+    "javascript",
+    "js",
+    "jquery"
   ],
   "author": "Caroline Amaba <her@carolineamaba.com>",
-  "license": "MIT",
+  "license": "ISC",
   "bugs": {
-    "url": "https://github.com/clineamb/bootstrap.offcanvas/issues"
+    "url": "https://github.com/clineamb/bootstrap-drawer-menu/issues"
   },
-  "homepage": "https://github.com/clineamb/bootstrap.offcanvas",
+  "homepage": "https://github.com/clineamb/bootstrap-drawer-menu",
   "devDependencies": {
     "gulp": "^3.8.10",
     "gulp-less": "^2.0.1",
     "gulp-rename": "^1.2.0",
     "gulp-uglify": "^1.1.0",
     "gulp-util": "^3.0.2",
-    "gulp-zip": "^2.0.2",
     "nunjucks": "^1.1.0",
     "through2": "^0.6.3"
   },
   "dependencies": {
-    "bootstrap": "^3.3.2"
+    "bootstrap": "^3.3.2",
+    "jquery": "^2.1.3"
   }
 }

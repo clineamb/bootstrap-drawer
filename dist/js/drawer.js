@@ -1,5 +1,5 @@
 /* ========================================================================
- * Bootstrap: offcanvas.js v3.3.2
+ * Bootstrap: drawer.js v1.0
  # Heavily based on collapse, but had to change the name to "fold" to 
  # avoid transition conflicts.
  * ========================================================================
@@ -12,53 +12,53 @@
   // OFF CANVAS PUBLIC CLASS DEFINITION
   // ================================
 
-  var OffCanvas = function (element, options) {
+  var Drawer = function (element, options) {
     this.$element      = $(element)
-    this.options       = $.extend({}, OffCanvas.DEFAULTS, options)
+    this.options       = $.extend({}, Drawer.DEFAULTS, options)
     this.$trigger      = $(this.options.trigger).filter('[href="#' + element.id + '"], [data-target="#' + element.id + '"]')
     this.transitioning = null
 
     if (this.options.parent) {
       this.$parent = this.getParent()
     } else {
-      this.addAriaAndOffCanvasdClass(this.$element, this.$trigger)
+      this.addAriaAndDrawerdClass(this.$element, this.$trigger)
     }
 
     if (this.options.toggle) this.toggle()
   }
 
-  OffCanvas.VERSION  = '3.3.2'
+  Drawer.VERSION  = '3.3.2'
 
-  OffCanvas.TRANSITION_DURATION = 350
+  Drawer.TRANSITION_DURATION = 350
 
-  OffCanvas.DEFAULTS = {
+  Drawer.DEFAULTS = {
     toggle: true,
-    trigger: '[data-toggle="offcanvas"]'
+    trigger: '[data-toggle="drawer"]'
   }
 
-  OffCanvas.prototype.dimension = function () {
-    var isRight = this.$element.hasClass('offcanvas-right')
+  Drawer.prototype.dimension = function () {
+    var isRight = this.$element.hasClass('drawer-right')
     return isRight ? 'margin-right' : 'margin-left'
   }
 
-  OffCanvas.prototype.show = function () {
+  Drawer.prototype.show = function () {
     if (this.transitioning || this.$element.hasClass('open')) return
 
     var activesData
     var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
 
     if (actives && actives.length) {
-      activesData = actives.data('bs.fold')
+      activesData = actives.data('bs.drawer')
       if (activesData && activesData.transitioning) return
     }
 
-    var startEvent = $.Event('show.bs.fold')
+    var startEvent = $.Event('show.bs.drawer')
     this.$element.trigger(startEvent)
     if (startEvent.isDefaultPrevented()) return
 
     if (actives && actives.length) {
       Plugin.call(actives, 'hide')
-      activesData || actives.data('bs.fold', null)
+      activesData || actives.data('bs.drawer', null)
     }
 
     var dimension = this.dimension()
@@ -79,20 +79,20 @@
         .addClass('fold open').css(dimension, '')
       this.transitioning = 0
       this.$element
-        .trigger('shown.bs.fold')
+        .trigger('shown.bs.drawer')
     }
 
     if (!$.support.transition) return complete.call(this)
 
     this.$element
       .one('bsTransitionEnd', $.proxy(complete, this))
-      .emulateTransitionEnd(OffCanvas.TRANSITION_DURATION).css(dimension, 0)
+      .emulateTransitionEnd(Drawer.TRANSITION_DURATION).css(dimension, 0)
   }
 
-  OffCanvas.prototype.hide = function () {
+  Drawer.prototype.hide = function () {
     if (this.transitioning || !this.$element.hasClass('open')) return
 
-    var startEvent = $.Event('hide.bs.fold')
+    var startEvent = $.Event('hide.bs.drawer')
     this.$element.trigger(startEvent)
     if (startEvent.isDefaultPrevented()) return
 
@@ -114,7 +114,7 @@
       this.$element
         .removeClass('folding')
         .addClass('fold')
-        .trigger('hidden.bs.fold')
+        .trigger('hidden.bs.drawer')
     }
 
     if (!$.support.transition) return complete.call(this)
@@ -122,24 +122,24 @@
     this.$element
       .css(dimension, '')
       .one('bsTransitionEnd', $.proxy(complete, this))
-      .emulateTransitionEnd(OffCanvas.TRANSITION_DURATION)
+      .emulateTransitionEnd(Drawer.TRANSITION_DURATION)
   }
 
-  OffCanvas.prototype.toggle = function () {
+  Drawer.prototype.toggle = function () {
     this[this.$element.hasClass('open') ? 'hide' : 'show']()
   }
 
-  OffCanvas.prototype.getParent = function () {
+  Drawer.prototype.getParent = function () {
     return $(this.options.parent)
-      .find('[data-toggle="offcanvas"][data-parent="' + this.options.parent + '"]')
+      .find('[data-toggle="drawer"][data-parent="' + this.options.parent + '"]')
       .each($.proxy(function (i, element) {
         var $element = $(element)
-        this.addAriaAndOffCanvasdClass(getTargetFromTrigger($element), $element)
+        this.addAriaAndDrawerdClass(getTargetFromTrigger($element), $element)
       }, this))
       .end()
   }
 
-  OffCanvas.prototype.addAriaAndOffCanvasdClass = function ($element, $trigger) {
+  Drawer.prototype.addAriaAndDrawerdClass = function ($element, $trigger) {
     var isOpen = $element.hasClass('open')
 
     $element.attr('aria-expanded', isOpen)
@@ -163,25 +163,25 @@
   function Plugin(option) {
     return this.each(function () {
       var $this   = $(this)
-      var data    = $this.data('bs.fold')
-      var options = $.extend({}, OffCanvas.DEFAULTS, $this.data(), typeof option == 'object' && option)
+      var data    = $this.data('bs.drawer')
+      var options = $.extend({}, Drawer.DEFAULTS, $this.data(), typeof option == 'object' && option)
 
       if (!data && options.toggle && option == 'show') options.toggle = false
-      if (!data) $this.data('bs.fold', (data = new OffCanvas(this, options)))
+      if (!data) $this.data('bs.drawer', (data = new Drawer(this, options)))
       if (typeof option == 'string') data[option]()
     })
   }
 
   var old = $.fn.fold
 
-  $.fn.offcanvas             = Plugin
-  $.fn.offcanvas.Constructor = OffCanvas
+  $.fn.drawer             = Plugin
+  $.fn.drawer.Constructor = Drawer
 
 
   // OFFCANVAS NO CONFLICT
   // ====================
 
-  $.fn.offcanvas.noConflict = function () {
+  $.fn.drawer.noConflict = function () {
     $.fn.fold = old
     return this
   }
@@ -190,13 +190,13 @@
   // OFFCANVAS DATA-API
   // =================
 
-  $(document).on('click.bs.fold.data-api', '[data-toggle="offcanvas"]', function (e) {
+  $(document).on('click.bs.drawer.data-api', '[data-toggle="drawer"]', function (e) {
     var $this   = $(this)
 
     if (!$this.attr('data-target')) e.preventDefault()
 
     var $target = getTargetFromTrigger($this)
-    var data    = $target.data('bs.fold')
+    var data    = $target.data('bs.drawer')
     var option  = data ? 'toggle' : $.extend({}, $this.data(), { trigger: this })
 
     Plugin.call($target, option)
