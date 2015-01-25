@@ -5,7 +5,6 @@ var gulp    = require('gulp'),
     less    = require('gulp-less'),
     uglify  = require('gulp-uglify'),
     rename  = require('gulp-rename')
-    zip      = require('gulp-zip')
 ;
 
 gulp.task("build", ['less', 'less.min', 'js', 'js.min', 'example']);
@@ -65,11 +64,4 @@ gulp.task('js.min', function() {
         .pipe(rename({extname: ".min.js"}))
         .pipe(gulp.dest("./dist/js"))
     ;
-});
-
-gulp.task('zip', function() {
-    // gulp.src(["!./node_modules", "!./bower_components", "./**/*"])
-    //     .pipe(zip('bootstrap-offcanvas-'+VERSION+".zip"))
-    //     .pipe(gulp.dest("./dist"))
-    // ;
 });

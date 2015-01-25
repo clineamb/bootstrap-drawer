@@ -8,6 +8,14 @@
   "moduleType": [
     "globals"
   ],
+  "main": [
+    "dist/css/*",
+    "dist/js/*"
+  ]
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/clineamb/bootstrap-offcanvas.git"
+  },
   "keywords": [
     "bootstrap",
     "offcanvas",

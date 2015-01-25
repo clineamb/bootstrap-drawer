@@ -48,17 +48,17 @@
     var actives = this.$parent && this.$parent.children('.panel').children('.in, .collapsing')
 
     if (actives && actives.length) {
-      activesData = actives.data('bs.fold')
+      activesData = actives.data('bs.offcanvas')
       if (activesData && activesData.transitioning) return
     }
 
-    var startEvent = $.Event('show.bs.fold')
+    var startEvent = $.Event('show.bs.offcanvas')
     this.$element.trigger(startEvent)
     if (startEvent.isDefaultPrevented()) return
 
     if (actives && actives.length) {
       Plugin.call(actives, 'hide')
-      activesData || actives.data('bs.fold', null)
+      activesData || actives.data('bs.offcanvas', null)
     }
 
     var dimension = this.dimension()
@@ -79,7 +79,7 @@
         .addClass('fold open').css(dimension, '')
       this.transitioning = 0
       this.$element
-        .trigger('shown.bs.fold')
+        .trigger('shown.bs.offcanvas')
     }
 
     if (!$.support.transition) return complete.call(this)
@@ -92,7 +92,7 @@
   OffCanvas.prototype.hide = function () {
     if (this.transitioning || !this.$element.hasClass('open')) return
 
-    var startEvent = $.Event('hide.bs.fold')
+    var startEvent = $.Event('hide.bs.offcanvas')
     this.$element.trigger(startEvent)
     if (startEvent.isDefaultPrevented()) return
 
@@ -114,7 +114,7 @@
       this.$element
         .removeClass('folding')
         .addClass('fold')
-        .trigger('hidden.bs.fold')
+        .trigger('hidden.bs.offcanvas')
     }
 
     if (!$.support.transition) return complete.call(this)
@@ -163,11 +163,11 @@
   function Plugin(option) {
     return this.each(function () {
       var $this   = $(this)
-      var data    = $this.data('bs.fold')
+      var data    = $this.data('bs.offcanvas')
       var options = $.extend({}, OffCanvas.DEFAULTS, $this.data(), typeof option == 'object' && option)
 
       if (!data && options.toggle && option == 'show') options.toggle = false
-      if (!data) $this.data('bs.fold', (data = new OffCanvas(this, options)))
+      if (!data) $this.data('bs.offcanvas', (data = new OffCanvas(this, options)))
       if (typeof option == 'string') data[option]()
     })
   }
@@ -190,13 +190,13 @@
   // OFFCANVAS DATA-API
   // =================
 
-  $(document).on('click.bs.fold.data-api', '[data-toggle="offcanvas"]', function (e) {
+  $(document).on('click.bs.offcanvas.data-api', '[data-toggle="offcanvas"]', function (e) {
     var $this   = $(this)
 
     if (!$this.attr('data-target')) e.preventDefault()
 
     var $target = getTargetFromTrigger($this)
-    var data    = $target.data('bs.fold')
+    var data    = $target.data('bs.offcanvas')
     var option  = data ? 'toggle' : $.extend({}, $this.data(), { trigger: this })
 
     Plugin.call($target, option)
