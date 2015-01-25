@@ -17,7 +17,7 @@ As of Bootstrap 3.2.2, there is no "drawer" element - a drawer-like menu that
 goes off screen.  This is an add-on to the core Bootstrap framewrk that adds various
 `.drawer` classes to quickly and easily create the drawer component.
 
-This Readme is actually a quick start. [Check out the full documentation](http://clineamb.github.io/bootstrap-canvas) for detailed
+This Readme is actually a quick start. [Check out the full documentation](http://clineamb.github.io/bootstrap-drawer) for detailed
 usage and style guide.
 
 **Version:** 0.9.0
