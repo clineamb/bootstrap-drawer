@@ -1,0 +1,21 @@
+{% extends "./views/layout/layout.nunjucks" %}
+{% set bodyHasDrawer = true %}
+
+{% block styles %}
+    
+{% endblock %}
+
+{% block body %}
+    <div id="drawer-docs" class="container">
+        <h1><strong>bootstrap-drawer</strong></h1>
+        <div class="row">
+            <div class="col-xs-12">
+                <h3>Currently a work in progress! <a href="http://github.com/clineamb/bootstrap-drawer">Check out the source</a> to get started for now!</h3>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block footer %}
+    
+{% endblock %}

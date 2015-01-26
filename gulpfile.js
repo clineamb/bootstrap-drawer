@@ -1,10 +1,9 @@
 // --- bootstrap.offcanvas gulpfile
-var VERSION = "0.9.0";
-
-var gulp    = require('gulp'),
-    less    = require('gulp-less'),
-    uglify  = require('gulp-uglify'),
-    rename  = require('gulp-rename')
+var gulp        = require('gulp'),
+    less        = require('gulp-less'),
+    uglify      = require('gulp-uglify'),
+    rename      = require('gulp-rename'),
+    nunjucks    = require('./gulp-nunjucks.js')
 ;
 
 gulp.task("build", ['less', 'less.min', 'js', 'js.min', 'example']);
@@ -62,5 +61,20 @@ gulp.task('js.min', function() {
         .pipe(uglify())
         .pipe(rename({extname: ".min.js"}))
         .pipe(gulp.dest("./dist/js"))
+    ;
+});
+
+gulp.task('docs', function() {
+    gulp.src("./less/drawer-docs.less")
+        .pipe(less())
+        .pipe(gulp.dest("./example"))
+    ;
+
+    gulp.src("./views/*.nunjucks")
+        .pipe(nunjucks({
+            path: "./views"
+        }))
+        .pipe(rename({extname: ".html"}))
+        .pipe(gulp.dest("./"))
     ;
 });
