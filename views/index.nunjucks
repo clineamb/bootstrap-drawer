@@ -6,7 +6,7 @@
 {% endblock %}
 
 {% block body %}
-    <div id="drawer-docs" class="container">
+    <div id="drawer-docs" data-page="index.html" class="container">
         <h1><strong>bootstrap-drawer</strong></h1>
         <div class="row">
             <div class="col-xs-12">
