@@ -20,30 +20,29 @@ gulp.task('example', function() {
 });
 
 gulp.task("less", function() {
-    gulp.src("./less/bootstrap.drawer.less")
+    gulp.src("./less/bootstrap-drawer.less")
         .pipe(less({
             paths: ["./less"]
         }))
         .pipe(gulp.dest("./example"))
     ;
 
-    gulp.src("./less/bootstrap.drawer.less")
+    gulp.src("./less/bootstrap-drawer.less")
         .pipe(less({
             paths: ["./less"],
             debug: true
         }))
-        .pipe(rename({basename: "drawer"}))
         .pipe(gulp.dest("./dist/css"))
     ;
 });
 
 gulp.task("less.min", function() {
-    gulp.src("./less/bootstrap.drawer.less")
+    gulp.src("./less/bootstrap-drawer.less")
         .pipe(less({
             paths: ["./less"],
             compress: true
         }))
-        .pipe(rename("drawer.min.css"))
+        .pipe(rename("bootstrap-drawer.min.css"))
         .pipe(gulp.dest("./dist/css"))
     ;
 });

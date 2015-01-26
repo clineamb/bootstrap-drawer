@@ -34,7 +34,7 @@ usage and style guide.
 
 `bower install bootstrap-drawer` / `npm install bootstrap-drawer`
 
-or you can (download the latest release)[https://github.com/clineamb/bootstrap-drawer/releases] from the release page.
+or you can [download the latest release](https://github.com/clineamb/bootstrap-drawer/releases) from the release page.
 
 
 ## Installing
@@ -47,7 +47,7 @@ For more detailed use on the bootstrap-drawer framework, check out the [style gu
     <html>
         <head>
             <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-            <link rel="stylesheet" type="text/css" href="drawer.min.css">
+            <link rel="stylesheet" type="text/css" href="bootstrap-drawer.min.css">
             <link rel="stylesheet" type="text/css" href="YOUR_OTHER_STYLES.css">
         </head>
         <body class="has-canvas">
@@ -58,6 +58,52 @@ For more detailed use on the bootstrap-drawer framework, check out the [style gu
             <script src="YOUR_CUSTOM_JS.js"></script>
         </body>
     </html>
+```
+
+### Basic Usage
+
+You can check out [example/index.html](example/index.html) for a more robust example,
+but the basic usage is very similar to using Bootstrap's col-SIZE-# classes, when it comes
+to sizing the component.  In addition, the inner elements (`.drawer-heading`, `-nav/-navfull`,
+ `-body`, `-footer`) are similar to how the `.panel` class family works.
+
+ The `.fold` class starts the drawer closed.  Becomes `.fold.open` when it's opened.
+
+ The sizing classes are dictated by the screen size to be responsive.  `.dw-SIZE-12` will cover
+ the whole screen/canvas of that size.  If you want to use the drawer in another container
+ instead of the `<body>`, check out [the full documentation](http://clineamb.github.io/bootstrap-drawer).
+
+```html
+    <body class="has-drawer"> <!-- add this class to your body for proper sizing -->
+        <div id="drawerExample" class="drawer dw-xs-10 dw-sm-6 dw-md-4 fold" aria-labelledby="drawerExample">
+            <div class="drawer-controls">
+                <a href="#drawerExample" data-toggle="drawer" href="#drawerExample" aria-foldedopen="false" aria-controls="drawerExample" class="btn btn-primary btn-sm">Menu</a>
+            </div>
+            <div class="drawer-contents">
+                <div class="drawer-heading">
+                    <h2 class="drawer-title">Menu</h2>
+                </div>
+                <div class="drawer-body">
+                    <p>
+                        This is a properly padded container for content in the
+                        drawer that isn't a navigation.
+                    </p>
+                    <a href="#">A Regular Link</a>
+                </div>
+                <ul class="drawer-nav">
+                    <li role="presentation" class="active"><a href="#">Home</a></li>
+                    <li role="presentation"><a href="#">Profile</a></li>
+                    <li role="presentation"><a href="#">Messages</a></li>
+                </ul>
+                <div class="drawer-footer">
+                    <small>&copy; Caroline Amaba</small>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <!-- content as per usual -->
+        </div>
+    </body>
 ```
 
 ### Using LESS
@@ -129,6 +175,23 @@ folders to maintain bootstrap structure.  The component's variables rely on a fe
     // Utility Classes
     // ... etc ...
 ```
+
+### Building Your Own Flavor of Drawer
+
+You'll need [gulp](http://gulpjs.com/) if you want to build your own version.
+
+Most of the tasks are outlined in `gulpfile.js`.  The `gulp build` will also update
+the assets for `example/index.html` so you can see your changes.
+
+To customize bootstrap-drawer, just edit some of the variables in `less/drawer-variables.less` to
+the sizes and colors, etc. you want.  Then run `gulp build` and a new `dist/css/bootstrap-drawer(.min).css` 
+should be made just for you!  Include the file right after the Bootstrap core file, and you should be
+good to go!  
+
+Things to keep in mind:
+*  bootstrap-drawer uses some variables (`@grid-gutter-width`, `@zindex-navbar-fixed`, `@link-color`, to
+name most of them), so if you're using a different `varibles.less file`, be sure to replace it in
+`less/bootstrap-drawer.less`.
 
 ### Javascript
 
