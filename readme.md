@@ -74,36 +74,36 @@ to sizing the component.  In addition, the inner elements (`.drawer-heading`, `-
  instead of the `<body>`, check out [the full documentation](http://clineamb.github.io/bootstrap-drawer).
 
 ```html
-    <body class="has-drawer"> <!-- add this class to your body for proper sizing -->
-        <div id="drawerExample" class="drawer dw-xs-10 dw-sm-6 dw-md-4 fold" aria-labelledby="drawerExample">
-            <div class="drawer-controls">
-                <a href="#drawerExample" data-toggle="drawer" href="#drawerExample" aria-foldedopen="false" aria-controls="drawerExample" class="btn btn-primary btn-sm">Menu</a>
+<body class="has-drawer"> <!-- add this class to your body for proper sizing -->
+    <div id="drawerExample" class="drawer dw-xs-10 dw-sm-6 dw-md-4 fold" aria-labelledby="drawerExample">
+        <div class="drawer-controls">
+            <a href="#drawerExample" data-toggle="drawer" href="#drawerExample" aria-foldedopen="false" aria-controls="drawerExample" class="btn btn-primary btn-sm">Menu</a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Menu</h2>
             </div>
-            <div class="drawer-contents">
-                <div class="drawer-heading">
-                    <h2 class="drawer-title">Menu</h2>
-                </div>
-                <div class="drawer-body">
-                    <p>
-                        This is a properly padded container for content in the
-                        drawer that isn't a navigation.
-                    </p>
-                    <a href="#">A Regular Link</a>
-                </div>
-                <ul class="drawer-nav">
-                    <li role="presentation" class="active"><a href="#">Home</a></li>
-                    <li role="presentation"><a href="#">Profile</a></li>
-                    <li role="presentation"><a href="#">Messages</a></li>
-                </ul>
-                <div class="drawer-footer">
-                    <small>&copy; Caroline Amaba</small>
-                </div>
+            <div class="drawer-body">
+                <p>
+                    This is a properly padded container for content in the
+                    drawer that isn't a navigation.
+                </p>
+                <a href="#">A Regular Link</a>
+            </div>
+            <ul class="drawer-nav">
+                <li role="presentation" class="active"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Profile</a></li>
+                <li role="presentation"><a href="#">Messages</a></li>
+            </ul>
+            <div class="drawer-footer">
+                <small>&copy; Caroline Amaba</small>
             </div>
         </div>
-        <div class="container">
-            <!-- content as per usual -->
-        </div>
-    </body>
+    </div>
+    <div class="container">
+        <!-- content as per usual -->
+    </div>
+</body>
 ```
 
 ### Using LESS
@@ -178,7 +178,9 @@ folders to maintain bootstrap structure.  The component's variables rely on a fe
 
 ### Building Your Own Flavor of Drawer
 
-You'll need [gulp](http://gulpjs.com/) if you want to build your own version.
+You'll need [gulp](http://gulpjs.com/) and [Node](http://nodejs.org/)/[io.js](https://iojs.org/ if you want to build your own version.
+
+Run `npm install` in order to get all the devDependencies from the `package.json`.
 
 Most of the tasks are outlined in `gulpfile.js`.  The `gulp build` will also update
 the assets for `example/index.html` so you can see your changes.
