@@ -69,12 +69,4 @@ gulp.task('docs', function() {
         .pipe(less())
         .pipe(gulp.dest("./example"))
     ;
-
-    gulp.src("./views/*.nunjucks")
-        .pipe(nunjucks({
-            path: "./views"
-        }))
-        .pipe(rename({extname: ".html"}))
-        .pipe(gulp.dest("./"))
-    ;
 });
