@@ -6,7 +6,7 @@ body.has-drawer {
   min-height: 100%;
   height: 100%;
 }
-.parent-has-drawer {
+.has-inner-drawer {
   position: relative;
   overflow: hidden;
 }
