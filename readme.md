@@ -200,6 +200,13 @@ name most of them), so if you're using a different `varibles.less file`, be sure
 The Javascript/jQuery plugin requires the `transition.js` file from the core Bootstrap
 framework in order to work.  Usage is nearly the same as the [collapse](http://getbootstrap.com/javascript/#collapse) component, but checkout out the documentation for more detailed usage for `$('.drawer').drawer()`.  The events emitted are `*.bs.drawer`.
 
+## Changelog
+
+#### v 0.9.1
+* Added `.has-inner-drawer` class to allow elements with a set width/height to
+have a drawer within it.
+* Added in `example/index.html` how to use the `.has-inner-drawer` feature.
+
 ----------------------------------------------------
 
 ## License

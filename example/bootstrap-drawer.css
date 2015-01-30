@@ -6,8 +6,9 @@ body.has-drawer {
   min-height: 100%;
   height: 100%;
 }
-.has-drawer {
+.has-inner-drawer {
   position: relative;
+  overflow: hidden;
 }
 .drawer {
   display: block;
@@ -47,6 +48,9 @@ body.has-drawer {
 }
 .drawer.drawer-inverse.drawer-right {
   border-right: 1px solid #dfdfdf;
+}
+.drawer.drawer-inside {
+  position: absolute;
 }
 .drawer-controls {
   float: right;
@@ -177,7 +181,6 @@ body.has-drawer {
   margin-right: 0;
 }
 .drawer.folding.dw-xs-12 {
-  position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
   transition-property: margin-left;
@@ -207,7 +210,6 @@ body.has-drawer {
   margin-right: 0;
 }
 .drawer.folding.dw-xs-11 {
-  position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
   transition-property: margin-left;
@@ -237,7 +239,6 @@ body.has-drawer {
   margin-right: 0;
 }
 .drawer.folding.dw-xs-10 {
-  position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
   transition-property: margin-left;
@@ -267,7 +268,6 @@ body.has-drawer {
   margin-right: 0;
 }
 .drawer.folding.dw-xs-9 {
-  position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
   transition-property: margin-left;
@@ -297,7 +297,6 @@ body.has-drawer {
   margin-right: 0;
 }
 .drawer.folding.dw-xs-8 {
-  position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
   transition-property: margin-left;
@@ -327,7 +326,6 @@ body.has-drawer {
   margin-right: 0;
 }
 .drawer.folding.dw-xs-7 {
-  position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
   transition-property: margin-left;
@@ -357,7 +355,6 @@ body.has-drawer {
   margin-right: 0;
 }
 .drawer.folding.dw-xs-6 {
-  position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
   transition-property: margin-left;
@@ -387,7 +384,6 @@ body.has-drawer {
   margin-right: 0;
 }
 .drawer.folding.dw-xs-5 {
-  position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
   transition-property: margin-left;
@@ -417,7 +413,6 @@ body.has-drawer {
   margin-right: 0;
 }
 .drawer.folding.dw-xs-4 {
-  position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
   transition-property: margin-left;
@@ -447,7 +442,6 @@ body.has-drawer {
   margin-right: 0;
 }
 .drawer.folding.dw-xs-3 {
-  position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
   transition-property: margin-left;
@@ -477,7 +471,6 @@ body.has-drawer {
   margin-right: 0;
 }
 .drawer.folding.dw-xs-2 {
-  position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
   transition-property: margin-left;
@@ -507,7 +500,6 @@ body.has-drawer {
   margin-right: 0;
 }
 .drawer.folding.dw-xs-1 {
-  position: fixed;
   height: 100%;
   -webkit-transition-property: margin-left;
   transition-property: margin-left;
@@ -538,7 +530,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-sm-12 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -568,7 +559,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-sm-11 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -598,7 +588,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-sm-10 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -628,7 +617,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-sm-9 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -658,7 +646,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-sm-8 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -688,7 +675,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-sm-7 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -718,7 +704,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-sm-6 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -748,7 +733,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-sm-5 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -778,7 +762,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-sm-4 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -808,7 +791,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-sm-3 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -838,7 +820,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-sm-2 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -868,7 +849,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-sm-1 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -900,7 +880,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-md-12 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -930,7 +909,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-md-11 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -960,7 +938,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-md-10 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -990,7 +967,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-md-9 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1020,7 +996,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-md-8 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1050,7 +1025,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-md-7 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1080,7 +1054,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-md-6 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1110,7 +1083,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-md-5 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1140,7 +1112,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-md-4 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1170,7 +1141,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-md-3 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1200,7 +1170,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-md-2 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1230,7 +1199,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-md-1 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1262,7 +1230,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-lg-12 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1292,7 +1259,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-lg-11 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1322,7 +1288,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-lg-10 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1352,7 +1317,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-lg-9 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1382,7 +1346,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-lg-8 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1412,7 +1375,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-lg-7 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1442,7 +1404,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-lg-6 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1472,7 +1433,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-lg-5 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1502,7 +1462,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-lg-4 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1532,7 +1491,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-lg-3 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1562,7 +1520,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-lg-2 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
@@ -1592,7 +1549,6 @@ body.has-drawer {
     margin-right: 0;
   }
   .drawer.folding.dw-lg-1 {
-    position: fixed;
     height: 100%;
     -webkit-transition-property: margin-left;
     transition-property: margin-left;
