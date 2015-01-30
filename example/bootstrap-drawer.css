@@ -6,8 +6,9 @@ body.has-drawer {
   min-height: 100%;
   height: 100%;
 }
-.has-drawer {
+.parent-has-drawer {
   position: relative;
+  overflow: hidden;
 }
 .drawer {
   display: block;
@@ -47,6 +48,9 @@ body.has-drawer {
 }
 .drawer.drawer-inverse.drawer-right {
   border-right: 1px solid #dfdfdf;
+}
+.drawer.drawer-inside {
+  position: absolute;
 }
 .drawer-controls {
   float: right;

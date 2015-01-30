@@ -16,8 +16,9 @@ body.has-drawer {
     height: 100%;
 }
 
-.has-drawer {
+.parent-has-drawer {
     position: relative;
+    overflow: hidden;
 }
 
 // Base class
@@ -59,6 +60,10 @@ body.has-drawer {
         &.drawer-right {
             border-right: 1px solid @drawer-border-color;
         }
+    }
+
+    &.drawer-inside {
+        position: absolute;
     }
 }
 
