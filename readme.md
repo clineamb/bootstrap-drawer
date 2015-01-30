@@ -43,7 +43,7 @@ For more detailed use on the bootstrap-drawer framework, check out the [style gu
 
 ### When using the full Bootstrap Framework:
 
-```html
+
     <html>
         <head>
             <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
@@ -58,7 +58,7 @@ For more detailed use on the bootstrap-drawer framework, check out the [style gu
             <script src="YOUR_CUSTOM_JS.js"></script>
         </body>
     </html>
-```
+
 
 ### Basic Usage
 

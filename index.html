@@ -10,6 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="example/prettify/prettify.css">
     <link rel="stylesheet" type="text/css" href="example/drawer-docs.css">
 </head>
 <body class="has-offcanvas">
@@ -55,13 +56,143 @@
             </div>
         </div>
         <div class="container">
+            <h2><strong>Note: This documentation is still a work in progress.  You can check out what's here, but also make sure you read the <a href="http://github.com/clineamb/bootstrap-drawer/blob/master/readme.md" target="_blank">Readme.md</a> in the repo! Thanks!</strong></h2>
+            
             <div class="page-header">
-                <h2>What is it?</h2>
+                <h2>What is it?</h2><a name="top"></a>
             </div>
+            <p><a href="http://clineamb.github.io/bootstrap-drawer#">bootstrap-drawer</a> is a Bootstrap add-on/plugin that, in Bootstrap style, adds an "off-canvas" element to your pages and containers.  We call it a "drawer" in these parts.*</p>
+            <p>I've looked around for fast-and-easy ways of implementing this constantly (and consistently), and I've had to rebuild it a few times.  Tired of doing this, I created this!  I imagine there's a lot of people like me looking for something like this, especially one that easily works with their front-end framework of choice, <a href="http://getbootstrap.com/" target="_blank">Bootstrap.</a></p>
+            <p><small>* Mostly because "bootstrap-offcanvas" was taken, and I've always referred to it as a mobile "drawer".</small></p>
+
+            <div class="page-header">
+                <h2>Basic Usage <small>ie, the tl;dr <a href="http://github.com/clineamb/bootstrap-drawer/blob/master/readme.md" target="_blank">Readme.md</a></small></h2>
+            </div>
+
+            <h3>Requirements</h3>
+
+            <p><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> is required for this plugin, since bootstrap-drawer built on top of the framework and, thus, <a href="http://jquery.com" target="_blank">jQuery</a> is also required.</p>
+
+            <h3>Download</h3>
+            <p>
+                <code>bower install bootstrap-drawer</code> or 
+                <code>npm install bootstrap-drawer</code>
+            </p>
+            <p>You can also find all the releases on the <a href="https://github.com/clineamb/bootstrap-drawer/releases" target="_blank">Github page.</a> For your convenience, here are some links to the latest releases.</p>
+            <p>
+                <a href="http://github.com/clineamb/bootstrap-drawer/releases/tag/1.0.0" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github-alt"></i> Download Version 1.0.0</a>
+                <a href="http://github.com/clineamb/bootstrap-drawer/archive/1.0.0.zip" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-archive"></i> Get the bootstrap-drawer-1.0.0.zip</a>
+            </p>
+
+            <h3>Basic Setup</h3>
+
+            <p>If you simply just want to quickly use bootstrap-drawer with Bootstrap, you just need to include <code>dist/bootstrap-drawer.css</code> after Bootstrap, and then include any other files after that.</p>
+
+            <p>The accomanying <code>drawer.js</code> requires Bootstrap's core <code>transitions.js</code> at least (which all come after jQuery).  Whether you're just including the separate Javascript components or the entire <code>bootstrap.js</code>, <code>drawer.js</code> needs to come after either/both.</p>
+<pre class="prettyprint">
+&lt;html&gt;
+&lt;head&gt;
+    &lt;link rel="stylesheet" type="text/css" href="bootstrap.min.css"&gt;
+    &lt;link rel="stylesheet" type="text/css" href="bootstrap-drawer.min.css"&gt;
+    &lt;link rel="stylesheet" type="text/css" href="YOUR_OTHER_STYLES.css"&gt;
+&lt;/head&gt;
+&lt;body class="has-canvas"&gt;
+    &lt;!-- Off Canvas & other HTML here --&gt;
+    &lt;script src="jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="bootstrap.min.js"&gt;&lt;/script&gt;
+    &lt;script src="drawer.min.js"&gt;&lt;/script&gt;
+    &lt;script src="YOUR_CUSTOM_JS.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            
+            <h3>Basic Usage</h3>
+
+            <p>To get a simple drawer like the one on this page:</p>
+<pre class="prettyprint">
+&lt;body class="has-drawer"&gt; &lt;!-- add this class to your body for proper sizing --&gt;
+    &lt;div id="drawerExample" class="drawer dw-xs-10 dw-sm-6 dw-md-4 fold" aria-labelledby="drawerExample"&gt;
+        &lt;div class="drawer-controls"&gt;
+            &lt;a href="#drawerExample" data-toggle="drawer" href="#drawerExample" aria-foldedopen="false" aria-controls="drawerExample" class="btn btn-primary btn-sm"&gt;Menu&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class="drawer-contents"&gt;
+            &lt;div class="drawer-heading"&gt;
+                &lt;h2 class="drawer-title"&gt;Menu&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div class="drawer-body"&gt;
+                &lt;p&gt;
+                    This is a properly padded container for content in the
+                    drawer that isn't a navigation.
+                &lt;/p&gt;
+                &lt;a href="#"&gt;A Regular Link&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;ul class="drawer-nav"&gt;
+                &lt;li role="presentation" class="active"&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li role="presentation"&gt;&lt;a href="#"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+                &lt;li role="presentation"&gt;&lt;a href="#"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class="drawer-footer"&gt;
+                &lt;small&gt;&copy; Caroline Amaba&lt;/small&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="container"&gt;
+        &lt;!-- content as per usual --&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</pre>
+
+            <p>bootstrap-drawer was built with a bootstrap-minded style, based on the already built <code>.nav</code> or <code>.panel</code> classes.</p>
+
+            <ul>
+                <li>
+                    <code>.drawer</code> is the main class.  It has a similar sizing system, based on the 12-column system of bootstrap, using <code>.dw-SIZE-#COLS</code>.  The drawer is built mobile-first, like the rest of Bootstrap, and the size in width is based on the document's fluid width (a percentage of it, based on the columns).
+                </li>
+                <li>
+                    <code>.fold</code> starts the menu closed (<code>.fold.open</code> for an opened drawer). This class, as well as its <a href="#javascript">Javascript component</a> are built similarly to the <code>.collapse</code> components.  It had to be named differently because bootstrap-drawer is folding horizontally and not collapsing veritcally.
+                </li>
+                <li>
+                    <code>.drawer-controls</code> is a special drawer column made to house a toggle button for the drawer that moves with the component.  It's an optional piece, since the menu can be toggled by other buttons either using the built-in <code>data-toggle="drawer"</code> or the jQuery API (<code>$('.drawer').drawer();</code>).
+                </li>
+                <li>
+                    <code>.drawer-contents</code> holds the innards of your drawer menu:
+
+                    <ul>
+                        <li>
+                            <code>.drawer-heading</code> is the title section of the menu.
+                        </li>
+                        <li>
+                            <code>.drawer-body</code> contains non-menu/nav text that you may want to include in your drawer.
+                        </li>
+                        <li>
+                            <code>.drawer-nav</code> or <code>.drawer-fullnav</code> are built-in stacked-pill/full-width style navigations that are made to play nice with the menu.  The list-styles are based on the stacked <a href="http://getbootstrap.com/components/#nav-pills" target="_blank">pills</a> nav.
+                        </li>
+                        <li>
+                            <code>.drawer-footer</code> is a good spot for any small-print type code.  Add the <code>.locked</code> class to position it at the bottom of your menu.
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="page-header">
+                <h2>Position / Colors <small>and other (advanced) uses.</a></small></h2>
+                <a name="options"></a>
+            </div>
+
+            <p>WIP</p>
+
+            <div class="page-header">
+                <h2>data-toggle / Javascript</h2>
+                <a name="javascript"></a>
+            </div>
+
+            <p>WIP</p>
         </div>
     </div>
 
     <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="example/prettify/prettify.js"></script>
+    <script src="example/prettify/run_prettify.js"></script>
     <script src="example/bootstrap.min.js"></script>
     <script src="dist/js/drawer.js"></script>
     <script>

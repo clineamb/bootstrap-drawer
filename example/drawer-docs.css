@@ -4348,11 +4348,17 @@ body.has-drawer {
 }
 body {
   font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 12pt;
+  line-height: 18pt;
+}
+p {
+  padding-bottom: 15px;
 }
 #drawer-docs {
   min-height: 100%;
   width: 100%;
   margin: 0 auto;
+  padding-bottom: 100px;
 }
 #drawer-docs .jumbotron.page-topper {
   padding-top: 30px;
@@ -4363,5 +4369,21 @@ body {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff4c8d9f', endColorstr='#ff579bae', GradientType=0);
   color: #fff;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+}
+#drawer-docs pre.prettyprint,
+#drawer-docs pre.prettyprinted {
+  border: 0;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+#drawer-docs ul {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+#drawer-docs ul li {
+  padding-bottom: 8px;
+}
+#drawer-docs .container {
+  max-width: 1000px;
 }
