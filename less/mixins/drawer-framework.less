@@ -5,7 +5,7 @@
 .make-drawer-columns() {
     // Common styles for all sizes of grid columns, widths 1-12
     .dw(@index) { // initial
-        @item: ~".dw-xs-@{index}, .dw-sm-@{index}, .dw-md-@{index}, .dw-lg-@{index}";
+        @item: ~".drawer.dw-xs-@{index}, .drawer.dw-sm-@{index}, .drawer.dw-md-@{index}, .drawer.dw-lg-@{index}";
         .dw((@index + 1), @item);
     }
     .dw(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
@@ -77,7 +77,7 @@
 .make-drawer(@class) {
   // .float-dwanvas-columns(@class);
   .loop-drawer-columns(@grid-columns, @class, width);
-  .loop-drawer-columns(@grid-columns, @class, pull);
-  .loop-drawer-columns(@grid-columns, @class, push);
-  .loop-drawer-columns(@grid-columns, @class, offset);
+  // .loop-drawer-columns(@grid-columns, @class, pull);
+  // .loop-drawer-columns(@grid-columns, @class, push);
+  // .loop-drawer-columns(@grid-columns, @class, offset);
 }

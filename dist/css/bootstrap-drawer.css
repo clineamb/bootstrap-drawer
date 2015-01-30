@@ -165,7 +165,7 @@ body.has-drawer {
   bottom: 0;
   left: 0;
 }
-.dw-xs-1, .dw-sm-1, .dw-md-1, .dw-lg-1, .dw-xs-2, .dw-sm-2, .dw-md-2, .dw-lg-2, .dw-xs-3, .dw-sm-3, .dw-md-3, .dw-lg-3, .dw-xs-4, .dw-sm-4, .dw-md-4, .dw-lg-4, .dw-xs-5, .dw-sm-5, .dw-md-5, .dw-lg-5, .dw-xs-6, .dw-sm-6, .dw-md-6, .dw-lg-6, .dw-xs-7, .dw-sm-7, .dw-md-7, .dw-lg-7, .dw-xs-8, .dw-sm-8, .dw-md-8, .dw-lg-8, .dw-xs-9, .dw-sm-9, .dw-md-9, .dw-lg-9, .dw-xs-10, .dw-sm-10, .dw-md-10, .dw-lg-10, .dw-xs-11, .dw-sm-11, .dw-md-11, .dw-lg-11, .dw-xs-12, .dw-sm-12, .dw-md-12, .dw-lg-12 {
+.drawer.dw-xs-1, .drawer.dw-sm-1, .drawer.dw-md-1, .drawer.dw-lg-1, .drawer.dw-xs-2, .drawer.dw-sm-2, .drawer.dw-md-2, .drawer.dw-lg-2, .drawer.dw-xs-3, .drawer.dw-sm-3, .drawer.dw-md-3, .drawer.dw-lg-3, .drawer.dw-xs-4, .drawer.dw-sm-4, .drawer.dw-md-4, .drawer.dw-lg-4, .drawer.dw-xs-5, .drawer.dw-sm-5, .drawer.dw-md-5, .drawer.dw-lg-5, .drawer.dw-xs-6, .drawer.dw-sm-6, .drawer.dw-md-6, .drawer.dw-lg-6, .drawer.dw-xs-7, .drawer.dw-sm-7, .drawer.dw-md-7, .drawer.dw-lg-7, .drawer.dw-xs-8, .drawer.dw-sm-8, .drawer.dw-md-8, .drawer.dw-lg-8, .drawer.dw-xs-9, .drawer.dw-sm-9, .drawer.dw-md-9, .drawer.dw-lg-9, .drawer.dw-xs-10, .drawer.dw-sm-10, .drawer.dw-md-10, .drawer.dw-lg-10, .drawer.dw-xs-11, .drawer.dw-sm-11, .drawer.dw-md-11, .drawer.dw-lg-11, .drawer.dw-xs-12, .drawer.dw-sm-12, .drawer.dw-md-12, .drawer.dw-lg-12 {
   min-height: 1px;
   height: 100%;
 }

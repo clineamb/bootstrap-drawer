@@ -1,0 +1,70 @@
+@import "./drawer-variables";
+@import "./mixins/drawer-framework";
+@import "./mixins/navbar-drawer-framework";
+@import "./drawer";
+
+.navbar {
+    &.navbar-drawer-xs {
+       .navbar-overrides();
+    }
+}
+
+.make-navbar-drawer-columns();
+
+.make-navbar-drawer(xs);
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: @screen-sm-min) {
+    .navbar.navbar-drawer-xs {
+        .navbar-reset();
+    }
+
+    .navbar.navbar-drawer-sm {
+        .navbar-overrides();
+
+        .container,
+        .navbar-header, .navbar-collapse,
+        .nav.navbar-nav {
+            .drawer-section-base();
+        }
+
+        .navbar-header {
+            .drawer-heading();
+        }
+
+        .navbar-collapse,
+        .nav.navbar-nav {
+            .drawer-nav();
+        }
+
+        .container, .navbar-collapse,
+        .nav.navbar-nav {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+
+    .make-navbar-drawer(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: @screen-md-min) {
+    .make-navbar-drawer(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: @screen-lg-min) {
+  .make-navbar-drawer(lg);
+}

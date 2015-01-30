@@ -20,14 +20,19 @@ gulp.task('example', function() {
 });
 
 gulp.task("less", function() {
-    gulp.src("./less/bootstrap-drawer.less")
+    var src = [
+        "./less/bootstrap-drawer.less",
+        "./less/bootstrap-navbar-drawer.less"
+    ];
+
+    gulp.src(src)
         .pipe(less({
             paths: ["./less"]
         }))
         .pipe(gulp.dest("./example"))
     ;
 
-    gulp.src("./less/bootstrap-drawer.less")
+    gulp.src(src)
         .pipe(less({
             paths: ["./less"],
             debug: true
@@ -43,6 +48,15 @@ gulp.task("less.min", function() {
             compress: true
         }))
         .pipe(rename("bootstrap-drawer.min.css"))
+        .pipe(gulp.dest("./dist/css"))
+    ;
+
+    gulp.src("./less/bootstrap-navbar-drawer.less")
+        .pipe(less({
+            paths: ["./less"],
+            compress: true
+        }))
+        .pipe(rename("bootstrap-navbar-drawer.min.css"))
         .pipe(gulp.dest("./dist/css"))
     ;
 });

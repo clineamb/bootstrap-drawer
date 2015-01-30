@@ -1,5 +1,5 @@
-@import "./mixins/drawer-framework";
 @import "./drawer-variables";
+@import "./mixins/drawer-framework";
 
 
 //
@@ -23,6 +23,12 @@ body.has-drawer {
 // Base class
 // --------------------------------------------------
 
+.drawer-section-base() {
+    display: inherit;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
 
 .drawer {
     display: block;
@@ -37,10 +43,7 @@ body.has-drawer {
     .box-shadow(0 1px 1px rgba(0,0,0,.05));
 
     &-contents, &-heading, &-body, &-nav, &-footer {
-        display: inherit;
-        margin: 0;
-        width: 100%;
-        position: relative;
+        .drawer-section-base();
     }
 
     &.drawer-right {
@@ -207,7 +210,6 @@ body.has-drawer {
 // smartphones.
 
 .make-drawer(xs);
-
 // Small grid
 //
 // Columns, offsets, pushes, and pulls for the small device range, from phones
