@@ -178,7 +178,7 @@ folders to maintain bootstrap structure.  The component's variables rely on a fe
 
 ### Building Your Own Flavor of Drawer
 
-You'll need [gulp](http://gulpjs.com/) and [Node](http://nodejs.org/)/[io.js](https://iojs.org/ if you want to build your own version.
+You'll need [gulp](http://gulpjs.com/) and [Node](http://nodejs.org/)/[io.js](https://iojs.org/) if you want to build your own version.
 
 Run `npm install` in order to get all the devDependencies from the `package.json`.
 
