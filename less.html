@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>bootstrap-drawer documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="example/drawer-docs.css">
+    <link rel="stylesheet" type="text/css" href="example/github.css">
+</head>
+<body class="has-offcanvas">
+    <div id="docDrawer" class="drawer dw-xs-10 dw-sm-6 dw-md-5 fold in" aria-labelledby="docDrawer">
+        <div class="drawer-controls">
+            <a href="#docDrawer" data-toggle="drawer" href="#docDrawer" aria-foldedopen="false" aria-controls="docDrawer" class="btn btn-default"><i class="fa fa-align-justify"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title"><strong>bootstrap-drawer</strong></h2>
+            </div>
+            <div class="drawer-body">
+                <iframe src="https://ghbtns.com/github-btn.html?user=clineamb&repo=bootstrap-drawer&type=star&count=true" frameborder="0" scrolling="0" width="100" height="20px"></iframe>&nbsp; 
+                <iframe src="https://ghbtns.com/github-btn.html?user=clineamb&repo=bootstrap-drawer&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="100" height="20px"></iframe>
+            </div>
+            <div class="drawer-heading">
+                <h3 class="drawer-title">Basics</h2>
+            </div>
+            <ul id="doc-nav" class="drawer-fullnav">
+                <li role="presentation"><a href="index.html">Home / Basic Usage</a></li>
+                <li role="presentation"><a href="customize.html">Position / Colors</a></li>
+                <li role="presentation"><a href="javascript.html">data-toggle / Javascript</a></li>
+                <li role="presentation"><a href="less.html">Using Less</a></li>
+            </ul>
+            <div class="drawer-heading">
+                <h3 class="drawer-title">Other Links</h2>
+            </div>
+            <ul class="drawer-fullnav">
+                <li role="presentation"><a href="http://github.com/clineamb/bootstrap-drawer" target="_blank"><i class="fa fa-github-alt"></i>&nbsp; GitHub Repo</a></li>
+                <li role="presentation"><a href="http://www.npmjs.com/package/bootstrap-drawer" target="_blank"><i class="fa fa-share-square"></i>&nbsp;npm</a></li>
+                <li role="presentation"><a href="http://twitter.com/clineamb" target="_blank"><i class="fa fa-twitter"></i>&nbsp;@clineamb</a></li>
+                <li><a name=""><iframe src="https://ghbtns.com/github-btn.html?user=clineamb&type=follow&count=true" frameborder="0" scrolling="0" width="100%" height="20px"></iframe></a></li>
+            </ul>
+            <div class="drawer-footer">
+                <small>&copy; 2015 Caroline Amaba</small>
+            </div>
+        </div>
+    </div>
+    <div id="drawer-docs">
+    <div class="jumbotron page-topper">
+        <div class="container">
+            <h1>bootstrap-drawer</h1>
+            <h4>bootstrap-drawer is a Bootstrap add-on that gives you an off-canvas/drawer element to your page or container! Check it out by clicking the toggle in the top-left corner!</h4>
+        </div>
+    </div>
+    <div id="drawer-docs-content" class="container">
+<h2 id="less-custom-builds">LESS / Custom Builds</h2>
+<p>If you&#39;re familiar with <a href="http://lesscss.org" target="_blank">LESS</a>, bootstrap-drawer has less files that you can use to either build your own custom bootstrap-drawer or directly incoroprate with other LESS files in your project.</p>
+<p>bootstrap-drawer currently uses Gulp and LESS, but it&#39;d be great if people can contribute grunt and SASS components! <a href="http://github.com/clineamb/bootstrap-drawer" target="_blank">Check out the repo to contribute</a>!</p>
+<hr>
+<h3 id="building-your-own-flavor-of-drawer">Building Your Own Flavor of Drawer</h3>
+<p>You&#39;ll need <a href="http://gulpjs.com" target="_blank">gulp</a> and <a href="http://nodejs.org" target="_blank">Node</a> (or <a href="http://iojs.org" target="_blank">io.js</a> if you want to build your own version.</p>
+<p>Run <code>npm install</code> in order to get all the devDependencies from the <code>package.json</code>.</p>
+<p>Most of the tasks are outlined in <code>gulpfile.js</code>.  The <code>gulp build</code> will also update
+the assets for <code>example/index.html</code> so you can see your changes.</p>
+<p>To customize bootstrap-drawer, just edit some of the variables in <code>less/drawer-variables.less</code> to
+the sizes and colors, etc. you want.  Then run <code>gulp build</code> and a new <code>dist/css/bootstrap-drawer(.min).css</code> 
+should be made just for you!  Include the file right after the Bootstrap core file, and you should be
+good to go!  </p>
+<p>Things to keep in mind:</p>
+<ul>
+<li>bootstrap-drawer uses some variables (<code>@grid-gutter-width</code>, <code>@zindex-navbar-fixed</code>, <code>@link-color</code>, to
+name most of them), so if you&#39;re using a different <code>varibles.less file</code>, be sure to replace it in
+<code>less/bootstrap-drawer.less</code>.</li>
+<li>The <code>.dw-SIZE-#</code> columns are built in LESS loops, and can change as you change the <code>@grid-columns</code> variable. If you&#39;re using 16-columns instead of 12, <code>less/mixins/drawer-framework.less is built to build more columns (like</code>.dw-md-13`, etc.).</li>
+</ul>
+<hr>
+<h3 id="using-less">Using Less</h3>
+<p>I am assuming for this section you are familiar with using less and the Bootstrap less source. 
+There are files in the <code>less/</code> directory that are parallel to Bootstrap&#39;s less source files.
+<code>drawer.less</code> already includes its custom variable package as well as less loop framework.
+To include the less in your build files, you can do one of the following:</p>
+<h4 id="add-to-your-main-less-file-after-bootstrap">Add to your main less file after bootstrap</h4>
+<pre><code class="lang-less">    @import &quot;bootstrap.less&quot;;
+    @import &quot;path/to/drawer.less&quot;;
+
+    /* Your styles */
+</code></pre>
+<h4 id="add-to-bootstrap-less">Add to bootstrap.less</h4>
+<pre><code class="lang-less">    @import &quot;variables.less&quot;;
+    @import &quot;mixins.less&quot;;
+
+    // Bootstrap Core
+    // ...
+
+    // ... etc ...
+
+    // Components w/ JavaScript
+    @import &quot;modals.less&quot;;
+    @import &quot;tooltip.less&quot;;
+    @import &quot;popovers.less&quot;;
+    @import &quot;carousel.less&quot;;
+    @import &quot;path/to/drawer.less&quot;;
+
+    // Utility Classes
+    // ... etc ...
+</code></pre>
+<h4 id="move-contents">Move Contents</h4>
+<p>The first two lines in <code>less/drawer.less</code> can be removed and moved</p>
+<p>Feel free to move <code>drawer-variables.less</code> and <code>drawer-framework.less</code> to appropriate
+folders to maintain bootstrap structure.  The component&#39;s variables rely on a few variables from the core bootstrap framework, likewise for the mixin framework.  Be sure to simply include them after the bootstrap core variables/mixins files:</p>
+<ul>
+<li><code>@import &quot;./drawer-variables&quot;;</code> can be put after importing <code>variables.less</code></li>
+<li><code>@import &quot;./mixins/drawer-framework&quot;;</code> can be put after importing <code>mixins.less</code></li>
+</ul>
+<pre><code class="lang-less">    @import &quot;variables.less&quot;;
+    @import &quot;path/to/drawer-variables.less&quot;
+    @import &quot;mixins.less&quot;;
+    @import &quot;path/to/drawer-framework.less&quot;;
+
+    // Bootstrap Core
+    // ...
+
+    // ... etc ...
+
+    // Components w/ JavaScript
+    @import &quot;modals.less&quot;;
+    @import &quot;tooltip.less&quot;;
+    @import &quot;popovers.less&quot;;
+    @import &quot;carousel.less&quot;;
+    @import &quot;path/to/drawer.less&quot;;
+
+    // Utility Classes
+    // ... etc ...
+</code></pre>
+        <div id="drawer-docs-footer">
+            <a href="#docDrawer" data-toggle="drawer" class="btn btn-lg btn-block btn-primary">Open the Drawer</a>
+        </div>
+    </div>
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="example/bootstrap.min.js"></script>
+    <script src="example/highlight.pack.js"></script>
+    <script src="dist/js/drawer.js"></script>
+    <script src="example/docs.js"></script>
+</body>
+</html>

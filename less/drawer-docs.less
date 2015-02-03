@@ -1,6 +1,6 @@
 // FOR DOCS
 
-@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700);
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,600,700);
 
 @bsdir: "../bower_components/bootstrap/less/";
 @teal: lighten(#447e8e, 5%);
@@ -9,7 +9,15 @@
 
 // Core variables and mixins
 @import "@{bsdir}variables.less";
+/*** variable overrides ***/
 @brand-primary: @teal;
+@font-size-h1:            225%;
+@font-size-h2:            200%;
+@font-size-h3:            150%;
+@font-size-h4:            110%;
+@font-size-h5:            100%;
+@font-size-h6:            95%;
+
 @import "./drawer-variables.less";
 @import "@{bsdir}mixins.less";
 @import "./mixins/drawer-framework.less";
@@ -28,6 +36,8 @@
 
 // Components
 @import "@{bsdir}component-animations.less";
+@import "@{bsdir}tables.less";
+@import "@{bsdir}panels.less";
 
 // Components w/ JavaScript
 @import "./drawer.less";
@@ -38,12 +48,18 @@
 
 body {
     font-family: 'Open Sans', Arial, sans-serif;
-    font-size: 12pt;
-    line-height: 18pt;
+    font-size: 14pt;
+    line-height: 24pt;
 }
 
-p {
-    padding-bottom: @grid-gutter-width/2;
+.container {
+    max-width: 1000px;
+}
+
+#drawer-docs, #drawer-docs-content {
+    p {
+        padding-bottom: @grid-gutter-width/2;
+    }
 }
 
 #drawer-docs {
@@ -58,25 +74,61 @@ p {
         #gradient > .vertical(@teal, @teal-light);
         color: #fff;
         margin-bottom: @grid-gutter-width/2;
-    }
 
-
-    pre.prettyprint, pre.prettyprinted {
-        border: 0;
-        padding: 10px;
-        margin-bottom: 15px;
-    }
-
-    ul {
-        padding-top: 8px;
-        padding-bottom: 8px;
-
-        li {
-            padding-bottom: 8px;
+        h4 {
+            line-height: 150%;
+            font-weight: 400;
         }
     }
 
-    .container {
-        max-width: 1000px;
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
     }
+}
+
+#drawer-docs-content {
+
+    hr {
+        margin-bottom: @grid-gutter-width;
+    }
+
+    h1, h2 {
+        border-bottom: 2px solid @brand-primary;
+        padding-bottom: @grid-gutter-width/2;
+        color: @gray;
+        font-weight: 700;
+    }
+
+    pre {
+        background: #f8f8f8;
+    }
+}
+
+#drawer-docs-footer {
+    margin: @grid-gutter-width auto 0 auto;
+    display: block;
+    padding: @grid-gutter-width 0;
+    border-top: 1px solid @gray-light;
+}
+
+.example-container, .example-container-right {
+    font-size: 12pt;
+    line-height: 16pt;
+    height: 400px;
+    z-index: 500;
+}
+
+.example-container {
+
+    .panel-body {
+        padding-left: 10%;
+    }
+
+    &-right .panel-body {
+        padding-right: 10%;
+    }
+}
+
+.give-height {
+    height: 350px;
 }
