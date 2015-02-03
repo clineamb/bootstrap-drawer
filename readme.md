@@ -2,25 +2,15 @@
 
 A [Bootstrap](http://getbootstrap.com) add-on to create drawer (off-canvas) styled navigation.
 
-## 1/25/2015
-
-This readme was written assuming the documentation was done.  Currently, the
-documentation is a work-in-progress, but feel free to checkout the example folder
-and use the quickstart to start using this!
-
-Also, had to change the name from "offcanvas" to drawer, because bootstrap-offcanvas
-was already taken.
-
 ----------
 
-As of Bootstrap 3.2.2, there is no "drawer" element - a drawer-like menu that
+As of Bootstrap 3, there is no "drawer" element - a drawer-like menu that
 goes off screen.  This is an add-on to the core Bootstrap framewrk that adds various
 `.drawer` classes to quickly and easily create the drawer component.
 
-This Readme is actually a quick start. [Check out the full documentation](http://clineamb.github.io/bootstrap-drawer) for detailed
-usage and style guide.
+This Readme is actually a quick start. [Check out the full documentation](http://clineamb.github.io/bootstrap-drawer) for detailed usage and style guide.
 
-**Version:** 0.9.0
+**Version:** 1.0.0
 
 ## Requirements
 
@@ -39,25 +29,25 @@ or you can [download the latest release](https://github.com/clineamb/bootstrap-d
 
 ## Installing
 
-For more detailed use on the bootstrap-drawer framework, check out the [style guide documentation](http://clineamb.github.io/bootstrap-drawer).
+For more detailed use on the bootstrap-drawer framework, check out the [documentation](http://clineamb.github.io/bootstrap-drawer).
 
 ### When using the full Bootstrap Framework:
 
 ```html
-    <html>
-        <head>
-            <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
-            <link rel="stylesheet" type="text/css" href="bootstrap-drawer.min.css">
-            <link rel="stylesheet" type="text/css" href="YOUR_OTHER_STYLES.css">
-        </head>
-        <body class="has-canvas">
-            <!-- Off Canvas & other HTML here -->
-            <script src="jquery.min.js"></script>
-            <script src="bootstrap.min.js"></script>
-            <script src="drawer.min.js"></script>
-            <script src="YOUR_CUSTOM_JS.js"></script>
-        </body>
-    </html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="bootstrap-drawer.min.css">
+        <link rel="stylesheet" type="text/css" href="YOUR_OTHER_STYLES.css">
+    </head>
+    <body class="has-canvas">
+        <!-- Off Canvas & other HTML here -->
+        <script src="jquery.min.js"></script>
+        <script src="bootstrap.min.js"></script>
+        <script src="drawer.min.js"></script>
+        <script src="YOUR_CUSTOM_JS.js"></script>
+    </body>
+</html>
 ```
 
 ### Basic Usage
@@ -106,94 +96,9 @@ to sizing the component.  In addition, the inner elements (`.drawer-heading`, `-
 </body>
 ```
 
-### Using LESS
+### Using LESS / Building Your Own Drawer
 
-I am assuming for this section you are familiar with using less and the Bootstrap less source. 
-There are files in the `less/` directory that are parallel to Bootstrap's less source files.
-`drawer.less` already includes its custom variable package as well as less loop framework.
-To include the less in your build files, you can do one of the following:
-
-#### Add to your main less file after bootstrap
-
-```less
-    @import "bootstrap.less";
-    @import "path/to/drawer.less";
-
-    /* Your styles */
-```
-
-#### Add to bootstrap.less
-
-```less
-    @import "variables.less";
-    @import "mixins.less";
-
-    // Bootstrap Core
-    // ...
-
-    // ... etc ...
-
-    // Components w/ JavaScript
-    @import "modals.less";
-    @import "tooltip.less";
-    @import "popovers.less";
-    @import "carousel.less";
-    @import "path/to/drawer.less";
-
-    // Utility Classes
-    // ... etc ...
-```
-
-#### Move Contents
-
-The first two lines in `less/drawer.less` can be removed and moved
-
-Feel free to move `drawer-variables.less` and `drawer-framework.less` to appropriate
-folders to maintain bootstrap structure.  The component's variables rely on a few variables from the core bootstrap framework, likewise for the mixin framework.  Be sure to simply include them after the bootstrap core variables/mixins files:
-
-*  `@import "./drawer-variables";` can be put after importing `variables.less`
-*  `@import "./mixins/drawer-framework";` can be put after importing `mixins.less`
-
-```less
-    @import "variables.less";
-    @import "path/to/drawer-variables.less"
-    @import "mixins.less";
-    @import "path/to/drawer-framework.less";
-
-    // Bootstrap Core
-    // ...
-
-    // ... etc ...
-
-    // Components w/ JavaScript
-    @import "modals.less";
-    @import "tooltip.less";
-    @import "popovers.less";
-    @import "carousel.less";
-    @import "path/to/drawer.less";
-
-    // Utility Classes
-    // ... etc ...
-```
-
-### Building Your Own Flavor of Drawer
-
-You'll need [gulp](http://gulpjs.com/) and [Node](http://nodejs.org/)/[io.js](https://iojs.org/) if you want to build your own version.
-
-Run `npm install` in order to get all the devDependencies from the `package.json`.
-
-Most of the tasks are outlined in `gulpfile.js`.  The `gulp build` will also update
-the assets for `example/index.html` so you can see your changes.
-
-To customize bootstrap-drawer, just edit some of the variables in `less/drawer-variables.less` to
-the sizes and colors, etc. you want.  Then run `gulp build` and a new `dist/css/bootstrap-drawer(.min).css` 
-should be made just for you!  Include the file right after the Bootstrap core file, and you should be
-good to go!  
-
-Things to keep in mind:
-*  bootstrap-drawer uses some variables (`@grid-gutter-width`, `@zindex-navbar-fixed`, `@link-color`, to
-name most of them), so if you're using a different `varibles.less file`, be sure to replace it in
-`less/bootstrap-drawer.less`.
+You can find out how to incorporate bootstrap-drawer and builr your own in [LESS section of the documentation](http://clineamb.github.io/bootstrap-drawer/less.html).
 
 ### Javascript
 
@@ -201,6 +106,12 @@ The Javascript/jQuery plugin requires the `transition.js` file from the core Boo
 framework in order to work.  Usage is nearly the same as the [collapse](http://getbootstrap.com/javascript/#collapse) component, but checkout out the documentation for more detailed usage for `$('.drawer').drawer()`.  The events emitted are `*.bs.drawer`.
 
 ## Changelog
+
+#### v 1.0.0
+* Finished the [detailed documentation](http://clineamb.github.io/bootstrap-drawer).
+* Moved the "Using LESS / Build Your Own..." section to the full documentation from the readme.
+* Updated `example/index.html` to have an inside-drawer.
+
 
 #### v 0.9.1
 * Added `.has-inner-drawer` class to allow elements with a set width/height to
