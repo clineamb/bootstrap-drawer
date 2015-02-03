@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-drawer",
-  "version": "0.9.1",
+  "version": "1.o.0",
   "description": "A Bootstrap add-on to create drawer (off-canvas) styled navigation",
   "main": "index.js",
   "directories": {
