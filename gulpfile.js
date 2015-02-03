@@ -4,7 +4,8 @@ var VERSION = "0.9.0";
 var gulp    = require('gulp'),
     less    = require('gulp-less'),
     uglify  = require('gulp-uglify'),
-    rename  = require('gulp-rename')
+    rename  = require('gulp-rename'),
+    hologram= require('gulp-hologram')
 ;
 
 gulp.task("build", ['less', 'less.min', 'js', 'js.min', 'example']);
@@ -16,6 +17,19 @@ gulp.task('example', function() {
         "./bower_components/bootstrap/dist/js/bootstrap.min.js"
     ])  
         .pipe(gulp.dest("./example"))
+    ;
+});
+
+gulp.task('docs', function() {
+    gulp.src("./less/drawer-docs.less")
+        .pipe(less())
+        .pipe(gulp.dest("./example"))
+    ;
+});
+
+gulp.task('hologram', ['example', 'docs'], function() {
+    gulp.src("hologram_config.yml")
+        .pipe(hologram())
     ;
 });
 
