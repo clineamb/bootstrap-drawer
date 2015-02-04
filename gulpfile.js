@@ -68,7 +68,7 @@ gulp.task('js.min', function() {
 
 gulp.task('docs.less', function() {
     gulp.src("./less/drawer-docs.less")
-        .pipe(less())
+        .pipe(less({compress: true}))
         .pipe(gulp.dest("./example"))
     ;
 });
