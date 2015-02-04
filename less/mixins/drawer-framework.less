@@ -1,27 +1,7 @@
-// Framework for dwanvas grid generation
+// Framework for drawer grid generation
 // Parallel to the grid framework of bootstrap
 // uses any value of `@grid-columns`
 
-.make-drawer-columns() {
-    // Common styles for all sizes of grid columns, widths 1-12
-    .dw(@index) { // initial
-        @item: ~".dw-xs-@{index}, .dw-sm-@{index}, .dw-md-@{index}, .dw-lg-@{index}";
-        .dw((@index + 1), @item);
-    }
-    .dw(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
-        .dw((@index + 1), ~"@{list}, @{item}");
-    }
-    .dw(@index, @list) when (@index > @grid-columns) { // terminal
-        @{list} {
-            // position: fixed;
-            // Prevent columns from collapsing when empty
-            min-height: 1px;
-            height: 100%;
-        }
-    }
-
-    .dw(1);
-}
 
 .dw-base(@index) {
   width: percentage((@index / @grid-columns));
@@ -33,34 +13,15 @@
     width: percentage((@index / @grid-columns));
   }
 
-  .drawer {
+
+  .fold.dw-@{class}-@{index} {
+    margin-left: -1 * percentage((@index / @grid-columns));;
+  }
+
+  .drawer-right {
     &.fold.dw-@{class}-@{index} {
-      margin-left: -1 * percentage((@index / @grid-columns));;
-      margin-right: 0;
-    }
-
-    &.folding.dw-@{class}-@{index} {
-        height: 100%;
-        .transition-property(~"margin-left");
-        .transition-duration(.35s);
-        .transition-timing-function(ease);
-    }
-
-    &.drawer-right {
-      &.fold.dw-@{class}-@{index} {
-        margin-left: 0;
-        margin-right: -1 * percentage((@index / @grid-columns));
-      }
-
-      &.fold.dw-@{class}-@{index} {
-        .transition-property(~"margin-right");
-      }
-    }
-
-    &.fold.open.dw-@{class}-@{index},
-    &.drawer-right.fold.open.dw-@{class}-@{index} {
-      margin-right: 0;
-      margin-left: 0;
+      // margin-left: 0;
+      margin-right: -1 * percentage((@index / @grid-columns));
     }
   }
 }
@@ -68,15 +29,10 @@
 // Basic looping in LESS
 .loop-drawer-columns(@index, @class, @type) when (@index >= 0) {
   .calc-drawer-column(@index, @class, @type);
-  // next iteration
   .loop-drawer-columns((@index - 1), @class, @type);
 }
 
 // Create grid for specific class
 .make-drawer(@class) {
-  // .float-dwanvas-columns(@class);
   .loop-drawer-columns(@grid-columns, @class, width);
-  // .loop-drawer-columns(@grid-columns, @class, pull);
-  // .loop-drawer-columns(@grid-columns, @class, push);
-  // .loop-drawer-columns(@grid-columns, @class, offset);
 }

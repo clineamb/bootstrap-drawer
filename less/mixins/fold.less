@@ -1,0 +1,26 @@
+.fold {
+  margin-right: 0;
+}
+
+.folding {
+  height: 100%;
+  .transition-property(~"margin-left");
+  .transition-duration(.35s);
+  .transition-timing-function(ease);
+}
+
+.drawer-right {
+  &.fold {
+    margin-left: 0;
+  }
+
+  &.folding {
+    .transition-property(~"margin-right");
+  }
+}
+
+.fold.open,
+.drawer-right.fold.open {
+  margin-left: 0;
+  margin-right: 0;
+}
