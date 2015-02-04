@@ -10,7 +10,7 @@ goes off screen.  This is an add-on to the core Bootstrap framewrk that adds var
 
 This Readme is actually a quick start. [Check out the full documentation](http://clineamb.github.io/bootstrap-drawer) for detailed usage and style guide.
 
-**Version:** 1.0.0
+**Version:** 1.0.1
 
 ## Requirements
 
@@ -105,18 +105,14 @@ You can find out how to incorporate bootstrap-drawer and builr your own in [LESS
 The Javascript/jQuery plugin requires the `transition.js` file from the core Bootstrap
 framework in order to work.  Usage is nearly the same as the [collapse](http://getbootstrap.com/javascript/#collapse) component, but checkout out the documentation for more detailed usage for `$('.drawer').drawer()`.  The events emitted are `*.bs.drawer`.
 
-## Changelog
+## Latest Changelog
 
-#### v 1.0.0
-* Finished the [detailed documentation](http://clineamb.github.io/bootstrap-drawer).
-* Moved the "Using LESS / Build Your Own..." section to the full documentation from the readme.
-* Updated `example/index.html` to have an inside-drawer.
+[Check out the full changelog](changelog.md) for past version changes.
 
+#### Version 1.0.1
 
-#### v 0.9.1
-* Added `.has-inner-drawer` class to allow elements with a set width/height to
-have a drawer within it.
-* Added in `example/index.html` how to use the `.has-inner-drawer` feature.
+* Optimize LESS to produce smaller css files.
+
 
 ----------------------------------------------------
 

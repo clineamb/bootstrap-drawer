@@ -30,6 +30,7 @@ body.has-drawer {
     background-color: @drawer-bg;
     color: @drawer-color;
     border-right: 1px solid @drawer-border-color;
+    min-height: 1px;
     height: 100%;
     top: 0;
     left: 0;
@@ -37,34 +38,34 @@ body.has-drawer {
     z-index: @zindex-drawer;
     .box-shadow(0 1px 1px rgba(0,0,0,.05));
 
-    &-contents, &-heading, &-body, &-nav, &-footer {
+    &-contents, &-heading, &-body, &-nav, &-footer, ul, li {
         display: inherit;
         margin: 0;
         width: 100%;
         position: relative;
     }
+}
+
+ .drawer-right {
+    left: auto;
+    right: 0;
+    border-right: none;
+    border-left: 1px solid @drawer-border-color;
+    .box-shadow(0 -1px 1px rgba(0,0,0,.05))
+}
+
+.drawer-inverse {
+    background-color: @drawer-inverse-bg;
+    color: @drawer-inverse-color;
+    border-right: 1px solid @drawer-inverse-border-color;
 
     &.drawer-right {
-        left: auto;
-        right: 0;
-        border-right: none;
-        border-left: 1px solid @drawer-border-color;
-        .box-shadow(0 -1px 1px rgba(0,0,0,.05))
+        border-right: 1px solid @drawer-border-color;
     }
+}
 
-    &.drawer-inverse {
-        background-color: @drawer-inverse-bg;
-        color: @drawer-inverse-color;
-        border-right: 1px solid @drawer-inverse-border-color;
-
-        &.drawer-right {
-            border-right: 1px solid @drawer-border-color;
-        }
-    }
-
-    &.drawer-inside {
-        position: absolute;
-    }
+.drawer-inside {
+    position: absolute;
 }
 
 .drawer-controls {
@@ -99,11 +100,11 @@ body.has-drawer {
     border-bottom: 1px solid @drawer-border-color;
     padding: @drawer-heading-padding;
     color: inherit;
+}
 
-    .drawer-title {
-        margin-top: 0;
-        margin-bottom: 0;
-    }
+.drawer-title {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .drawer-inner-toggle {
@@ -121,31 +122,24 @@ body.has-drawer {
     margin-bottom: 0;
     list-style: none;
     &:extend(.clearfix all);
+}
 
-    > li {
+.drawer-nav li, .drawer-fullnav li {
+    position: relative;
+    margin-bottom: 5px;
+
+    a {
+        color: @drawer-nav-link-color;
+        border-radius: @drawer-nav-border-radius;
         position: relative;
         display: block;
-        width: 100%;
-        margin-bottom: 5px;
+        padding: @drawer-nav-link-padding;
+    }
 
-        a {
-            color: @drawer-nav-link-color;
-            border-radius: @drawer-nav-border-radius;
-            position: relative;
-            display: block;
-            padding: @drawer-nav-link-padding;
-
-            &:hover, &:focus {
-                color: @drawer-nav-link-hover-color;
-                text-decoration: none;
-                background-color: @drawer-nav-link-hover-bg;
-            }
-        }
-
-        &.active a {
-            color: @drawer-nav-link-hover-color;
-            background-color: @drawer-nav-link-hover-bg;
-        }
+    &.active a, a:hover, a:focus {
+        color: @drawer-nav-link-hover-color;
+        text-decoration: none;
+        background-color: @drawer-nav-link-hover-bg;
     }
 }
 
@@ -153,7 +147,7 @@ body.has-drawer {
     color: @drawer-inverse-nav-link-color;
     padding: 0;
 
-    > li {
+    li {
         margin-bottom: 0;
 
         a {
@@ -162,33 +156,20 @@ body.has-drawer {
     }
 }
 
-.drawer.drawer-inverse {
+.drawer-inverse {
     .drawer-contents {
         background-color: @drawer-inverse-bg;
     }
 
-    .drawer-fullnav, .drawer-nav {
-        > li {
-            a {
-                color: @drawer-inverse-nav-link-color;
-                padding: @drawer-navfull-padding;
+    .drawer-fullnav li a, .drawer-nav li a {
+        color: @drawer-inverse-nav-link-color;
+        padding: @drawer-navfull-padding;
+    }
 
-                &:hover, &:focus {
-                    color: @drawer-inverse-nav-link-hover-color;
-                    background-color: @drawer-inverse-nav-link-hover-bg;
-                }
-            }
-
-            &.active a {
-                color: @drawer-inverse-nav-link-hover-color;
-                background-color: @drawer-inverse-nav-link-hover-bg;
-
-                &:hover, &:focus {
-                    color: @drawer-inverse-nav-link-hover-color;
-                    background-color: @drawer-inverse-nav-link-hover-bg;
-                }
-            }
-        }
+    .drawer-fullnav li.active a, .drawer-fullnav li a:hover, .drawer-fullnav li a:active,
+    .drawer-nav li.active a, .drawer-nav li a:hover, .drawer-nav li a:active, {
+        color: @drawer-inverse-nav-link-hover-color;
+        background-color: @drawer-inverse-nav-link-hover-bg;
     }
 }
 
@@ -201,10 +182,6 @@ body.has-drawer {
         left:       0;
     }
 }
-
-
-.make-drawer-columns();
-
 
 // Extra small grid
 //
@@ -239,3 +216,5 @@ body.has-drawer {
 @media (min-width: @screen-lg-min) {
   .make-drawer(lg);
 }
+
+@import "mixins/fold";
