@@ -97,7 +97,7 @@ Options can be passed via data attributes or JavaScript. For data attributes, ap
 
 #### Methods
 
-##### .collapse(options)
+##### .drawer(options)
 
 Activates your content as a drawer element.  Accepts an optional options `object`.
 
@@ -107,15 +107,15 @@ $('#myDrawer').drawer({
 });
 ```
 
-##### .collapse('toggle')
+##### .drawer('toggle')
 
 Toggles a drawer element as folded or open.
 
-##### .collapse('show')
+##### .drawer('show')
 
 Shows drawer element as opened.
 
-##### .collapse('hide')
+##### .drawer('hide')
 
 Hide a drawer element.
 
