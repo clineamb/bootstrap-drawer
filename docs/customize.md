@@ -64,6 +64,6 @@ Like the Bootstrap navbar, there is an inverse color option to the drawer.  Just
         </div>
     </div>
     <div class="panel-body">
-        <p>You can position the drawer to the right by adding the <code>.drawer-right</code> class.  This also works on full-page drawers.</p>
+        <p>You can inverse the drawer color (like navbar) by adding <code>.drawer-inverse</code> class.</p>
     </div>
 </div>
