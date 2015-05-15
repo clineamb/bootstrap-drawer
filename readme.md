@@ -16,7 +16,7 @@ This Readme is actually a quick start. [Check out the full documentation](http:/
 
 *  [Bootstrap](http://getbootstrap.com)
 *  [jQuery](http://jquery.com/) (already a Bootstrap dependency)
-*  [Node](http://nodejs.org/)/[io.js](https://iojs.org/) & [gulp](http://gulpjs.com/) if you want to build your own version.
+*  [Node](http://nodejs.org/) & [gulp](http://gulpjs.com/) if you want to build your own version.
 
 ## Download
 
