@@ -1,19 +1,12 @@
 ## Component jQuery API
 
-Bootstrap drawer comes with `drawer.js` to be added to the `bootstrap.js` component suite.  If you're including separate components, `drawer.js` does depend on `transition.js` plugin.
+Bootstrap drawer comes with `drawer.js` to be added to the `bootstrap.js` component suite.  If you're including separate components, `drawer.js` depends on `transition.js` plugin.
 
 `drawer.js` is built similarly to `collapse.js`.
 
 ----------
 
 ### Example
-
-Click the buttons below to fold/open another element with the class changes:
-* `.fold` hides content
-* `.folding` is applied during transitions.
-* `.fold.open` shows content.
-
-You can use a link with the `href` attribute, or a button with the `data-target` attribute. Both require the `data-toggle="drawer"` attribute.
 
 <div class="panel panel-default has-inner-drawer example-container-right">
     <div id="drawerExample2" class="drawer drawer-inside dw-xs-5 fold" aria-labelledby="drawerExample2">
@@ -35,7 +28,7 @@ You can use a link with the `href` attribute, or a button with the `data-target`
             </div>
             <div class="col-xs-6">
                 <p>
-                    <a href="#drawerExample2" data-toggle="drawer" href="#drawerExample2" aria-foldedopen"false" aria-controls="drawerExample2" class="btn btn-primary">Link with href</a>
+                    <a href="#drawerExample2" data-toggle="drawer" aria-expanded="false" aria-controls="drawerExample2" class="btn btn-primary">Link with href</a>
                 </p>
                 <p>
                     <button class="btn btn-info" type="button" data-toggle="drawer" data-target="#drawerExample2" aria-expanded="false" aria-controls="drawerExample2">
@@ -67,7 +60,7 @@ Just add `data-toggle="drawer"` and a data-target to the element to automaticall
 Enable manually with:
 
 ```js
-$('.drawer').drawer()
+$('.drawer').drawer();
 ```
 
 #### Options

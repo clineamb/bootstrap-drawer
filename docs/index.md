@@ -1,7 +1,6 @@
 ## What Is It?
 
-[bootstrap-drawer](http://github.com/clineamb/bootstrap-drawer) is a Bootstrap add-on/plugin that, in Bootstrap style, adds an
-"off-canvas" element to your pages and containers. We call it a "drawer" in these parts.*
+[bootstrap-drawer](http://github.com/clineamb/bootstrap-drawer) is a Bootstrap add-on/plugin that, in Bootstrap style, adds an "off-canvas" element to your pages and containers. We call it a "drawer" in these parts.*
 
 I've looked around for fast-and-easy ways of implementing this constantly (and consistently), and I've had to rebuild it a few times. Tired of doing this, I created this! I imagine there's a lot of people like me looking for something like this, especially one that easily works with their front-end framework of choice, Bootstrap.
 
