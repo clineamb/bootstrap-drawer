@@ -1,5 +1,5 @@
 /* ========================================================================
- * Bootstrap: drawer.js v1.0
+ * Bootstrap: drawer.js v1.0.0.1
  # Heavily based on collapse, but had to change the name to "fold" to 
  # avoid transition conflicts.
  * ========================================================================
@@ -82,10 +82,14 @@
         .trigger('shown.bs.drawer')
     }
 
-    if (!$.support.transition) return complete.call(this)
+    if (!$.support.transition) {
+        return complete.call(this)
+    } else {
+        this.transEventName = $.support.transition.end;
+    }
 
     this.$element
-      .one('bsTransitionEnd', $.proxy(complete, this))
+      .one(this.transEventName, $.proxy(complete, this))
       .emulateTransitionEnd(Drawer.TRANSITION_DURATION).css(dimension, 0)
   }
 
@@ -117,11 +121,15 @@
         .trigger('hidden.bs.drawer')
     }
 
-    if (!$.support.transition) return complete.call(this)
+    if (!$.support.transition) {
+        return complete.call(this)
+    } else {
+        this.transEventName = $.support.transition.end;
+    }
 
     this.$element
       .css(dimension, '')
-      .one('bsTransitionEnd', $.proxy(complete, this))
+      .one(this.transEventName, $.proxy(complete, this))
       .emulateTransitionEnd(Drawer.TRANSITION_DURATION)
   }
 
