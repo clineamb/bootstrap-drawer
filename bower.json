@@ -1,6 +1,6 @@
 {
   "name": "bootstrap-drawer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "authors": [
     "Caroline Amaba <her@carolineamaba.com>"
   ],
@@ -43,7 +43,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
-    "bootstrap": "~3.3.4"
+    "jquery": "2.x",
+    "bootstrap": "3.x"
   }
 }
