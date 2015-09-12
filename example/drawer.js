@@ -1,5 +1,5 @@
 /* ========================================================================
- * Bootstrap: drawer.js v1.0.3
+ * Bootstrap: drawer.js v1.0
  # Heavily based on collapse, but had to change the name to "fold" to 
  # avoid transition conflicts.
  * ========================================================================
@@ -82,14 +82,10 @@
         .trigger('shown.bs.drawer')
     }
 
-    if (!$.support.transition) {
-        return complete.call(this)
-    } else {
-        this.transEventName = $.support.transition.end;
-    }
+    if (!$.support.transition) return complete.call(this)
 
     this.$element
-      .one(this.transEventName, $.proxy(complete, this))
+      .one('bsTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd(Drawer.TRANSITION_DURATION).css(dimension, 0)
   }
 
@@ -121,15 +117,11 @@
         .trigger('hidden.bs.drawer')
     }
 
-    if (!$.support.transition) {
-        return complete.call(this)
-    } else {
-        this.transEventName = $.support.transition.end;
-    }
+    if (!$.support.transition) return complete.call(this)
 
     this.$element
       .css(dimension, '')
-      .one(this.transEventName, $.proxy(complete, this))
+      .one('bsTransitionEnd', $.proxy(complete, this))
       .emulateTransitionEnd(Drawer.TRANSITION_DURATION)
   }
 
@@ -205,6 +197,12 @@
 
     var $target = getTargetFromTrigger($this)
     var data    = $target.data('bs.drawer')
+    var option  = data ? 'toggle' : $.extend({}, $this.data(), { trigger: this })
+
+    Plugin.call($target, option)
+  })
+
+}(jQuery);    var data    = $target.data('bs.drawer')
     var option  = data ? 'toggle' : $.extend({}, $this.data(), { trigger: this })
 
     Plugin.call($target, option)
