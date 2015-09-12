@@ -1,10 +1,10 @@
 {
   "name": "bootstrap-drawer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "authors": [
     "Caroline Amaba <her@carolineamaba.com>"
   ],
-  "description": "A Bootstrap add-on to create drawer (off-canvas) styled navigation",
+  "description": "A Bootstrap 3 add-on to create drawer (off-canvas) styled navigation",
   "moduleType": [
     "globals"
   ],
@@ -17,6 +17,8 @@
     "url": "https://github.com/clineamb/bootstrap-drawer.git"
   },
   "keywords": [
+    "bootstrap3",
+    "bootstrap-3",
     "bootstrap",
     "offcanvas",
     "off-canvas",
