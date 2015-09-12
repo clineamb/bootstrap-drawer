@@ -68,8 +68,7 @@
     </div>
     <div id="drawer-docs-content" class="container">
 <h2 id="what-is-it-">What Is It?</h2>
-<p><a href="http://github.com/clineamb/bootstrap-drawer">bootstrap-drawer</a> is a Bootstrap add-on/plugin that, in Bootstrap style, adds an
-&quot;off-canvas&quot; element to your pages and containers. We call it a &quot;drawer&quot; in these parts.*</p>
+<p><a href="http://github.com/clineamb/bootstrap-drawer">bootstrap-drawer</a> is a Bootstrap add-on/plugin that, in Bootstrap style, adds an &quot;off-canvas&quot; element to your pages and containers. We call it a &quot;drawer&quot; in these parts.*</p>
 <p>I&#39;ve looked around for fast-and-easy ways of implementing this constantly (and consistently), and I&#39;ve had to rebuild it a few times. Tired of doing this, I created this! I imagine there&#39;s a lot of people like me looking for something like this, especially one that easily works with their front-end framework of choice, Bootstrap.</p>
 <p><small>* Mostly because &quot;bootstrap-offcanvas&quot; was taken, and I&#39;ve always referred to it as a mobile &quot;drawer&quot;.</small></p>
 <hr>
@@ -136,7 +135,7 @@
 <div class="panel panel-default has-inner-drawer example-container">
     <div id="drawerExample2" class="drawer drawer-inside dw-xs-5 fold" aria-labelledby="drawerExample2">
         <div class="drawer-controls">
-            <a href="#drawerExample2" data-toggle="drawer" href="#drawerExample2" aria-foldedopen"false" aria-controls="drawerExample2" class="btn btn-primary btn-sm">Menu</a>
+            <a href="#drawerExample2" data-toggle="drawer" href="#drawerExample2" aria-foldedopen="false" aria-controls="drawerExample2" class="btn btn-primary btn-sm">Menu</a>
         </div>
         <div class="drawer-contents">
             <div class="drawer-heading">
@@ -159,7 +158,7 @@
 <pre><code class="lang-html">&lt;div class=&quot;panel panel-default has-inner-drawer&quot;&gt;
     &lt;div id=&quot;drawerExample2&quot; class=&quot;drawer drawer-inside dw-xs-5 fold&quot; aria-labelledby=&quot;drawerExample2&quot;&gt;
         &lt;div class=&quot;drawer-controls&quot;&gt;
-            &lt;a href=&quot;#drawerExample2&quot; data-toggle=&quot;drawer&quot; href=&quot;#drawerExample2&quot; aria-foldedopen&quot;false&quot; aria-controls=&quot;drawerExample2&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Menu&lt;/a&gt;
+            &lt;a href=&quot;#drawerExample2&quot; data-toggle=&quot;drawer&quot; href=&quot;#drawerExample2&quot; aria-foldedopen=&quot;false&quot; aria-controls=&quot;drawerExample2&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Menu&lt;/a&gt;
         &lt;/div&gt;
         &lt;div class=&quot;drawer-contents&quot;&gt;
             &lt;div class=&quot;drawer-heading&quot;&gt;
@@ -195,7 +194,7 @@ be named differently because bootstrap-drawer is folding horizontally and not co
 <p><code>.drawer-controls</code> is a special drawer column made to house a toggle button for the drawer that moves with the component.  It&#39;s an optional piece, since the menu can be toggled by other buttons either using the built-in <code>data-toggle=&quot;drawer&quot;</code> or the jQuery API (<code>$(&#39;.drawer&#39;).drawer();</code>).</p>
 <pre><code class="lang-html">&lt;div id=&quot;drawerExample2&quot; class=&quot;drawer dw-xs-5 fold&quot; aria-labelledby=&quot;drawerExample2&quot;&gt;
     &lt;div class=&quot;drawer-controls&quot;&gt;
-        &lt;a href=&quot;#drawerExample2&quot; data-toggle=&quot;drawer&quot; href=&quot;#drawerExample2&quot; aria-foldedopen&quot;false&quot; aria-controls=&quot;drawerExample2&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Menu&lt;/a&gt;
+        &lt;a href=&quot;#drawerExample2&quot; data-toggle=&quot;drawer&quot; href=&quot;#drawerExample2&quot; aria-foldedopen=&quot;false&quot; aria-controls=&quot;drawerExample2&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Menu&lt;/a&gt;
     &lt;/div&gt;
     &lt;div class=&quot;drawer-contents&quot;&gt;
         ...

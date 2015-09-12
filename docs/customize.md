@@ -17,7 +17,7 @@ Sometimes you might want the drawer to the right.  You can do this quickly by ad
 <div class="panel panel-default has-inner-drawer example-container-right">
     <div id="drawerExample2" class="drawer drawer-right drawer-inside dw-xs-5 fold" aria-labelledby="drawerExample2">
         <div class="drawer-controls">
-            <a href="#drawerExample2" data-toggle="drawer" href="#drawerExample2" aria-foldedopen"false" aria-controls="drawerExample2" class="btn btn-primary btn-sm">Menu</a>
+            <a href="#drawerExample2" data-toggle="drawer" href="#drawerExample2" aria-foldedopen="false" aria-controls="drawerExample2" class="btn btn-primary btn-sm">Menu</a>
         </div>
         <div class="drawer-contents">
             <div class="drawer-heading">
@@ -50,7 +50,7 @@ Like the Bootstrap navbar, there is an inverse color option to the drawer.  Just
 <div class="panel panel-default has-inner-drawer example-container">
     <div id="drawerExample3" class="drawer drawer-inverse drawer-inside dw-xs-5 fold" aria-labelledby="drawerExample3">
         <div class="drawer-controls">
-            <a href="#drawerExample3" data-toggle="drawer" href="#drawerExample3" aria-foldedopen"false" aria-controls="drawerExample3" class="btn btn-primary btn-sm">Menu</a>
+            <a href="#drawerExample3" data-toggle="drawer" href="#drawerExample3" aria-foldedopen="false" aria-controls="drawerExample3" class="btn btn-primary btn-sm">Menu</a>
         </div>
         <div class="drawer-contents">
             <div class="drawer-heading">

@@ -88,7 +88,7 @@ To get a simple, full-page drawer, like the one here in the docs, simply add `.h
 <div class="panel panel-default has-inner-drawer example-container">
     <div id="drawerExample2" class="drawer drawer-inside dw-xs-5 fold" aria-labelledby="drawerExample2">
         <div class="drawer-controls">
-            <a href="#drawerExample2" data-toggle="drawer" href="#drawerExample2" aria-foldedopen"false" aria-controls="drawerExample2" class="btn btn-primary btn-sm">Menu</a>
+            <a href="#drawerExample2" data-toggle="drawer" href="#drawerExample2" aria-foldedopen="false" aria-controls="drawerExample2" class="btn btn-primary btn-sm">Menu</a>
         </div>
         <div class="drawer-contents">
             <div class="drawer-heading">
@@ -112,7 +112,7 @@ To get a simple, full-page drawer, like the one here in the docs, simply add `.h
 <div class="panel panel-default has-inner-drawer">
     <div id="drawerExample2" class="drawer drawer-inside dw-xs-5 fold" aria-labelledby="drawerExample2">
         <div class="drawer-controls">
-            <a href="#drawerExample2" data-toggle="drawer" href="#drawerExample2" aria-foldedopen"false" aria-controls="drawerExample2" class="btn btn-primary btn-sm">Menu</a>
+            <a href="#drawerExample2" data-toggle="drawer" href="#drawerExample2" aria-foldedopen="false" aria-controls="drawerExample2" class="btn btn-primary btn-sm">Menu</a>
         </div>
         <div class="drawer-contents">
             <div class="drawer-heading">
@@ -160,7 +160,7 @@ be named differently because bootstrap-drawer is folding horizontally and not co
 ```html
 <div id="drawerExample2" class="drawer dw-xs-5 fold" aria-labelledby="drawerExample2">
     <div class="drawer-controls">
-        <a href="#drawerExample2" data-toggle="drawer" href="#drawerExample2" aria-foldedopen"false" aria-controls="drawerExample2" class="btn btn-primary btn-sm">Menu</a>
+        <a href="#drawerExample2" data-toggle="drawer" href="#drawerExample2" aria-foldedopen="false" aria-controls="drawerExample2" class="btn btn-primary btn-sm">Menu</a>
     </div>
     <div class="drawer-contents">
         ...
