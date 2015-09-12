@@ -5,6 +5,10 @@ A [Bootstrap](http://getbootstrap.com) add-on to create drawer (off-canvas) styl
 ----------
 
 # Changelog
+#### v 1.0.3
+* Fixed to be backwards compat w/BS 3.0.0 - somwhere after 3.0.0, the name of the transition.end event changed
+* Thus, 1.0.2 likely introduced this breaking change
+
 
 #### v 1.0.2
 * Updated some typos in the docs [detailed documentation](http://clineamb.github.io/bootstrap-drawer).

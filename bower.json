@@ -45,7 +45,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
-    "bootstrap": "~3.3.4"
+    "jquery": "2.x",
+    "bootstrap": "3.x"
   }
 }
