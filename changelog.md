@@ -5,9 +5,14 @@ A [Bootstrap](http://getbootstrap.com) add-on to create drawer (off-canvas) styl
 ----------
 
 # Changelog
+
+#### v 1.0.4
+* Fix docs.
+* Update `package.json`, `bower.json`
+
+
 #### v 1.0.3
-* Fixed to be backwards compat w/BS 3.0.0 - somwhere after 3.0.0, the name of the transition.end event changed
-* Thus, 1.0.2 likely introduced this breaking change
+* Fixed to be backwards compatible with Bootstrap 3.0.0 - somwhere after 3.0.0, the name of the transition.end event changed
 
 
 #### v 1.0.2
