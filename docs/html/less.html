@@ -1,0 +1,70 @@
+<h2 id="less-custom-builds">LESS / Custom Builds</h2>
+<p>If you&#39;re familiar with <a href="http://lesscss.org" target="_blank">LESS</a>, bootstrap-drawer has less files that you can use to either build your own custom bootstrap-drawer or directly incoroprate with other LESS files in your project.</p>
+<p>bootstrap-drawer currently uses Gulp and LESS, but it&#39;d be great if people can contribute grunt and SASS components! <a href="http://github.com/clineamb/bootstrap-drawer" target="_blank">Check out the repo to contribute</a>!</p>
+<hr>
+<h3 id="building-your-own-flavor-of-drawer">Building Your Own Flavor of Drawer</h3>
+<p>You&#39;ll need <a href="http://gulpjs.com" target="_blank">gulp</a> and <a href="http://nodejs.org" target="_blank">Node</a> if you want to build your own version.</p>
+<p>Run <code>npm install</code> in order to get all the devDependencies from the <code>package.json</code>.</p>
+<p>Most of the tasks are outlined in <code>gulpfile.js</code>.  The <code>gulp build</code> will also update the assets for <code>example/index.html</code> so you can see your changes.</p>
+<p>To customize bootstrap-drawer, just edit some of the variables in <code>less/drawer-variables.less</code> to the sizes and colors, etc. you want.  Then run <code>gulp build</code> and a new <code>dist/css/bootstrap-drawer(.min).css</code> should be made just for you!  Include the file right after the Bootstrap core file, and you should be good to go!  </p>
+<p>Things to keep in mind:</p>
+<ul>
+<li>bootstrap-drawer uses some variables (<code>@grid-gutter-width</code>, <code>@zindex-navbar-fixed</code>, <code>@link-color</code>, to
+name most of them), so if you&#39;re using a different <code>varibles.less file</code>, be sure to replace it in <code>less/bootstrap-drawer.less</code>.</li>
+<li>The <code>.dw-SIZE-#</code> columns are built in LESS loops, and can change as you change the <code>@grid-columns</code> variable. If you&#39;re using 16-columns instead of 12, <code>less/mixins/drawer-framework.less</code> is built to build more columns (like <code>.dw-md-13</code>, etc.).</li>
+</ul>
+<hr>
+<h3 id="using-less">Using Less</h3>
+<p>I am assuming for this section you are familiar with using less and the Bootstrap less source. There are files in the <code>less/</code> directory that are parallel to Bootstrap&#39;s less source files. <code>drawer.less</code> already includes its custom variable package as well as less loop framework. To include the less in your build files, you can do one of the following:</p>
+<h4 id="add-to-your-main-less-file-after-bootstrap">Add to your main less file after bootstrap</h4>
+<pre><code class="lang-less">    @import &quot;bootstrap.less&quot;;
+    @import &quot;path/to/drawer.less&quot;;
+
+    /* Your styles */
+</code></pre>
+<h4 id="add-to-bootstrap-less">Add to bootstrap.less</h4>
+<pre><code class="lang-less">    @import &quot;variables.less&quot;;
+    @import &quot;mixins.less&quot;;
+
+    // Bootstrap Core
+    // ...
+
+    // ... etc ...
+
+    // Components w/ JavaScript
+    @import &quot;modals.less&quot;;
+    @import &quot;tooltip.less&quot;;
+    @import &quot;popovers.less&quot;;
+    @import &quot;carousel.less&quot;;
+    @import &quot;path/to/drawer.less&quot;;
+
+    // Utility Classes
+    // ... etc ...
+</code></pre>
+<h4 id="move-contents">Move Contents</h4>
+<p>The first two lines in <code>less/drawer.less</code> can be removed and moved</p>
+<p>Feel free to move <code>drawer-variables.less</code> and <code>drawer-framework.less</code> to appropriate folders to maintain bootstrap structure.  The component&#39;s variables rely on a few variables from the core bootstrap framework, likewise for the mixin framework.  Be sure to simply include them after the bootstrap core variables/mixins files:</p>
+<ul>
+<li><code>@import &quot;./drawer-variables&quot;;</code> can be put after importing <code>variables.less</code></li>
+<li><code>@import &quot;./mixins/drawer-framework&quot;;</code> can be put after importing <code>mixins.less</code></li>
+</ul>
+<pre><code class="lang-less">    @import &quot;variables.less&quot;;
+    @import &quot;path/to/drawer-variables.less&quot;
+    @import &quot;mixins.less&quot;;
+    @import &quot;path/to/drawer-framework.less&quot;;
+
+    // Bootstrap Core
+    // ...
+
+    // ... etc ...
+
+    // Components w/ JavaScript
+    @import &quot;modals.less&quot;;
+    @import &quot;tooltip.less&quot;;
+    @import &quot;popovers.less&quot;;
+    @import &quot;carousel.less&quot;;
+    @import &quot;path/to/drawer.less&quot;;
+
+    // Utility Classes
+    // ... etc ...
+</code></pre>

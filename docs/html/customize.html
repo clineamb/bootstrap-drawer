@@ -1,0 +1,57 @@
+<h2 id="drawer-customization">Drawer Customization</h2>
+<p><strong>bootstrap-drawer</strong> comes with some built-in classes to customize some basics about your drawer. These utility classes are modeled after Bootstrap&#39;s Navbar components.</p>
+<hr>
+<h2 id="position">Position</h2>
+<p>Sometimes you might want the drawer to the right.  You can do this quickly by adding <code>.drawer-right</code> to the <code>.drawer</code> container.</p>
+<pre><code class="lang-html">&lt;div id=&quot;drawerExample2&quot; class=&quot;drawer drawer-right ...&quot;&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<div class="panel panel-default has-inner-drawer example-container-right">
+    <div id="drawerExample2" class="drawer drawer-right drawer-inside dw-xs-5 fold" aria-labelledby="drawerExample2">
+        <div class="drawer-controls">
+            <a href="#drawerExample2" data-toggle="drawer" href="#drawerExample2" aria-foldedopen"false" aria-controls="drawerExample2" class="btn btn-primary btn-sm">Menu</a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <strong>right menu example</strong>
+            </div>
+            <ul class="drawer-nav">
+                <li role="presentation" class="active"><a href="#">Link</a></li>
+                <li role="presentation"><a href="#">Link</a></li>
+                <li role="presentation"><a href="#">Link</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel-body">
+        <p>You can position the drawer to the right by adding the <code>.drawer-right</code> class.  This also works on full-page drawers.</p>
+    </div>
+</div>
+
+<hr>
+<h2 id="inverse-color">Inverse Color</h2>
+<p>Like the Bootstrap navbar, there is an inverse color option to the drawer.  Just add <code>.drawer-inverse</code> to your <code>.drawer</code> container.</p>
+<pre><code class="lang-html">&lt;div id=&quot;drawerExample2&quot; class=&quot;drawer drawer-inverse ...&quot;&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<div class="panel panel-default has-inner-drawer example-container">
+    <div id="drawerExample3" class="drawer drawer-inverse drawer-inside dw-xs-5 fold" aria-labelledby="drawerExample3">
+        <div class="drawer-controls">
+            <a href="#drawerExample3" data-toggle="drawer" href="#drawerExample3" aria-foldedopen"false" aria-controls="drawerExample3" class="btn btn-primary btn-sm">Menu</a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <strong>inverse menu example</strong>
+            </div>
+            <ul class="drawer-fullnav">
+                <li role="presentation" class="active"><a href="#">Link</a></li>
+                <li role="presentation"><a href="#">Link</a></li>
+                <li role="presentation"><a href="#">Link</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel-body">
+        <p>You can inverse the drawer color (like navbar) by adding <code>.drawer-inverse</code> class.</p>
+    </div>
+</div>

@@ -1,0 +1,134 @@
+// FOR DOCS
+
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,600,700);
+
+@bsdir: "../bower_components/bootstrap/less/";
+@teal: lighten(#447e8e, 5%);
+@teal-light: lighten(@teal, 5%);
+
+
+// Core variables and mixins
+@import "@{bsdir}variables.less";
+/*** variable overrides ***/
+@brand-primary: @teal;
+@font-size-h1:            225%;
+@font-size-h2:            200%;
+@font-size-h3:            150%;
+@font-size-h4:            110%;
+@font-size-h5:            100%;
+@font-size-h6:            95%;
+
+@import "./drawer-variables.less";
+@import "@{bsdir}mixins.less";
+@import "./mixins/drawer-framework.less";
+
+// Reset and dependencies
+@import "@{bsdir}normalize.less";
+
+// Core CSS
+@import "@{bsdir}scaffolding.less";
+@import "@{bsdir}type.less";
+@import "@{bsdir}code.less";
+@import "@{bsdir}grid.less";
+@import "@{bsdir}tables.less";
+@import "@{bsdir}forms.less";
+@import "@{bsdir}buttons.less";
+
+// Components
+@import "@{bsdir}component-animations.less";
+@import "@{bsdir}tables.less";
+@import "@{bsdir}panels.less";
+
+// Components w/ JavaScript
+@import "./drawer.less";
+
+// Utility classes
+@import "@{bsdir}utilities.less";
+@import "@{bsdir}responsive-utilities.less";
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 14pt;
+    line-height: 24pt;
+}
+
+.container {
+    max-width: 1000px;
+}
+
+#drawer-docs, #drawer-docs-content {
+    p {
+        padding-bottom: @grid-gutter-width/2;
+    }
+}
+
+#drawer-docs {
+    min-height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+
+    .jumbotron.page-topper {
+        padding-top: @grid-gutter-width;
+        padding-bottom: @grid-gutter-width;
+        #gradient > .vertical(@teal, @teal-light);
+        color: #fff;
+        margin-bottom: @grid-gutter-width/2;
+
+        h4 {
+            line-height: 150%;
+            font-weight: 400;
+        }
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+    }
+}
+
+#drawer-docs-content {
+
+    hr {
+        margin-bottom: @grid-gutter-width;
+    }
+
+    h1, h2 {
+        border-bottom: 2px solid @brand-primary;
+        padding-bottom: @grid-gutter-width/2;
+        color: @gray;
+        font-weight: 700;
+    }
+
+    pre {
+        background: #f8f8f8;
+    }
+}
+
+#drawer-docs-footer {
+    margin: @grid-gutter-width auto 0 auto;
+    display: block;
+    padding: @grid-gutter-width 0;
+    border-top: 1px solid @gray-light;
+}
+
+.example-container, .example-container-right {
+    font-size: 12pt;
+    line-height: 16pt;
+    height: 400px;
+    z-index: 500;
+}
+
+.example-container {
+
+    .panel-body {
+        padding-left: 10%;
+    }
+
+    &-right .panel-body {
+        padding-right: 10%;
+    }
+}
+
+.give-height {
+    height: 350px;
+}

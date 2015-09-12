@@ -37,9 +37,14 @@
   "homepage": "https://github.com/clineamb/bootstrap-drawer-menu",
   "devDependencies": {
     "gulp": "^3.8.10",
+    "gulp-concat": "^2.4.3",
     "gulp-less": "^2.0.1",
+    "gulp-markdown": "^1.0.0",
     "gulp-rename": "^1.2.0",
-    "gulp-uglify": "^1.1.0"
+    "gulp-uglify": "^1.1.0",
+    "gulp-util": "^3.0.2",
+    "nunjucks": "^1.1.0",
+    "through2": "^0.6.3"
   },
   "dependencies": {
     "bootstrap": "^3.3.2",

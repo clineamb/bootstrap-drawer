@@ -1,0 +1,118 @@
+<h2 id="component-jquery-api">Component jQuery API</h2>
+<p>Bootstrap drawer comes with <code>drawer.js</code> to be added to the <code>bootstrap.js</code> component suite.  If you&#39;re including separate components, <code>drawer.js</code> depends on <code>transition.js</code> plugin.</p>
+<p><code>drawer.js</code> is built similarly to <code>collapse.js</code>.</p>
+<hr>
+<h3 id="example">Example</h3>
+<div class="panel panel-default has-inner-drawer example-container-right">
+    <div id="drawerExample2" class="drawer drawer-inside dw-xs-5 fold" aria-labelledby="drawerExample2">
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <strong>Button/Link Toggle Example</strong>
+            </div>
+            <ul class="drawer-nav">
+                <li role="presentation" class="active"><a href="#">Link</a></li>
+                <li role="presentation"><a href="#">Link</a></li>
+                <li role="presentation"><a href="#">Link</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-xs-6">
+                Try the buttons over there to toggle the menu that pops out on the left!
+            </div>
+            <div class="col-xs-6">
+                <p>
+                    <a href="#drawerExample2" data-toggle="drawer" aria-expanded="false" aria-controls="drawerExample2" class="btn btn-primary">Link with href</a>
+                </p>
+                <p>
+                    <button class="btn btn-info" type="button" data-toggle="drawer" data-target="#drawerExample2" aria-expanded="false" aria-controls="drawerExample2">
+                        Button with data-target
+                    </button>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<h3 id="usage">Usage</h3>
+<p>The drawer plugin utilizes a few classes to do all the work:</p>
+<ul>
+<li><code>.fold</code> hides content</li>
+<li><code>.fold.open</code> shows content.</li>
+<li><code>.folding</code> is applied during transitions, and removed when it finishes.</li>
+</ul>
+<p>These classes can be found in <code>less/mixins/drawer-framework.less</code>.  They are built in loops with the <code>.dw-SIZE-#</code> classes because they utilize margins based on the column width.</p>
+<h4 id="via-data-attributes">Via data attributes</h4>
+<p>Just add <code>data-toggle=&quot;drawer&quot;</code> and a data-target to the element to automatically assign control of drawer element. The data-target attribute accepts a CSS selector to apply the folding animation to. Be sure to add the class <code>.fold</code> to the collapsible element. If you&#39;d like it to default open, add the additional class <code>.open</code>.</p>
+<h4 id="via-javascript">Via JavaScript</h4>
+<p>Enable manually with:</p>
+<pre><code class="lang-js">$(&#39;.drawer&#39;).drawer();
+</code></pre>
+<h4 id="options">Options</h4>
+<p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-parent=&quot;&quot;</code>.</p>
+<table class="table table-bordered">
+    <tr class="active">
+        <th width="15%">Name</th>
+        <th width="15%">selector</th>
+        <th width="15%">default</th>
+        <th width="45%">description</th>
+    </tr>
+    <tr>
+        <td>parent</td>
+        <td>selector</td>
+        <td>false</td>
+        <td>If a selector is provided, then all collapsible elements under the specified parent will be closed when this drawer is open.</td>
+    </tr>
+    <tr>
+        <td>toggle</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Toggle the drawer element on invocation.</td>
+    </tr>
+</table>
+
+<h4 id="methods">Methods</h4>
+<h5 id="-drawer-options-">.drawer(options)</h5>
+<p>Activates your content as a drawer element.  Accepts an optional options <code>object</code>.</p>
+<pre><code class="lang-js">$(&#39;#myDrawer&#39;).drawer({
+    toggle: false
+});
+</code></pre>
+<h5 id="-drawer-toggle-">.drawer(&#39;toggle&#39;)</h5>
+<p>Toggles a drawer element as folded or open.</p>
+<h5 id="-drawer-show-">.drawer(&#39;show&#39;)</h5>
+<p>Shows drawer element as opened.</p>
+<h5 id="-drawer-hide-">.drawer(&#39;hide&#39;)</h5>
+<p>Hide a drawer element.</p>
+<h4 id="events">Events</h4>
+<p>drawer-bootstrap drawer class exposes drawer events (very similarly to how Bootstrap collapse) for hooking
+into the drawer functionality.</p>
+<table class="table table-bordered">
+    <tr class="active">
+        <th width="25%">Event Type</th>
+        <th width="75%">Description</th>
+    </tr>
+    <tr>
+        <td>show.bs.drawer</td>
+        <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+    </tr>
+    <tr>
+        <td>shown.bs.drawer</td>
+        <td>This event is fired when a collapse element has been made visible to the user (will wait for CSS transitions to complete).</td>
+    </tr>
+    <tr>
+        <td>hide.bs.drawer</td>
+        <td>This event is fired immediately when the <code>hide</code> method has been called.</td>
+    </tr>
+    <tr>
+        <td>hidden.bs.drawer</td>
+        <td>This event is fired when a collapse element has been hidden from the user (will wait for CSS transitions to complete).</td>
+    </tr>
+</table>
+
+<pre><code class="lang-js">$(&#39;#myDrawer&#39;).on(&#39;hidden.bs.drawer&#39;, function() {
+    // do something here...
+});
+</code></pre>

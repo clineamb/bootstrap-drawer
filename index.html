@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>bootstrap-drawer documentation</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="example/drawer-docs.css">
+    <link rel="stylesheet" type="text/css" href="example/github.css">
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-59331212-1', 'auto');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body class="has-offcanvas">
+    <div id="docDrawer" class="drawer dw-xs-10 dw-sm-6 dw-md-5 fold in" aria-labelledby="docDrawer">
+        <div class="drawer-controls">
+            <a href="#docDrawer" data-toggle="drawer" href="#docDrawer" aria-foldedopen="false" aria-controls="docDrawer" class="btn btn-default"><i class="fa fa-align-justify"></i></a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title"><strong>bootstrap-drawer</strong></h2>
+            </div>
+            <div class="drawer-body">
+                <iframe src="https://ghbtns.com/github-btn.html?user=clineamb&repo=bootstrap-drawer&type=star&count=true" frameborder="0" scrolling="0" width="100" height="20px"></iframe>&nbsp; 
+                <iframe src="https://ghbtns.com/github-btn.html?user=clineamb&repo=bootstrap-drawer&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="100" height="20px"></iframe>
+            </div>
+            <div class="drawer-heading">
+                <h3 class="drawer-title">Basics</h2>
+            </div>
+            <ul id="doc-nav" class="drawer-fullnav">
+                <li role="presentation"><a href="index.html">Home / Basic Usage</a></li>
+                <li role="presentation"><a href="customize.html">Position / Colors</a></li>
+                <li role="presentation"><a href="javascript.html">data-toggle / Javascript</a></li>
+                <li role="presentation"><a href="less.html">Using Less</a></li>
+            </ul>
+            <div class="drawer-heading">
+                <h3 class="drawer-title">Other Links</h2>
+            </div>
+            <ul class="drawer-fullnav">
+                <li role="presentation"><a href="http://github.com/clineamb/bootstrap-drawer" target="_blank"><i class="fa fa-github-alt"></i>&nbsp; GitHub Repo</a></li>
+                <li role="presentation"><a href="http://www.npmjs.com/package/bootstrap-drawer" target="_blank"><i class="fa fa-share-square"></i>&nbsp;npm</a></li>
+                <li role="presentation"><a href="http://twitter.com/clineamb" target="_blank"><i class="fa fa-twitter"></i>&nbsp;@clineamb</a></li>
+                <li><a name=""><iframe src="https://ghbtns.com/github-btn.html?user=clineamb&type=follow&count=true" frameborder="0" scrolling="0" width="100%" height="20px"></iframe></a></li>
+            </ul>
+            <div class="drawer-footer">
+                <small>&copy; 2015 Caroline Amaba</small>
+            </div>
+        </div>
+    </div>
+    <div id="drawer-docs">
+    <div class="jumbotron page-topper">
+        <div class="container">
+            <h1>bootstrap-drawer</h1>
+            <h4>bootstrap-drawer is a Bootstrap add-on that gives you an off-canvas/drawer element to your page or container! Check it out by clicking the toggle in the top-left corner!</h4>
+        </div>
+    </div>
+    <div id="drawer-docs-content" class="container">
+<h2 id="what-is-it-">What Is It?</h2>
+<p><a href="http://github.com/clineamb/bootstrap-drawer">bootstrap-drawer</a> is a Bootstrap add-on/plugin that, in Bootstrap style, adds an
+&quot;off-canvas&quot; element to your pages and containers. We call it a &quot;drawer&quot; in these parts.*</p>
+<p>I&#39;ve looked around for fast-and-easy ways of implementing this constantly (and consistently), and I&#39;ve had to rebuild it a few times. Tired of doing this, I created this! I imagine there&#39;s a lot of people like me looking for something like this, especially one that easily works with their front-end framework of choice, Bootstrap.</p>
+<p><small>* Mostly because &quot;bootstrap-offcanvas&quot; was taken, and I&#39;ve always referred to it as a mobile &quot;drawer&quot;.</small></p>
+<hr>
+<h2 id="requirements">Requirements</h2>
+<p><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a> is required for this plugin, since bootstrap-drawer is built on top of the framework. (Thus, <a href="http://jquery.com" target="_blank">jQuery</a> is also required.)</p>
+<h3 id="download">Download</h3>
+<p><code>bower install bootstrap-drawer</code> or <code>npm install bootstrap-drawer</code></p>
+<p>You can also find all the release on the <a href="https://github.com/clineamb/bootstrap-drawer/releases" target="_blank">GitHub repo releases page</a>.  For your convenience, here are some links to the latest releases:</p>
+<p><a href="http://github.com/clineamb/bootstrap-drawer/releases/latest" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github-alt"></i> Get Latest Vesion (1.0.1)</a>
+<a href="http://github.com/clineamb/bootstrap-drawer/archive/1.0.1.zip" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-archive"></i> Download bootstrap-drawer-1.0.1.zip</a></p>
+<hr>
+<h2 id="basic-setup">Basic Setup</h2>
+<p>If you simply just want to quickly use bootstrap-drawer with Bootstrap, you just need to include <code>dist/bootstrap-drawer.css</code> after Bootstrap, and then include any other files after that.</p>
+<pre><code class="lang-html">&lt;html&gt;
+    &lt;head&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;bootstrap.min.css&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;bootstrap-drawer.min.css&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;YOUR_OTHER_STYLES.css&quot;&gt;
+    &lt;/head&gt;
+    &lt;body class=&quot;has-canvas&quot;&gt;
+        &lt;!-- Off Canvas &amp; other HTML here --&gt;
+        &lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;bootstrap.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;drawer.min.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;YOUR_CUSTOM_JS.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="basic-usage">Basic Usage</h2>
+<h3 id="full-page-drawer">Full Page Drawer</h3>
+<p>To get a simple, full-page drawer, like the one here in the docs, simply add <code>.has-drawer</code> to your body, and add the <code>.drawer</code> container like so:</p>
+<pre><code class="lang-html">&lt;body class=&quot;has-drawer&quot;&gt; &lt;!-- add this class to your body for proper sizing --&gt;
+    &lt;div id=&quot;drawerExample&quot; class=&quot;drawer dw-xs-10 dw-sm-6 dw-md-4 fold&quot; aria-labelledby=&quot;drawerExample&quot;&gt;
+        &lt;div class=&quot;drawer-controls&quot;&gt;
+            &lt;a href=&quot;#drawerExample&quot; data-toggle=&quot;drawer&quot; href=&quot;#drawerExample&quot; aria-foldedopen=&quot;false&quot; aria-controls=&quot;drawerExample&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Menu&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;drawer-contents&quot;&gt;
+            &lt;div class=&quot;drawer-heading&quot;&gt;
+                &lt;h2 class=&quot;drawer-title&quot;&gt;Menu&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;drawer-body&quot;&gt;
+                &lt;p&gt;
+                    This is a properly padded container for content in the
+                    drawer that isn&#39;t a navigation.
+                &lt;/p&gt;
+                &lt;a href=&quot;#&quot;&gt;A Regular Link&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;ul class=&quot;drawer-nav&quot;&gt;
+                &lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot;&gt;Profile&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot;&gt;Messages&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class=&quot;drawer-footer&quot;&gt;
+                &lt;small&gt;&amp;copy; Caroline Amaba&lt;/small&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;container&quot;&gt;
+        &lt;!-- content as per usual --&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<h3 id="container-nested-drawer">Container-nested Drawer</h3>
+<div class="panel panel-default has-inner-drawer example-container">
+    <div id="drawerExample2" class="drawer drawer-inside dw-xs-5 fold" aria-labelledby="drawerExample2">
+        <div class="drawer-controls">
+            <a href="#drawerExample2" data-toggle="drawer" href="#drawerExample2" aria-foldedopen"false" aria-controls="drawerExample2" class="btn btn-primary btn-sm">Menu</a>
+        </div>
+        <div class="drawer-contents">
+            <div class="drawer-heading">
+                <h2 class="drawer-title">Menu</h2>
+            </div>
+            <ul class="drawer-nav">
+                <li role="presentation" class="active"><a href="#">Link</a></li>
+                <li role="presentation"><a href="#">Link</a></li>
+                <li role="presentation"><a href="#">Link</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="panel-body">
+        <p>You can also nest the drawer in a block container by adding the <code>.drawer-inside</code> class to <code>.drawer</code> and adding <code>.has-inner-drawer</code> to your parent container, like so:</p>
+        <p>You can also use panels inside of other elements that have a defined with and height. A <code>z-index</code> will also need to be defined.</p>
+        <p>You&#39;ll also have to make sure that you give your controls (however you do them) are visible. In this example, the <code>.panel-body</code> was given <code>padding-left: 10%</code> so that the Menu button isn&#39;t running into the content of the panel.</p>
+    </div>
+</div>
+
+<pre><code class="lang-html">&lt;div class=&quot;panel panel-default has-inner-drawer&quot;&gt;
+    &lt;div id=&quot;drawerExample2&quot; class=&quot;drawer drawer-inside dw-xs-5 fold&quot; aria-labelledby=&quot;drawerExample2&quot;&gt;
+        &lt;div class=&quot;drawer-controls&quot;&gt;
+            &lt;a href=&quot;#drawerExample2&quot; data-toggle=&quot;drawer&quot; href=&quot;#drawerExample2&quot; aria-foldedopen&quot;false&quot; aria-controls=&quot;drawerExample2&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Menu&lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;drawer-contents&quot;&gt;
+            &lt;div class=&quot;drawer-heading&quot;&gt;
+                &lt;h2 class=&quot;drawer-title&quot;&gt;Menu&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;ul class=&quot;drawer-nav&quot;&gt;
+                &lt;li role=&quot;presentation&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+                &lt;li role=&quot;presentation&quot;&gt;&lt;a href=&quot;#&quot;&gt;Link&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;panel-body&quot; style=&quot;padding-left: 10%&quot;&gt;
+        &lt;p&gt;You can also use panels inside of other elements that have
+        a defined with and height.&lt;/p&gt;
+        &lt;p&gt;You&#39;ll have to be responsible for making sure your controls accessible.&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><br></p>
+<h2 id="bootstrap-drawer-components">bootstrap-drawer components</h2>
+<p><strong>bootstrap_drawer</strong> was built with a Bootstrap-minded style.  The classes used are very similar to the <code>.nav</code> and <code>.panel</code> classes in Bootstrap.  The Bootstrap <code>data-api</code> for toggling the drawer is, likewise, built like <code>.collapse</code> and its javascript component.</p>
+<p>bootstrap-drawer does <strong>not</strong> (yet) have a class that expands to a navbar on bigger screens. For now, the main focus of bootstrap-drawer was to do one thing well.  In a later version, there may be an additional &quot;.drawer-navbar&quot; class to remove the drawer on larger screens.</p>
+<h3 id="class-breakdown">Class Breakdown</h3>
+<p><code>.drawer</code> is the main class.  The sizing system is based on the 12-column system of Bootstrap, using <code>.dw-SIZE-#COLS</code>.  The drawer is built mobile-first, like the rest of Bootstrap, and the size in width is based on the document&#39;s fluid width (a percentage of it, based on the columns).  This size becomes relative when using it inside another container.</p>
+<p><code>.fold</code> started the menu closed (<code>.fold.open</code> starts the menu opened).  This class, as well as the
+<a href="javascript.html">javascript component</a> are built similarly to the <code>.collapse</code> components.  It had to
+be named differently because bootstrap-drawer is folding horizontally and not collapsing vertically.</p>
+<pre><code class="lang-html">&lt;div class=&quot;drawer dw-xs-10 dw-sm-6 dw-md-4 fold&quot;&gt;
+    ...
+&lt;/div&gt;
+</code></pre>
+<p><code>.drawer-controls</code> is a special drawer column made to house a toggle button for the drawer that moves with the component.  It&#39;s an optional piece, since the menu can be toggled by other buttons either using the built-in <code>data-toggle=&quot;drawer&quot;</code> or the jQuery API (<code>$(&#39;.drawer&#39;).drawer();</code>).</p>
+<pre><code class="lang-html">&lt;div id=&quot;drawerExample2&quot; class=&quot;drawer dw-xs-5 fold&quot; aria-labelledby=&quot;drawerExample2&quot;&gt;
+    &lt;div class=&quot;drawer-controls&quot;&gt;
+        &lt;a href=&quot;#drawerExample2&quot; data-toggle=&quot;drawer&quot; href=&quot;#drawerExample2&quot; aria-foldedopen&quot;false&quot; aria-controls=&quot;drawerExample2&quot; class=&quot;btn btn-primary btn-sm&quot;&gt;Menu&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;drawer-contents&quot;&gt;
+        ...
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><br></p>
+<h4 id="drawer-contents">Drawer Contents</h4>
+<p><code>.drawer-contents</code> wraps the main parts of the drawer: <code>.drawer-heading</code>, <code>.drawer-body</code>, <code>.drawer-nav</code> / <code>.drawer-fullnav</code>, <code>.drawer-footer</code>.  These classes are very similar to how Bootstrap&#39;s <code>.panel</code> inner classes work.  </p>
+<p><code>.drawer-nav</code> and <code>.drawer-fullnav</code> are already-built nav classes that are based on the <code>.nav.nav-pills.nav-stacked</code> combination of classes.  The difference between the two is that <code>.drawer-nav</code> has padding on the left and right, while <code>.drawer-fullnav</code> goes the entire width of the drawer.</p>
+<p>You can use <code>.drawer-body</code> to wrap you own navigation, as well, or just include content.</p>
+<p><strong>DEMOS:</strong></p>
+<div class="row">
+    <div class="col-xs-12 col-sm-6">
+        <div class="panel panel-default has-inner-drawer example-container">
+            <div id="drawerExample3a" class="drawer drawer-inside dw-xs-8 fold open">
+                <div class="drawer-contents">
+                    <div class="drawer-heading">
+                        <h4 class="drawer-title">.drawer-nav example</h4>
+                    </div>
+                    <ul class="drawer-nav">
+                        <li role="presentation" class="active"><a href="#">Link</a></li>
+                        <li role="presentation"><a href="#">Link</a></li>
+                        <li role="presentation"><a href="#">Link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-6">
+        <div class="panel panel-default has-inner-drawer example-container">
+            <div id="drawerExample3a" class="drawer drawer-inside dw-xs-8 fold open">
+                <div class="drawer-contents">
+                    <div class="drawer-heading">
+                        <h4 class="drawer-title">.drawer-fullnav example</h4>
+                    </div>
+                    <ul class="drawer-fullnav">
+                        <li role="presentation" class="active"><a href="#">Link</a></li>
+                        <li role="presentation"><a href="#">Link</a></li>
+                        <li role="presentation"><a href="#">Link</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p><code>.drawer-heading</code>, like <code>.panel-heading</code>  is specially styled to be the top of the drawer.  In addition, there is a <code>.drawer-title</code> class that can be put within <code>.drawer-heading</code> for a specially styled <code>&lt;h#&gt;</code> tag.</p>
+<p><code>.drawer-footer</code> finishes off the components of the drawer (again, like <code>.panel-footer</code>).  Additionally, by giving the <code>.drawer-footer</code> an additional <code>locked</code> class, the footer will then stick to the bottom of the drawer.  This is absolutely positioned within the drawer, and you should be careful that your content does not overlap the <code>.drawer-footer</code>.</p>
+        <div id="drawer-docs-footer">
+            <a href="#docDrawer" data-toggle="drawer" class="btn btn-lg btn-block btn-primary">Open the Drawer</a>
+        </div>
+    </div>
+    <script src="//code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="example/bootstrap.min.js"></script>
+    <script src="example/highlight.pack.js"></script>
+    <script src="dist/js/drawer.js"></script>
+    <script src="example/docs.js"></script>
+</body>
+</html>
