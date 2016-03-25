@@ -38,15 +38,15 @@
   },
   "homepage": "https://github.com/clineamb/bootstrap-drawer-menu",
   "devDependencies": {
-    "gulp": "^3.9.0",
+    "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
-    "gulp-less": "^3.0.3",
-    "gulp-markdown": "^1.0.0",
+    "gulp-less": "^3.0.5",
+    "gulp-markdown": "^1.2.0",
     "gulp-rename": "^1.2.2",
-    "gulp-uglify": "^1.4.1",
-    "gulp-util": "^3.0.6",
-    "nunjucks": "^2.0.0",
-    "through2": "^2.0.0"
+    "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
+    "nunjucks": "^2.4.1",
+    "through2": "^2.0.1"
   },
   "dependencies": {
     "jquery": "2.x",
