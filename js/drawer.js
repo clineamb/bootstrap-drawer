@@ -6,7 +6,7 @@
 */
 
 
-+function ($) {
+function ($) {
   'use strict';
 
   // OFF CANVAS PUBLIC CLASS DEFINITION
