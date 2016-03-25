@@ -6,7 +6,7 @@
 */
 
 
-+function ($) {
+(function ($) {
   'use strict';
 
   // OFF CANVAS PUBLIC CLASS DEFINITION
@@ -210,4 +210,4 @@
     Plugin.call($target, option)
   })
 
-}(jQuery);
+})(window.jQuery || {});
