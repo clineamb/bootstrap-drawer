@@ -67,7 +67,7 @@ to sizing the component.  In addition, the inner elements (`.drawer-heading`, `-
 <body class="has-drawer"> <!-- add this class to your body for proper sizing -->
     <div id="drawerExample" class="drawer dw-xs-10 dw-sm-6 dw-md-4 fold" aria-labelledby="drawerExample">
         <div class="drawer-controls">
-            <a href="#drawerExample" data-toggle="drawer" href="#drawerExample" aria-foldedopen="false" aria-controls="drawerExample" class="btn btn-primary btn-sm">Menu</a>
+            <a href="#drawerExample" data-toggle="drawer" aria-foldedopen="false" aria-controls="drawerExample" class="btn btn-primary btn-sm">Menu</a>
         </div>
         <div class="drawer-contents">
             <div class="drawer-heading">
