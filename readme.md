@@ -10,7 +10,7 @@ goes off screen.  This is an add-on to the core Bootstrap framework that adds va
 
 This Readme is actually a quick start. [Check out the full documentation](http://clineamb.github.io/bootstrap-drawer) for detailed usage and style guide.
 
-**Version:** 1.0.4
+**Version:** 1.0.5
 
 ## Requirements
 
