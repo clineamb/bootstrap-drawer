@@ -6,6 +6,12 @@ A [Bootstrap](http://getbootstrap.com) add-on to create drawer (off-canvas) styl
 
 # Changelog
 
+#### v 1.0.5
+* Fix docs (fromn [PR#10](https://github.com/clineamb/bootstrap-drawer/issues/11))
+* Update website to match docs.
+* Update `package.json`
+* Rebuild assets & example after upgrading `package.json`
+
 #### v 1.0.4
 * Fix docs.
 * Update `package.json`, `bower.json`
