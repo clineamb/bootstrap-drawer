@@ -18,8 +18,8 @@ I've looked around for fast-and-easy ways of implementing this constantly (and c
 
 You can also find all the release on the <a href="https://github.com/clineamb/bootstrap-drawer/releases" target="_blank">GitHub repo releases page</a>.  For your convenience, here are some links to the latest releases:
 
-<a href="http://github.com/clineamb/bootstrap-drawer/releases/latest" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github-alt"></i> Get Latest Vesion (1.0.5)</a>
-<a href="http://github.com/clineamb/bootstrap-drawer/archive/1.0.5.zip" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-archive"></i> Download bootstrap-drawer-1.0.5.zip</a>
+<a href="http://github.com/clineamb/bootstrap-drawer/releases/latest" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-github-alt"></i> Get Latest Vesion (1.0.6)</a>
+<a href="http://github.com/clineamb/bootstrap-drawer/archive/1.0.6.zip" target="_blank" class="btn btn-lg btn-primary"><i class="fa fa-archive"></i> Download bootstrap-drawer-1.0.6.zip</a>
 
 ----------
 
