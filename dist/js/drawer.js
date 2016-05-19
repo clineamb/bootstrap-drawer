@@ -1,5 +1,5 @@
 /* ========================================================================
- * Bootstrap: drawer.js v1.0.6
+ * Bootstrap: drawer.js v1.0.5
  # Heavily based on collapse, but had to change the name to "fold" to 
  # avoid transition conflicts.
  * ========================================================================
